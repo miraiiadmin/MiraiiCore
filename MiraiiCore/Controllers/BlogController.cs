@@ -12,5 +12,10 @@ namespace MiraiiCore.Controllers
         {
             return View();
         }
+
+        public IActionResult Review()
+        {
+            return View();
+        }
     }
 }
