@@ -16,7 +16,8 @@
     <script src="https://kit.fontawesome.com/8dedd5ecd1.js" crossorigin="anonymous"></script>
 
     <!--google font-->
-    <link href="https://fonts.googleapis.com/css2?family=Merienda+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Galada&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -25,7 +26,7 @@
         <nav class="navbar navbar-expand-lg navbar fixed-top navbar-dark" style="background-color:#B03A2E ;">
             <div class="container">
                 <!--center Navbar's Menu & Logo-->
-                <a class="navbar-brand" href="#">Miraii</a>
+                <a class="navbar-brand" href="https://localhost:44369/Home/index">Miraii</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                         data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                         aria-label="Toggle navigation">
@@ -36,13 +37,13 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="index">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" asp-area="" asp-controller="Blog" asp-action="Review">Review</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">About</a>
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="About">About</a>
                         </li>
                     </ul>
 
@@ -63,9 +64,11 @@
 
     <!--Footer-->
     <footer>
-        <div style="background-color:#B03A2E; color: #FFFFFF; ">
-            <div>
-                <p>&copy; 2020 - MiraiiCore - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a></p>
+        <div class="container-fluid" style="background-color:#B03A2E; color: #FFFFFF; ">
+            <div class="container">
+                <div>
+                    <p>&copy; 2020 - MiraiiCore - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a></p>
+                </div>
             </div>
         </div>
     </footer>
