@@ -6,6 +6,34 @@
     body {
         font-family: 'Galada', cursive;
     }
+
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+
+    .text-popular {
+        margin-left: auto;
+        margin-right: auto;
+        font-weight: bold;
+        font-size: 25px;
+    }
+
+    .content-name {
+        font-weight: bold;
+        font-size: 15px;
+        color: black;
+    }
+
+    .content-text-preview {
+        color: black;
+    }
+
+    .text-podcast {
+        color: white;
+    }
 </style>
 
 <body>
@@ -46,102 +74,108 @@
 
     <!--Content 1-->
     <div class="container-sm my-5">
-        <div class="row text-center ">
+        <div class="row text-center">
             <div class="col-xl-7 p-3">
-                <img src="~/image/Index/john wick.jpg" class="img-fluid">
-                <br><br>
-                <h2 style="font-weight:bold; font-size:20px; ">
-                    <u>
+                <a href="#">
+                    <img src="~/image/Index/john wick.jpg" class="center m-2">
+                    <h2 class="content-name" ">
                         John Wick 4 เลื่อนไปเดือนพฤษภาคม 2022 :<br>
                         เหตุวิกฤติ COVID-19 ทำให้ล่าช้าไปอีก 1 ปี
-                    </u>
-                </h2><br>
-                <p style="text-align:left">
-                    Lionsgate สตูดิโอผู้สร้างแฟรนไชส์ภาพยนตร์ John Wick ได้ประกาศว่า John Wick 4
-                    ซึ่งยังคงนำแสดงโดย Keanu Reeves (คีอานู รีฟส์) จะเลื่อนกำหนดการฉายไปเป็นวันที่ 27 พฤษภมคม 2022
-                    จากเดิมที่กำหนดไว้วันที่ 21 พฤษภาคม 2021
-                </p>
+                    </h2><br>
+                    <p class="content-text-preview">
+                        Lionsgate สตูดิโอผู้สร้างแฟรนไชส์ภาพยนตร์ John Wick ได้ประกาศว่า John Wick 4
+                        ซึ่งยังคงนำแสดงโดย Keanu Reeves (คีอานู รีฟส์) จะเลื่อนกำหนดการฉายไปเป็นวันที่ 27 พฤษภมคม 2022
+                        จากเดิมที่กำหนดไว้วันที่ 21 พฤษภาคม 2021
+                    </p>
+                </a>
             </div>
             <!--Most Popular (picture 4:3)-->
             <div class="col-sm-5">
                 <hr>
                 <div class="container">
                     <div class="row">
-                        <p style="font-weight:bold; text-align:center; font-size:25px;"><u> MOST POPULAR </u></p>
+                        <p class="text-popular"><u> MOST POPULAR </u></p>
                     </div>
 
                     <!--Popular 1-->
                     <div class="row text-left">
                         <div class="col-xl-4">
-                            <a href="https://localhost:44369/Blog/Review">
-                                <img src="~/image/Index/Dr. romantic.jpg" align="center" class="img-fluid" width="125px" height="125px">
-                            </a>
+                            <!--img-link-->
+                            <a href="https://localhost:44369/Blog/Review"><img src="~/image/Index/Dr. romantic.jpg" class="center"></a>
                         </div>
                         <div class="col-xl-8">
-                            <h2 style="font-size:15px;">รีวิว DOCTOR ROMANTIC (2016)</h2>
-                            <p style="text-align:left;">
+                            <!--content-link-->
+                            <a href="https://localhost:44369/Blog/Review"><h2 class="content-name"> รีวิว DOCTOR ROMANTIC (2016)</h2></a>
+                            <p class="content-text-preview">
                                 การตัดสินใจเลือกประกอบอาชีพการงานของทุกคน
                                 เชื่อว่าแต่ละคนคงมีเหตุผลแตกต่างกันไปในการตัดสินใจ
                             </p>
-                        </div>
-                    </div>
+                        </div><!--col-->
+                    </div><!--row-->
 
                     <!--Popular 2-->
                     <div class="row text-left">
                         <div class="col-xl-4">
-                            <img src="~/image/Index/Bohemian.jpg" align="center" class="img-fluid" width="125px" height="125px">
+                            <!--img-link-->
+                            <a href="#"><img src="~/image/Index/Bohemian.jpg" class="center"></a>
                         </div>
                         <div class="col-xl-8">
-                            <h2 style="font-size:15px;">รีวิว DOCTOR ROMANTIC (2016)</h2>
-                            <p style="text-align:left;">
+                            <!--content-link-->
+                            <a href="#"><h2 class="content-name"> รีวิว DOCTOR ROMANTIC (2016)</h2></a>
+                            <p class="content-text-preview">
                                 การตัดสินใจเลือกประกอบอาชีพการงานของทุกคน
-                                เชื่อว่าแต่ละคนคงมีเหตุผลแตกต่างกัน
+                                เชื่อว่าแต่ละคนคงมีเหตุผลแตกต่างกันไปในการตัดสินใจ
                             </p>
-                        </div>
-                    </div>
+                        </div><!--col-->
+                    </div><!--row-->
 
                     <!--Popular 3-->
                     <div class="row text-left">
                         <div class="col-xl-4">
-                            <img src="~/image/Index/the beetle.jpg" align="center" class="img-fluid" width="125px" height="125px">
+                            <!--img-link-->
+                            <a href="#"><img src="~/image/Index/the beetle.jpg" class="center"></a>
                         </div>
                         <div class="col-xl-8">
-                            <h2 style="font-size:15px;">รีวิว DOCTOR ROMANTIC (2016)</h2>
-                            <p style="text-align:left;">
+                            <!--content-link-->
+                            <a href="#"><h2 class="content-name"> รีวิว DOCTOR ROMANTIC (2016)</h2></a>
+                            <p class="content-text-preview">
                                 การตัดสินใจเลือกประกอบอาชีพการงานของทุกคน
-                                เชื่อว่าแต่ละคนคงมีเหตุผลแตกต่างกัน
+                                เชื่อว่าแต่ละคนคงมีเหตุผลแตกต่างกันไปในการตัดสินใจ
                             </p>
-                        </div>
-                    </div>
+                        </div><!--col-->
+                    </div><!--row-->
 
                     <!--Popular 4-->
                     <div class="row text-left">
                         <div class="col-xl-4">
-                            <img src="~/image/Index/Descendants Of The Sun (news) 2.jpg" align="center" class="img-fluid"
-                                 width="125px" height="125px">
+                            <!--img-link-->
+                            <a href="#"><img src="~/image/Index/Descendants Of The Sun (news) 2.jpg" class="center"></a>
                         </div>
                         <div class="col-xl-8">
-                            <h2 style="font-size:15px;">รีวิว DOCTOR ROMANTIC (2016)</h2>
-                            <p style="text-align:left;">
+                            <!--content-link-->
+                            <a href="#"><h2 class="content-name"> รีวิว DOCTOR ROMANTIC (2016)</h2></a>
+                            <p class="content-text-preview">
                                 การตัดสินใจเลือกประกอบอาชีพการงานของทุกคน
-                                เชื่อว่าแต่ละคนคงมีเหตุผลแตกต่างกัน
+                                เชื่อว่าแต่ละคนคงมีเหตุผลแตกต่างกันไปในการตัดสินใจ
                             </p>
-                        </div>
-                    </div>
+                        </div><!--col-->
+                    </div><!--row-->
 
                     <!--Popular 5-->
                     <div class="row text-left">
                         <div class="col-xl-4">
-                            <img src="~/image/Index/Dr. romantic.jpg" align="center" class="img-fluid" width="125px" height="125px">
+                            <!--img-link-->
+                            <a href="#"><img src="~/image/Index/Dr. romantic.jpg" class="center"></a>
                         </div>
                         <div class="col-xl-8">
-                            <h2 style="font-size:15px;">รีวิว DOCTOR ROMANTIC (2016)</h2>
-                            <p style="text-align:left;">
+                            <!--content-link-->
+                            <a href="#"><h2 class="content-name"> รีวิว DOCTOR ROMANTIC (2016)</h2></a>
+                            <p class="content-text-preview">
                                 การตัดสินใจเลือกประกอบอาชีพการงานของทุกคน
-                                เชื่อว่าแต่ละคนคงมีเหตุผลแตกต่างกัน
+                                เชื่อว่าแต่ละคนคงมีเหตุผลแตกต่างกันไปในการตัดสินใจ
                             </p>
-                        </div>
-                    </div>
+                        </div><!--col-->
+                    </div><!--row-->
                 </div><!--container inside (Most Popular)-->
             </div><!--Most Popular-->
         </div><!--row (content1)-->
@@ -263,7 +297,7 @@
                         </div>
                     </div>
                 </div>
-                <a href="#" class="btn form-control btn-warning">See more !</a> <!-- BS3 -->
+                <a href="#" class="btn form-control btn-danger">See more !</a> <!-- BS3 -->
             </div>
         </section>
     </main>
@@ -272,7 +306,7 @@
             <!-- Post Content Column -->
             <div class="col-lg-6">
                 <div class="card my-4 ">
-                    <h5 class="card-header display-6 text-center bg-warning">PODCAST ?!</h5>
+                    <h5 class="card-header display-6 text-center bg-danger"> <p class="text-podcast" > PODCAST ?! </p> </h5>
                     <div class="card-body">
                         <audio controls>
                             <source src="~/assets/podcast/1.mp3" type="audio/mpeg">
@@ -282,7 +316,7 @@
                         <div class="table-responsive">
                             <table class="table table-hover">
                                 <thead>
-                                    <tr class="table-warning">
+                                    <tr class="table-danger">
                                         <th scope="col">Title</th>
                                         <th scope="col">Speaker</th>
                                         <th scope="col">Length</th>
@@ -381,7 +415,7 @@
                         <div class="form-group">
                             <textarea class="form-control" name="Feedback" id="Feedback" rows="5" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-warning form-control">Submit</button>
+                        <button type="submit" class="btn btn-danger form-control">Submit</button>
 
                     </form>
                 }
