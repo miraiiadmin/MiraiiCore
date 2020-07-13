@@ -26,6 +26,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Galada&display=swap" rel="stylesheet">
 
     <style>
+        .navbar {
+            background-color: #B03A2E;
+            font-family: 'Galada', cursive;
+        }
+
+        .logo {
+            font-size: 35px;
+        }
+
         .border-top footer {
             background-color: #B03A2E;
             color: white;
@@ -36,10 +45,10 @@
 <body>
     <header>
         <!--Navbar-->
-        <nav class="navbar navbar-expand-lg navbar fixed-top navbar-dark" style="background-color:#B03A2E ;">
+        <nav class="navbar navbar-expand-lg navbar fixed-top navbar-dark">
             <div class="container">
                 <!--center Navbar's Menu & Logo-->
-                <a class="navbar-brand" href="https://localhost:44369/Home/index">Miraii</a>
+                <a class="navbar-brand logo" href="https://localhost:44369/Home/index">Miraii</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                         data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                         aria-label="Toggle navigation">
@@ -53,17 +62,17 @@
                             <a class="nav-link" asp-area="" asp-controller="Home" asp-action="index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="Blog" asp-action="Review">Review</a>
+                            <a class="nav-link" asp-area="" asp-controller="Blog" asp-action="index">Review</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="About">About</a>
+                            <a class="nav-link" asp-area="" asp-controller="About" asp-action="index">About</a>
                         </li>
                     </ul>
 
-                    <!--search bar & button-->
+                    <!--search bar & button--><!--<i class="fas fa-search"></i>-->
                     <form class="form-inline my-2 my-lg-0">
                         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-warning my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></i></button>
+                        <button class="btn btn-warning my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button> 
                     </form>
                 </div><!--menu-->
             </div><!--container-->
@@ -80,7 +89,7 @@
     <br />
     <!--Footer-->
     <footer class="border-top footer">
-        <div class="container">
+        <div class="container" style="font-family: 'Galada', cursive;" >
             &copy; 2020 - Miraii
         </div>
     </footer>

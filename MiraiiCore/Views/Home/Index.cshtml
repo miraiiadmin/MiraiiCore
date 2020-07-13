@@ -3,10 +3,6 @@
 }
 
 <style>
-    body {
-        font-family: 'Galada', cursive;
-    }
-
     .center {
         display: block;
         margin-left: auto;
@@ -26,20 +22,75 @@
         font-size: 15px;
         color: black;
     }
+    .content-head {
+        position: absolute;
+        font-weight: bold;
+        font-size: 25px;
+        color: white;
+        bottom: 8px;
+    }
 
     .content-text-preview {
         color: black;
     }
 
-    .text-podcast {
+    .text-head {
         color: white;
+        font-family: 'Galada', cursive;
+        margin-bottom: 0px;
     }
+
+    .text-head-dark {
+        color: black;
+        font-family: 'Galada', cursive;
+    }
+
+    .img-head {
+        display: block;
+        margin-top: 75px;
+        margin-bottom: 50px;
+        width: 100%;
+    }
+
+    .img-big-content {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top : 65px;
+        width: 100%;
+    }
+
+    .text-block {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        background-color: black;
+        color: white;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .overimg {
+        position: relative;
+        max-width: 100%; 
+        margin: auto; 
+    }
+
+    .overimg .content {
+       position: absolute;
+       bottom: 0;
+       background: rgb(0, 0, 0);
+       background: rgba(0, 0, 0, 0.3);
+       color: white;
+       width: 100%; 
+       padding: 20px; 
+        }
 </style>
 
 <body>
     <!--Crossfade Carousel (picture 1200x480)-->
-    <div id="carouselExampleControls" class="carousel slide carousel-fade" data-ride="carousel">
-        <div class="carousel-inner mt-5 pt-2">
+    <div id="carouselExampleControls" class="carousel slide carousel-fade img-head" data-ride="carousel">
+        <div class="carousel-inner">
 
             <!--img 1-->
             <div class="carousel-item active" data-interval="2000">
@@ -70,38 +121,31 @@
         </a>
     </div>
 
-    <hr>
-
     <!--Content 1-->
-    <div class="container-sm my-5">
-        <div class="row text-center">
-            <div class="col-xl-7 p-3">
+    <div class="container-sm">
+        <div class="row">
+            <div class="col-xl-7">
                 <a href="#">
-                    <img src="~/image/Index/john wick.jpg" class="center m-2">
-                    <h2 class="content-name" ">
-                        John Wick 4 เลื่อนไปเดือนพฤษภาคม 2022 :<br>
-                        เหตุวิกฤติ COVID-19 ทำให้ล่าช้าไปอีก 1 ปี
-                    </h2><br>
-                    <p class="content-text-preview">
-                        Lionsgate สตูดิโอผู้สร้างแฟรนไชส์ภาพยนตร์ John Wick ได้ประกาศว่า John Wick 4
-                        ซึ่งยังคงนำแสดงโดย Keanu Reeves (คีอานู รีฟส์) จะเลื่อนกำหนดการฉายไปเป็นวันที่ 27 พฤษภมคม 2022
-                        จากเดิมที่กำหนดไว้วันที่ 21 พฤษภาคม 2021
-                    </p>
+                    <img src="~/image/Index/john wick.jpg" class="img-big-content">
+                    <div class="overimg ">
+                        <h2 class="content">
+                            John Wick 4 เลื่อนไปเดือนพฤษภาคม 2022 :
+                            เหตุวิกฤติ COVID-19 ทำให้ล่าช้าไปอีก 1 ปี
+                        </h2>
+                    </div>
                 </a>
             </div>
+
             <!--Most Popular (picture 4:3)-->
             <div class="col-sm-5">
                 <hr>
                 <div class="container">
-                    <div class="row">
-                        <p class="text-popular"><u> MOST POPULAR </u></p>
-                    </div>
 
                     <!--Popular 1-->
                     <div class="row text-left">
                         <div class="col-xl-4">
                             <!--img-link-->
-                            <a href="https://localhost:44369/Blog/Review"><img src="~/image/Index/Dr. romantic.jpg" class="center"></a>
+                            <a href="https://localhost:44369/Blog/index"><img src="~/image/Index/Dr. romantic.jpg" class="center"></a>
                         </div>
                         <div class="col-xl-8">
                             <!--content-link-->
@@ -297,7 +341,7 @@
                         </div>
                     </div>
                 </div>
-                <a href="#" class="btn form-control btn-danger">See more !</a> <!-- BS3 -->
+                <a href="#" class="btn form-control btn-danger text-head">See more !</a> <!-- BS3 -->
             </div>
         </section>
     </main>
@@ -306,7 +350,7 @@
             <!-- Post Content Column -->
             <div class="col-lg-6">
                 <div class="card my-4 ">
-                    <h5 class="card-header display-6 text-center bg-danger"> <p class="text-podcast" > PODCAST ?! </p> </h5>
+                    <h5 class="card-header display-6 text-center bg-danger"> <p class="text-head"> PODCAST ?! </p> </h5>
                     <div class="card-body">
                         <audio controls>
                             <source src="~/assets/podcast/1.mp3" type="audio/mpeg">
@@ -351,7 +395,7 @@
             </div>
             <div class="col-lg-6 text-center">
                 <hr>
-                <h2 class="display-6 text-center">Artwork</h2>
+                <h2 class="display-6 text-center text-head-dark ">Artwork</h2>
                 <hr>
                 <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
@@ -399,7 +443,7 @@
         <div class="row">
             <div class="col-md-6 mb-5">
                 <hr>
-                <p class="display-6 text-center">Contact us ?!</p>
+                <p class="display-6 text-center text-head-dark">Contact us ?!</p>
                 <hr>
                 <address class="text-center">
 
@@ -415,14 +459,14 @@
                         <div class="form-group">
                             <textarea class="form-control" name="Feedback" id="Feedback" rows="5" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-danger form-control">Submit</button>
+                        <button type="submit" class="btn btn-danger form-control text-head ">Submit</button>
 
                     </form>
                 }
             </div>
             <div class="col-md-6 mb-5">
                 <hr>
-                <h2 class="display-6 text-center">FB FANPAGE</h2>
+                <h2 class="display-6 text-center text-head-dark ">FB FANPAGE</h2>
                 <hr>
                 <address class="text-center">
                     <div class="fb-page" data-href="" class="fb-xfbml-parse-ignore"><a href="">The Handyman</a></blockquote></div>
