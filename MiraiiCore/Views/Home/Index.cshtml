@@ -10,13 +10,6 @@
         width: 100%;
     }
 
-    .text-popular {
-        margin-left: auto;
-        margin-right: auto;
-        font-weight: bold;
-        font-size: 25px;
-    }
-
     .content-name {
         font-weight: bold;
         font-size: 15px;
@@ -34,17 +27,6 @@
         color: black;
     }
 
-    .text-head {
-        color: white;
-        font-family: 'Galada', cursive;
-        margin-bottom: 0px;
-    }
-
-    .text-head-dark {
-        color: black;
-        font-family: 'Galada', cursive;
-    }
-
     .img-head {
         display: block;
         margin-top: 75px;
@@ -59,32 +41,6 @@
         margin-top : 65px;
         width: 100%;
     }
-
-    .text-block {
-        position: absolute;
-        bottom: 20px;
-        right: 20px;
-        background-color: black;
-        color: white;
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
-    .overimg {
-        position: relative;
-        max-width: 100%; 
-        margin: auto; 
-    }
-
-    .overimg .content {
-       position: absolute;
-       bottom: 0;
-       background: rgb(0, 0, 0);
-       background: rgba(0, 0, 0, 0.3);
-       color: white;
-       width: 100%; 
-       padding: 20px; 
-        }
 </style>
 
 <body>
@@ -126,13 +82,7 @@
         <div class="row">
             <div class="col-xl-7">
                 <a href="#">
-                    <img src="~/image/Index/john wick.jpg" class="img-big-content">
-                    <div class="overimg ">
-                        <h2 class="content">
-                            John Wick 4 เลื่อนไปเดือนพฤษภาคม 2022 :
-                            เหตุวิกฤติ COVID-19 ทำให้ล่าช้าไปอีก 1 ปี
-                        </h2>
-                    </div>
+                    <img src="~/image/Index/john wick.jpg" class="img-big-content"> 
                 </a>
             </div>
 
@@ -341,7 +291,7 @@
                         </div>
                     </div>
                 </div>
-                <a href="#" class="btn form-control btn-danger text-head">See more !</a> <!-- BS3 -->
+                <a href="#" class="btn form-control bg-maincolor text-head-dark">See more !</a> <!-- BS3 -->
             </div>
         </section>
     </main>
@@ -350,7 +300,7 @@
             <!-- Post Content Column -->
             <div class="col-lg-6">
                 <div class="card my-4 ">
-                    <h5 class="card-header display-6 text-center bg-danger"> <p class="text-head"> PODCAST ?! </p> </h5>
+                    <h5 class="card-header display-6 text-center bg-maincolor "> <p class="text-head-dark"> PODCAST ?! </p> </h5>
                     <div class="card-body">
                         <audio controls>
                             <source src="~/assets/podcast/1.mp3" type="audio/mpeg">
@@ -360,7 +310,7 @@
                         <div class="table-responsive">
                             <table class="table table-hover">
                                 <thead>
-                                    <tr class="table-danger">
+                                    <tr class="table bg-maincolor">
                                         <th scope="col">Title</th>
                                         <th scope="col">Speaker</th>
                                         <th scope="col">Length</th>
@@ -459,14 +409,14 @@
                         <div class="form-group">
                             <textarea class="form-control" name="Feedback" id="Feedback" rows="5" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-danger form-control text-head ">Submit</button>
+                        <button type="submit" class="btn bg-maincolor form-control ">Submit</button>
 
                     </form>
                 }
             </div>
             <div class="col-md-6 mb-5">
                 <hr>
-                <h2 class="display-6 text-center">FB FANPAGE</h2>
+                <h2 class="display-6 text-center text-head-dark ">FB FANPAGE</h2>
                 <hr>
                 <address class="text-center">
                     <div class="fb-page" data-href="https://www.facebook.com/Miraii-101825598242098/" data-tabs="timeline" data-width="340" data-height="427" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/Miraii-101825598242098/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Miraii-101825598242098/">The Handyman</a></blockquote></div>

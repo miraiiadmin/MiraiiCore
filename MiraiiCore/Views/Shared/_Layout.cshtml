@@ -23,33 +23,55 @@
     <script src="https://kit.fontawesome.com/8dedd5ecd1.js" crossorigin="anonymous"></script>
 
     <!--google font-->
-    <link href="https://fonts.googleapis.com/css2?family=Galada&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
 
     <style>
         .navbar {
-            background-color: #B03A2E;
-            font-family: 'Galada', cursive;
+            background-color: #E5AC51;
+            font-family: 'Bangers', cursive;
         }
 
-        .logo {
+        .text-nav {
             font-size: 35px;
+            color: #35823A;
         }
 
         .border-top footer {
-            background-color: #B03A2E;
-            color: white;
+            background-color: #E5AC51;
+            color: #87C93A;
         }
+
+        .bg-maincolor {
+            background-color: #F1AA2A;
+        }
+
+        .text-maincolor {
+            color: #35823A;
+        }
+
+        .text-head {
+            color: white;
+            font-family: 'Bangers', cursive;
+            margin-bottom: 0px;
+        }
+
+        .text-head-dark {
+            color: black;
+            font-family: 'Bangers', cursive;
+            margin-bottom: 0px;
+        }
+
     </style>
 </head>
 
 <body>
     <header>
         <!--Navbar-->
-        <nav class="navbar navbar-expand-lg navbar fixed-top navbar-dark">
+        <nav class="navbar navbar-expand-lg navbar fixed-top">
             <div class="container">
                 <!--center Navbar's Menu & Logo-->
-                <a class="navbar-brand logo" href="https://localhost:44369/Home/index">Miraii</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                <a class="navbar-brand text-nav" href="https://localhost:44369/Home/index">Miraii</a>
+                <button class="navbar-toggler btn-warning " type="button" data-toggle="collapse"
                         data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                         aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -59,20 +81,19 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="index">Home</a>
+                            <a class="nav-link text-nav" asp-area="" asp-controller="Home" asp-action="index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="Blog" asp-action="index">Review</a>
+                            <a class="nav-link text-nav" asp-area="" asp-controller="Blog" asp-action="index">Review</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="About" asp-action="index">About</a>
+                            <a class="nav-link text-nav" asp-area="" asp-controller="About" asp-action="index">About</a>
                         </li>
                     </ul>
 
                     <!--search bar & button--><!--<i class="fas fa-search"></i>-->
                     <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-warning my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button> 
+                        <button class="btn btn-warning m-2 mx-4  my-sm-0" type="submit"><i class="fas fa-search"></i></button> 
                     </form>
                 </div><!--menu-->
             </div><!--container-->
@@ -89,7 +110,7 @@
     <br />
     <!--Footer-->
     <footer class="border-top footer">
-        <div class="container" style="font-family: 'Galada', cursive;" >
+        <div class="container text-maincolor " style="font-family: 'Bangers', cursive; " >
             &copy; 2020 - Miraii
         </div>
     </footer>
