@@ -47,6 +47,10 @@
             color: #35823A;
         }
 
+        .modal-backdrop {
+          z-index: -1;
+        }
+
         .main-font {
             font-family: 'Bangers', cursive;
             margin-bottom: 0px;
@@ -114,14 +118,14 @@
                     </ul>
 
                     <!--search bar & button--><!--<i class="fas fa-search"></i>-->
-                    <form class="form-inline my-2 my-lg-0">
+                    <form>
                         <!-- Button trigger modal -->
                         <button type="button" class="btn btn-warning mx-3" data-toggle="modal" data-target="#exampleModal">
                             <i class="fas fa-search"></i>
                         </button>
 
                         <!-- Modal -->
-                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal fade" id="exampleModal"  role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="false">
                             <div class="modal-dialog modal-dialog-centered">
                                 <div class="modal-content">
                                     <div class="modal-header">
