@@ -41,22 +41,26 @@
         margin-top : 65px;
         width: 100%;
     }
+
+    .fix-index {
+        max-width: 1140px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .podcast-center {
+        max-width: 330px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 </style>
 
 <body>
     <!--Crossfade Carousel (picture 1200x480)-->
-    <div id="carouselExampleControls" class="carousel slide carousel-fade img-head" data-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active" data-interval="2000">
-                <video loop="true" autoplay="autoplay" controls muted class="d-block w-100" >
-                    <source src="~/image/Vimeo_2.mp4" type="video/mp4" />
-                </video>
-            </div>
-        </div>
-    </div>
+    <img src="~/image/Index/cover.jpg" class="img-head">
 
     <!--Content 1-->
-    <div class="container-sm">
+    <div class="container-sm fix-index ">
         <div class="row">
             <div class="col-xl-7">
                 <a href="#">
@@ -77,7 +81,7 @@
                         </div>
                         <div class="col-xl-8">
                             <!--content-link-->
-                            <a href="https://localhost:44369/Blog/Review"><h2 class="content-name"> รีวิว DOCTOR ROMANTIC (2016)</h2></a>
+                            <a href="https://localhost:44369/Blog/index"><h2 class="content-name"> รีวิว DOCTOR ROMANTIC (2016)</h2></a>
                             <p class="content-text-preview">
                                 การตัดสินใจเลือกประกอบอาชีพการงานของทุกคน
                                 เชื่อว่าแต่ละคนคงมีเหตุผลแตกต่างกันไปในการตัดสินใจ
@@ -269,7 +273,7 @@
                         </div>
                     </div>
                 </div>
-                <a href="#" class="btn form-control bg-maincolor text-head-dark">See more !</a> <!-- BS3 -->
+                <a href="#" class="btn form-control bg-maincolor main-font">See more !</a> <!-- BS3 -->
             </div>
         </section>
     </main>
@@ -279,12 +283,14 @@
             <div class="col-lg-6">
                 <div class="card my-4 ">
                     <h5 class="card-header display-6 text-center bg-maincolor "> <p class="text-head-dark"> PODCAST ?! </p> </h5>
-                    <div class="card-body">
-                        <audio controls>
-                            <source src="~/assets/podcast/1.mp3" type="audio/mpeg">
-                            Your browser does not support the audio element.
-                        </audio><br /><br />
-                        <p class="display-6">Now you are listening to <a href="#">this</a></p><br />
+                    <div class="card-body ">
+                        <div class="container podcast-center">
+                            <audio controls>
+                                <source src="~/assets/podcast/1.mp3" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio><br />
+                        </div>
+                        <p class="display-6 text-center" >Now you are listening to <a href="#">this</a></p><br />
                         <div class="table-responsive">
                             <table class="table table-hover">
                                 <thead>
@@ -387,7 +393,7 @@
                         <div class="form-group">
                             <textarea class="form-control" name="Feedback" id="Feedback" rows="5" required></textarea>
                         </div>
-                        <button type="submit" class="btn bg-maincolor form-control ">Submit</button>
+                        <button type="submit" class="btn bg-maincolor form-control main-font ">Submit</button>
 
                     </form>
                 }

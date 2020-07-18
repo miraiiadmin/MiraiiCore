@@ -16,9 +16,7 @@
 
     <link href="~/assets/css/style.css" rel="stylesheet">
 
-    <!--Bootstrap CSS CDN-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-
+   
     <!--font awesome-->
     <script src="https://kit.fontawesome.com/8dedd5ecd1.js" crossorigin="anonymous"></script>
 
@@ -27,13 +25,13 @@
 
     <style>
         .navbar {
-            background-color: #E5AC51;
+            background-color: white;
             font-family: 'Bangers', cursive;
         }
 
         .text-nav {
             font-size: 35px;
-            color: #35823A;
+            color: #E5AC51;
         }
 
         .border-top footer {
@@ -49,8 +47,7 @@
             color: #35823A;
         }
 
-        .text-head {
-            color: white;
+        .main-font {
             font-family: 'Bangers', cursive;
             margin-bottom: 0px;
         }
@@ -59,8 +56,20 @@
             color: black;
             font-family: 'Bangers', cursive;
             margin-bottom: 0px;
+            font-size: 2rem;
         }
 
+        .nav-icon {
+            margin-top: auto;
+            margin-bottom: auto;
+            font-size: 35px;
+        }
+
+        .logo {
+            width: 11%;
+            padding-left: 15px;
+            display: block;
+        }
     </style>
 </head>
 
@@ -70,7 +79,7 @@
         <nav class="navbar navbar-expand-lg navbar fixed-top">
             <div class="container">
                 <!--center Navbar's Menu & Logo-->
-                <a class="navbar-brand text-nav" href="https://localhost:44369/Home/index">Miraii</a>
+                <a class="navbar-brand text-nav" href="https://localhost:44369/Home/index"> <img src="~/image/Index/Miraii LOGO.png" class="logo img-fluid" /> </a>
                 <button class="navbar-toggler btn-warning " type="button" data-toggle="collapse"
                         data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                         aria-label="Toggle navigation">
@@ -83,23 +92,55 @@
                         <li class="nav-item active">
                             <a class="nav-link text-nav" asp-area="" asp-controller="Home" asp-action="index">Home</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-nav" asp-area="" asp-controller="Blog" asp-action="index">Review</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-nav" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                service
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item text-nav" asp-area="" asp-controller="Blog" asp-action="index">blog</a>
+                                <a class="dropdown-item text-nav" asp-area="" asp-controller="Blog" asp-action="index">review</a>
+                                <a class="dropdown-item text-nav" asp-area="" asp-controller="Blog" asp-action="index">podcast</a>
+                            </div>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-nav" asp-area="" asp-controller="About" asp-action="index">About</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item nav-icon">
                             <a href="https://www.facebook.com/The-Handyman-110039810651594/"><i class="nav-link icofont-facebook"></i></a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item nav-icon">
                             <a href="https://www.instagram.com/thehandyman.bkk/"><i class="nav-link icofont-instagram"></i></a>
                         </li>
                     </ul>
 
                     <!--search bar & button--><!--<i class="fas fa-search"></i>-->
                     <form class="form-inline my-2 my-lg-0">
-                        <button class="btn btn-warning m-2 mx-4  my-sm-0" type="submit"><i class="fas fa-search"></i></button> 
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-warning mx-3" data-toggle="modal" data-target="#exampleModal">
+                            <i class="fas fa-search"></i>
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </form>
                 </div><!--menu-->
             </div><!--container-->
