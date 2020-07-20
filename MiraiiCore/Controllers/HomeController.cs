@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
@@ -11,22 +12,39 @@ namespace MiraiiCore.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
-        {
-            _logger = logger;
-        }
+        SqlConnection con = new SqlConnection();
+        SqlCommand com = new SqlCommand();
+        SqlDataReader dr;
 
         public IActionResult Index()
         {
             return View();
         }
 
-        public IActionResult Privacy()
+        void ConnectionString()
         {
-            return View();
+            con.ConnectionString = "Data Source=DESKTOP-2MCCG5E\\SQLEXPRESS;Initial Catalog=Miraii;Trusted_Connection=True;MultipleActiveResultSets=true";
         }
+
+        [HttpPost]
+        public IActionResult Feedback(FeedbackModel insertFeedback) //Insert Feedback Action
+        {
+            DateTime date = DateTime.Now;
+            ConnectionString();
+            con.Open();
+
+            com.Connection = con;
+            com.CommandText = "INSERT INTO Feedback(Feedback,Date) VALUES (@Feedback,@Date)";
+
+            com.Parameters.AddWithValue("@Feedback", insertFeedback.Feedback);
+            com.Parameters.AddWithValue("@Date", date.ToString());
+            com.ExecuteNonQuery();
+            con.Close();
+
+            return RedirectToAction("Index", "Home");
+
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

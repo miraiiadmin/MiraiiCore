@@ -382,6 +382,8 @@
                     <a href="https://www.linkedin.com/"><i class="icofont-linkedin text-center"></i><br /><br /></a>
                 </address>
                 <p class="display-6 text-center">You can leave us a comment here !</p>
+
+
                 @using (Html.BeginForm("Feedback", "Home", FormMethod.Post))
                 {
                     <form data-aos="fade-up">
@@ -389,7 +391,6 @@
                             <textarea class="form-control" name="Feedback" id="Feedback" rows="5" required></textarea>
                         </div>
                         <button type="submit" class="btn bg-maincolor form-control main-font ">Submit</button>
-
                     </form>
                 }
             </div>
