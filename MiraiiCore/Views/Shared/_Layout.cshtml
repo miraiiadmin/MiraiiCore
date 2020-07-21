@@ -64,15 +64,29 @@
         }
 
         .nav-icon {
-            margin-top: auto;
-            margin-bottom: auto;
+            margin-top: 8px;
+            margin-bottom: 9px;
             font-size: 35px;
+        }
+
+        .nav-button {
+            margin-top: 9px;
+            margin-bottom: 10px;
+            padding: 0px;
+            font-size: 25px;
+            color : white;
         }
 
         .logo {
             width: 11%;
-            padding-left: 15px;
+            padding-right: auto;
             display: block;
+        }
+
+        .nav-tog {
+            color: white;
+            background-color: #E5AC51;
+            margin-left: auto;
         }
     </style>
 </head>
@@ -84,10 +98,10 @@
             <div class="container">
                 <!--center Navbar's Menu & Logo-->
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
-                    <img src="~/image/Index/Miraii LOGO.png" class="logo img-fluid">
+                    <img src="~/image/Index/Miraii LOGO.png" class="logo">
                 </a>
-                <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon navbar-dark"></span>
+                <button class="navbar-toggler nav-tog" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <!--menu-->
@@ -100,7 +114,7 @@
                             <a class="nav-link dropdown-toggle text-nav" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 service
                             </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <div id="reviewDrop" class="dropdown-menu" aria-labelledby="navbarDropdown" onmouseover="reviewDrop.classList.add('show');">
                                 <a class="dropdown-item text-nav" asp-area="" asp-controller="Blog" asp-action="index">blog</a>
                                 <a class="dropdown-item text-nav" asp-area="" asp-controller="Blog" asp-action="index">review</a>
                                 <a class="dropdown-item text-nav" asp-area="" asp-controller="Blog" asp-action="index">podcast</a>
@@ -112,44 +126,35 @@
                         <li class="nav-item nav-icon">
                             <a href="https://www.facebook.com/The-Handyman-110039810651594/"><i class="nav-link icofont-facebook"></i></a>
                         </li>
-                        <li class="nav-item nav-icon">
+                        <li class="nav-item mr-3 nav-icon">
                             <a href="https://www.instagram.com/thehandyman.bkk/"><i class="nav-link icofont-instagram"></i></a>
                         </li>
                     </ul>
 
-                    <!--search bar & button--><!--<i class="fas fa-search"></i>-->
+                    <!--button--><!--<i class="fas fa-search"></i>-->
                     <form>
                         <!-- Button trigger modal -->
-                        <button type="button" class="btn btn-warning mx-3" data-toggle="modal" data-target="#exampleModal">
+                        <button type="button" class="btn btn-warning nav-button " data-toggle="modal" data-target="#exampleModal">
                             <i class="nav-link fas fa-search"></i>
                         </button>
 
                         <!-- Modal -->
-                        <div class="modal fade" id="exampleModal" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="false">
+                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered">
                                 <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                        <button type="button" class="btn btn-primary">Save changes</button>
-                                    </div>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Search this blog">
+                                        <div class="input-group-append text-center">
+                                            <button class="btn btn-warning" type="submit"><i class="fa fa-search"></i></button>
+                                        </div>
+                                    </div><!--input-group-->
                                 </div>
                             </div>
                         </div>
-
                     </form>
                 </div><!--menu-->
             </div><!--container-->
     </header>
-
 
     <main role="main" class="pb-3">
         @RenderBody()
@@ -160,7 +165,7 @@
     <br />
     <!--Footer-->
     <footer class="border-top footer">
-        <div class="container text-maincolor " style="font-family: 'Bangers', cursive; " >
+        <div class="container text-maincolor " style="font-family: 'Bangers', cursive; ">
             &copy; 2020 - Miraii
         </div>
     </footer>
