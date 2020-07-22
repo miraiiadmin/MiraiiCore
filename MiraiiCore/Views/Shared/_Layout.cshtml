@@ -32,6 +32,7 @@
         .text-nav {
             font-size: 35px;
             color: #E5AC51;
+            margin-right: 10px;
         }
 
         .border-top footer {
@@ -89,6 +90,13 @@
             background-color: #E5AC51;
             margin-left: auto;
         }
+        .dropdown:hover > .dropdown-menu {
+            display: block;
+        }
+
+        .dropdown > .dropdown-toggle:active {
+            pointer-events: none;
+        }
     </style>
 </head>
 
@@ -114,7 +122,7 @@
                         </li>
                         <!--Read-->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-nav" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link text-nav" href="https://localhost:44369/Blog/index" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Read
                             </a>
                             <div id="reviewDrop" class="dropdown-menu" aria-labelledby="navbarDropdown" onmouseover="reviewDrop.classList.add('show');">
@@ -124,7 +132,7 @@
                         </li>
                         <!--Listen-->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-nav" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link text-nav" href="https://localhost:44369/Home/index" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Listen
                             </a>
                             <div id="reviewDrop" class="dropdown-menu" aria-labelledby="navbarDropdown" onmouseover="reviewDrop.classList.add('show');">
