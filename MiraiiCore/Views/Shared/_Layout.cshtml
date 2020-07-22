@@ -24,7 +24,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
 
     <style>
-        .navbar {
+        .nav-theme {
             background-color: white;
             font-family: 'Bangers', cursive;
         }
@@ -78,9 +78,10 @@
         }
 
         .logo {
-            width: 11%;
+            width: 30%;
             padding-right: auto;
             display: block;
+            max-width: 200px;
         }
 
         .nav-tog {
@@ -94,32 +95,43 @@
 <body>
     <header>
         <!--Navbar-->
-        <nav class="navbar navbar-expand-lg navbar fixed-top">
+        <nav class="navbar navbar-expand-lg nav-theme bg-white fixed-top">
             <div class="container">
                 <!--center Navbar's Menu & Logo-->
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
                     <img src="~/image/Index/Miraii LOGO.png" class="logo">
                 </a>
-                <button class="navbar-toggler nav-tog" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler nav-tog navbar-dark" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <!--menu-->
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto">
+                        <!--Home-->
                         <li class="nav-item active">
                             <a class="nav-link text-nav" asp-area="" asp-controller="Home" asp-action="index">Home</a>
                         </li>
+                        <!--Read-->
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-nav" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                service
+                                Read
                             </a>
                             <div id="reviewDrop" class="dropdown-menu" aria-labelledby="navbarDropdown" onmouseover="reviewDrop.classList.add('show');">
                                 <a class="dropdown-item text-nav" asp-area="" asp-controller="Blog" asp-action="index">blog</a>
                                 <a class="dropdown-item text-nav" asp-area="" asp-controller="Blog" asp-action="index">review</a>
+                            </div>
+                        </li>
+                        <!--Listen-->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-nav" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Listen
+                            </a>
+                            <div id="reviewDrop" class="dropdown-menu" aria-labelledby="navbarDropdown" onmouseover="reviewDrop.classList.add('show');">
                                 <a class="dropdown-item text-nav" asp-area="" asp-controller="Blog" asp-action="index">podcast</a>
                             </div>
                         </li>
+                        <!--About-->
                         <li class="nav-item">
                             <a class="nav-link text-nav" asp-area="" asp-controller="About" asp-action="index">About</a>
                         </li>
@@ -142,15 +154,19 @@
                         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered">
                                 <div class="modal-content">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control" placeholder="Search this blog">
-                                        <div class="input-group-append text-center">
-                                            <button class="btn btn-warning" type="submit"><i class="fa fa-search"></i></button>
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" placeholder="Type something here">
+                                                <div class="input-group-append text-center">
+                                                    <button class="btn btn-warning" type="submit"><i class="fa fa-search"></i></button>
+                                                </div>
+                                            </div><!--input-group-->
                                         </div>
-                                    </div><!--input-group-->
+                                    </div><!--Card-->
                                 </div>
-                            </div>
-                        </div>
+                            </div><!--Modal dialog-->
+                        </div><!--Modal-->
                     </form>
                 </div><!--menu-->
             </div><!--container-->
