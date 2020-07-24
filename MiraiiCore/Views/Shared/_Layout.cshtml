@@ -16,14 +16,20 @@
 
     <link href="~/assets/css/style.css" rel="stylesheet">
 
-   
+
     <!--font awesome-->
     <script src="https://kit.fontawesome.com/8dedd5ecd1.js" crossorigin="anonymous"></script>
 
     <!--google font-->
     <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@500&display=swap" rel="stylesheet">
+
 
     <style>
+        body {
+            font-family: 'Sarabun', sans-serif;
+        }
+
         .nav-theme {
             background-color: white;
             font-family: 'Bangers', cursive;
@@ -37,7 +43,12 @@
 
         .border-top footer {
             background-color: #E5AC51;
-            color: #87C93A;
+        }
+
+        .text-footer {
+            color: white;
+            font-size: 35px;
+            font-family: 'Bangers', cursive;
         }
 
         .bg-maincolor {
@@ -45,11 +56,15 @@
         }
 
         .text-maincolor {
-            color: #35823A;
+            color: #E5AC51;
+        }
+
+        .text-seccolor {
+            color: #239B56;
         }
 
         .modal-backdrop {
-          z-index: -1;
+            z-index: -1;
         }
 
         .main-font {
@@ -59,6 +74,13 @@
 
         .text-head-dark {
             color: black;
+            font-family: 'Bangers', cursive;
+            margin-bottom: 0px;
+            font-size: 2rem;
+        }
+
+        .text-head-light {
+            color: #E5AC51;
             font-family: 'Bangers', cursive;
             margin-bottom: 0px;
             font-size: 2rem;
@@ -75,7 +97,7 @@
             margin-bottom: 10px;
             padding: 0px;
             font-size: 25px;
-            color : white;
+            color: white;
         }
 
         .logo {
@@ -90,6 +112,7 @@
             background-color: #E5AC51;
             margin-left: auto;
         }
+
         .dropdown:hover > .dropdown-menu {
             display: block;
         }
@@ -178,6 +201,7 @@
                     </form>
                 </div><!--menu-->
             </div><!--container-->
+        </nav>
     </header>
 
     <main role="main" class="pb-3">
@@ -189,7 +213,7 @@
     <br />
     <!--Footer-->
     <footer class="border-top footer">
-        <div class="container text-maincolor " style="font-family: 'Bangers', cursive; ">
+        <div class="container text-footer">
             &copy; 2020 - Miraii
         </div>
     </footer>

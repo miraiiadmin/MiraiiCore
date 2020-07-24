@@ -11,6 +11,7 @@
     }
 
     .content-name {
+        font-family: 'Sarabun', sans-serif;
         font-weight: bold;
         font-size: 15px;
         color: black;
@@ -38,14 +39,14 @@
         display: block;
         margin-left: auto;
         margin-right: auto;
-        margin-top: 65px;
-        width: 100%;
+        width: 97.5%;
     }
 
     .fix-index {
         max-width: 1110px;
         margin-left: auto;
         margin-right: auto;
+        margin-bottom: 30px;
     }
 
     .podcast-center {
@@ -58,6 +59,18 @@
 <body>
     <!--Crossfade Carousel (picture 1200x480)-->
     <img src="~/image/Index/cover.jpg" class="img-head">
+
+    <!--=========== ONLY TEST ==============-->
+
+    <a href="https://localhost:44369/Admin/FileUploader">
+        <input class="btn btn-warning admin-btn" id="Button1" type="button" value="Upload" />
+    </a>
+
+    <a href="https://localhost:44369/Admin">
+        <input class="btn btn-warning admin-btn" id="Button1" type="button" value="LOGIN" />
+    </a>
+    <!--=========== ONLY TEST ==============-->
+
 
     <main role="main">
         <section id="portfolio" class="portfolio">
@@ -75,7 +88,6 @@
                 </div>
 
                 <div class="row portfolio-container" data-aos="fade-up">
-
                     <div class="col-lg-4 col-md-6 portfolio-item filter-card">
                         <img src="https://steamuserimages-a.akamaihd.net/ugc/868489934988835719/ED9B08B975B07AEC0FC43632305F8AD4F45B4718/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true" width="100" height="225" class="card-img-top" text="Thumbnail" />
                         <div class="card-body">
@@ -180,26 +192,40 @@
     </main>
 
     <!--Content 1-->
-    <div class="container-sm fix-index ">
+    <div class="container-xl fix-index ">
         <div class="row fix-index">
-            <div class="col-xl-7 fix-index">
-                <a href="#">
-                    <img src="~/image/Index/john wick.jpg" class="img-big-content">
-                </a>
+            <div class="col-xl fix-index">
+                <div class="container">
+                    <div class="row mt-3">
+                        <a href="#">
+                            <img src="~/image/Index/korea2.jpg" class="img-big-content">
+                        </a>
+                    </div>
+                    <div class="row mt-3">
+                        <a href="#">
+                            <img src="~/image/Index/weathering.jpg" class="img-big-content">
+                        </a>
+                    </div>
+                </div>
             </div>
 
-            <!--Most Popular (picture 4:3)-->
-            <div class="col-sm-5">
+
+            <!--WEEKLY UPDATE !! (picture 4:3)-->
+
+            <div class="col-sm">
+                <hr>
+                <p class="display-6 text-center text-head-light">WEEKLY UPDATE !!</p>
                 <hr>
                 <div class="container">
-
+                    <br />
+                    <br />
                     <!--Popular 1-->
                     <div class="row text-left">
-                        <div class="col-xl-4">
+                        <div class="col-md-4 my-2">
                             <!--img-link-->
                             <a href="https://localhost:44369/Blog/index"><img src="~/image/Index/Dr. romantic.jpg" class="center"></a>
                         </div>
-                        <div class="col-xl-8">
+                        <div class="col-sm-8 my-2">
                             <!--content-link-->
                             <a href="https://localhost:44369/Blog/index"><h2 class="content-name"> รีวิว DOCTOR ROMANTIC (2016)</h2></a>
                             <p class="content-text-preview">
@@ -210,11 +236,11 @@
                     </div><!--row-->
                     <!--Popular 2-->
                     <div class="row text-left">
-                        <div class="col-xl-4">
+                        <div class="col-md-4 my-2">
                             <!--img-link-->
                             <a href="#"><img src="~/image/Index/Bohemian.jpg" class="center"></a>
                         </div>
-                        <div class="col-xl-8">
+                        <div class="col-sm-8 my-2">
                             <!--content-link-->
                             <a href="#"><h2 class="content-name"> รีวิว DOCTOR ROMANTIC (2016)</h2></a>
                             <p class="content-text-preview">
@@ -225,11 +251,11 @@
                     </div><!--row-->
                     <!--Popular 3-->
                     <div class="row text-left">
-                        <div class="col-xl-4">
+                        <div class="col-md-4 my-2">
                             <!--img-link-->
                             <a href="#"><img src="~/image/Index/the beetle.jpg" class="center"></a>
                         </div>
-                        <div class="col-xl-8">
+                        <div class="col-sm-8 my-2">
                             <!--content-link-->
                             <a href="#"><h2 class="content-name"> รีวิว DOCTOR ROMANTIC (2016)</h2></a>
                             <p class="content-text-preview">
@@ -240,11 +266,11 @@
                     </div><!--row-->
                     <!--Popular 4-->
                     <div class="row text-left">
-                        <div class="col-xl-4">
+                        <div class="col-md-4 my-2">
                             <!--img-link-->
                             <a href="#"><img src="~/image/Index/Descendants Of The Sun (news) 2.jpg" class="center"></a>
                         </div>
-                        <div class="col-xl-8">
+                        <div class="col-md-8 my-2">
                             <!--content-link-->
                             <a href="#"><h2 class="content-name"> รีวิว DOCTOR ROMANTIC (2016)</h2></a>
                             <p class="content-text-preview">
@@ -255,11 +281,11 @@
                     </div><!--row-->
                     <!--Popular 5-->
                     <div class="row text-left">
-                        <div class="col-xl-4">
+                        <div class="col-md-4 my-2">
                             <!--img-link-->
-                            <a href="#"><img src="~/image/Index/Dr. romantic.jpg" class="center"></a>
+                            <a href="#"><img src="~/image/Index/away.jpg" class="center"></a>
                         </div>
-                        <div class="col-xl-8">
+                        <div class="col-sm-8 my-2">
                             <!--content-link-->
                             <a href="#"><h2 class="content-name"> รีวิว DOCTOR ROMANTIC (2016)</h2></a>
                             <p class="content-text-preview">
@@ -274,6 +300,8 @@
     </div><!--container-->
     <div class="container">
         <div class="row">
+
+
             <!-- Post Content Column -->
             <div class="col-lg-6">
                 <div class="card my-4 ">
