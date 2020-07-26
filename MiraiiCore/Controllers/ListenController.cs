@@ -6,13 +6,11 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace MiraiiCore.Controllers
 {
-    public class BlogController : Controller
+    public class ListenController : Controller
     {
         public IActionResult Index()
         {
             return View();
         }
-
-        
     }
 }

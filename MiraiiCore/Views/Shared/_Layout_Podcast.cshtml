@@ -123,18 +123,20 @@
 
         .active2 {
             text-decoration: underline overline;
-            font-size: 39px;
+            font-size: 37px;
             color: #FCDC74;
         }
 
         .dropdown:hover {
             text-decoration: underline overline;
+            font-size: 37px;
             color: #FCDC74;
         }
 
         .nav-item:hover {
             text-decoration: underline overline;
-            color: #FCDC74;
+            font-size: 37px;
+            font-size: 37px;
         }
 
         .dropdown-item:hover {
@@ -163,7 +165,7 @@
                     <ul class="navbar-nav ml-auto">
                         <!--Home-->
                         <li class="nav-item">
-                            <a class="nav-link text-nav active2" asp-area="" asp-controller="Home" asp-action="index">Home</a>
+                            <a class="nav-link text-nav" asp-area="" asp-controller="Home" asp-action="index">Home</a>
                         </li>
                         <!--Read-->
                         <li class="nav-item dropdown">
@@ -177,7 +179,7 @@
                         </li>
                         <!--Listen-->
                         <li class="nav-item dropdown">
-                            <a class="nav-link text-nav" href="https://localhost:44369/Home/index" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link text-nav active2" href="https://localhost:44369/Home/index" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Listen
                             </a>
                             <div id="reviewDrop" class="dropdown-menu" aria-labelledby="navbarDropdown" onmouseover="reviewDrop.classList.add('show');">
