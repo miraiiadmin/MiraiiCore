@@ -23,16 +23,14 @@ namespace MiraiiCore.Controllers
             con.ConnectionString = "data source=DESKTOP-27AKM7H\\MSSQLSERVER01; database=Miraii; integrated security = SSPI;";
         }
 
-
         [HttpGet]
         public IActionResult Verify()
         {
             return View();
         }
 
-
         [HttpPost]
-        public IActionResult Verify(Admin acc)
+        public IActionResult Verify(AdminViewModel acc)
         {
             connectionString();
             con.Open();
@@ -47,7 +45,7 @@ namespace MiraiiCore.Controllers
             else
             {
                 con.Close();
-                return View("Index");
+                return View("Error");
             }
         }
         [HttpGet]
@@ -56,6 +54,9 @@ namespace MiraiiCore.Controllers
             return View();
         }
 
-       
+        public IActionResult Error()
+        {
+            return View();
+        }
     }
 }

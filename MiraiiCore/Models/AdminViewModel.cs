@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace MiraiiCore.Models
 {
-    public class Admin
+    public class AdminViewModel
     {
- 
         public string username { get; set; }
 
         public string password { get; set; }
