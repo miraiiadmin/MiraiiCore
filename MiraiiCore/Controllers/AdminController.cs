@@ -14,7 +14,6 @@ namespace MiraiiCore.Controllers
         SqlCommand com = new SqlCommand();
         SqlDataReader dr;
 
-        [HttpGet]
         public IActionResult Index()
         {
             return View();
@@ -23,6 +22,14 @@ namespace MiraiiCore.Controllers
         {
             con.ConnectionString = "data source=DESKTOP-27AKM7H\\MSSQLSERVER01; database=Miraii; integrated security = SSPI;";
         }
+
+
+        [HttpGet]
+        public IActionResult Verify()
+        {
+            return View();
+        }
+
 
         [HttpPost]
         public IActionResult Verify(Admin acc)
@@ -43,10 +50,12 @@ namespace MiraiiCore.Controllers
                 return View("Index");
             }
         }
-
+        [HttpGet]
         public IActionResult FileUploader()
         {
             return View();
         }
+
+       
     }
 }

@@ -63,11 +63,17 @@
         margin-left: auto;
         margin-right: auto;
     }
+
+    .icon {
+            margin-top: 8px;
+            margin-bottom: 9px;
+            font-size: 35px;
+     }
 </style>
 
 <body>
     <!--Crossfade Carousel (picture 1200x480)-->
-    <img src="~/image/Index/cover.jpg" class="img-head">
+    <img src="~/image/Index/cover.png" class="img-head">
 
     <!--=========== ONLY TEST ==============-->
 
@@ -75,7 +81,7 @@
         <input class="btn btn-warning admin-btn" id="Button1" type="button" value="Upload" />
     </a>
 
-    <a href="https://localhost:44369/Admin">
+    <a asp-area="" asp-controller="Admin" asp-action="Index">
         <input class="btn btn-warning admin-btn" id="Button1" type="button" value="LOGIN" />
     </a>
     <!--=========== ONLY TEST ==============-->
@@ -195,7 +201,7 @@
                         </div>
                     </div>
                 </div>
-                <a href="#" class="btn form-control btn-outline-success main-font">See more !</a> <!-- BS3 -->
+                <a href="#" class="btn form-control btn-outline-success">See more !</a> <!-- BS3 -->
             </div>
         </section>
     </main>
@@ -223,7 +229,7 @@
 
             <div class="col-sm">
                 <hr>
-                <p class="display-6 text-center text-head-light">มุมประจำสัปดาห์</p>
+                <p class="display-6 text-center text-head-light">มุมนักเขียนประจำสัปดาห์</p>
                 <hr>
                 <div class="container">
                     <br />
@@ -237,14 +243,11 @@
                             <!--content-link-->
                             <a href="https://localhost:44369/Blog/index"><h2 class="content-name"> รีวิว DOCTOR ROMANTIC (2016)</h2></a>
                             <p class="content-text-preview">
-                                Memories On The Table Brown
-                                <br />
-                                Date : 26/07/2020
-                            </p>
-                            <p class="content-text-preview">
+                                <b>26/07/2020</b><br />
                                 การตัดสินใจเลือกประกอบอาชีพการงานของทุกคน
                                 เชื่อว่าแต่ละคนคงมีเหตุผลแตกต่างกันไปในการตัดสินใจ
                             </p>
+
                         </div><!--col-->
                     </div><!--row-->
                     <!--Popular 2-->
@@ -257,14 +260,11 @@
                             <!--content-link-->
                             <a href="https://localhost:44369/Blog/index"><h2 class="content-name"> รีวิว DOCTOR ROMANTIC (2016)</h2></a>
                             <p class="content-text-preview">
-                                Memories On The Table Brown
-                                <br />
-                                Date : 26/07/2020
-                            </p>
-                            <p class="content-text-preview">
+                                <b>26/07/2020</b><br />
                                 การตัดสินใจเลือกประกอบอาชีพการงานของทุกคน
                                 เชื่อว่าแต่ละคนคงมีเหตุผลแตกต่างกันไปในการตัดสินใจ
                             </p>
+
                         </div><!--col-->
                     </div><!--row-->
                     <!--Popular 3-->
@@ -277,19 +277,32 @@
                             <!--content-link-->
                             <a href="https://localhost:44369/Blog/index"><h2 class="content-name"> รีวิว DOCTOR ROMANTIC (2016)</h2></a>
                             <p class="content-text-preview">
-                                Memories On The Table Brown
-                                <br />
-                                Date : 26/07/2020
+                                <b>26/07/2020</b><br />
+                                การตัดสินใจเลือกประกอบอาชีพการงานของทุกคน
+                                เชื่อว่าแต่ละคนคงมีเหตุผลแตกต่างกันไปในการตัดสินใจ
                             </p>
+
+                        </div><!--col-->
+                    </div><!--row-->
+                    <!--Popular 4-->
+                    <div class="row text-left">
+                        <div class="col-md-4 my-2">
+                            <!--img-link-->
+                            <a href="https://localhost:44369/Blog/index"><img src="~/image/Index/memoriesonthetablebrown.png" class="center"></a>
+                        </div>
+                        <div class="col-sm-8 my-2">
+                            <!--content-link-->
+                            <a href="https://localhost:44369/Blog/index"><h2 class="content-name"> รีวิว DOCTOR ROMANTIC (2016)</h2></a>
                             <p class="content-text-preview">
+                                <b>26/07/2020</b><br />
                                 การตัดสินใจเลือกประกอบอาชีพการงานของทุกคน
                                 เชื่อว่าแต่ละคนคงมีเหตุผลแตกต่างกันไปในการตัดสินใจ
                             </p>
                         </div><!--col-->
                     </div><!--row-->
-
-
                 </div><!--container inside (Most Popular)-->
+                <br /><br />
+                <a href="#" class="btn form-control btn-outline-success">See more !</a> 
             </div><!--Most Popular-->
         </div><!--row (content1)-->
     </div><!--container-->
@@ -392,7 +405,7 @@
     <div class="container">
         <div class="col-md-12">
             <hr>
-            <p class="display-6 text-center text-head-dark">Contact us ?!</p>
+            <p class="display-6 text-center text-head-dark">Contact for work</p>
             <hr>
             <div class="row">
                 <div class="col-md-6 mb-5">
@@ -403,12 +416,15 @@
                 </div>
                 <div class="col-md-6 mb-5">
                     <address class="text-center">
-                        <p class="text-center"><a href="mailto:#"></a></p>
-                        <a href="https://www.instagram.com/"><i class="icofont-instagram text-center"></i></a>
-                        <a href="https://www.facebook.com/"><i class="icofont-facebook text-center"></i></a>
-                        <a href="https://www.linkedin.com/"><i class="icofont-linkedin text-center"></i><br /><br /></a>
+                       <br />
+                        <a href="https://www.instagram.com/"><i class="icofont-instagram icon "></i></a>
+                        <a href="https://www.facebook.com/"><i class="icofont-facebook icon"></i></a>
+                        <a href="https://www.linkedin.com/"><i class="icofont-linkedin icon text-center"></i><br /><br /></a>
                     </address>
-                    <p class="display-6 text-center">You can leave us a comment here !</p>
+
+                    <button class="btn btn-outline-success form-control">Learn more about us</button><br /><br />
+
+                    <p class="display-6 text-center">You can leave us some comments here : )</p><br />
 
 
                     @using (Html.BeginForm("Feedback", "Home", FormMethod.Post))
@@ -417,7 +433,7 @@
                             <div class="form-group">
                                 <textarea class="form-control" name="Feedback" id="Feedback" rows="5" required></textarea>
                             </div>
-                            <button type="submit" class="btn btn-success form-control main-font ">Submit</button>
+                            <button type="submit" class="btn btn-outline-warning form-control ">Submit</button>
                         </form>
                     }
                 </div>
@@ -456,7 +472,6 @@
                         </div>
                     </div>
                 </div>
-                <br />
             </div>
         </div>
 </body>
