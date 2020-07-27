@@ -8,7 +8,7 @@ namespace MiraiiCore.Controllers
 {
     public class ListenController : Controller
     {
-        public IActionResult Index()
+        public IActionResult Podcast()
         {
             return View();
         }

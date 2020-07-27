@@ -14,7 +14,7 @@ namespace MiraiiCore.Controllers
         SqlCommand com = new SqlCommand();
         SqlDataReader dr;
 
-        public IActionResult Index()
+        public IActionResult Login()
         {
             return View();
         }
@@ -40,7 +40,7 @@ namespace MiraiiCore.Controllers
             if(dr.Read())
             {
                 con.Close();
-                return View("FileUploader");
+                return View("Uploader");
             }
             else
             {
@@ -49,7 +49,7 @@ namespace MiraiiCore.Controllers
             }
         }
         [HttpGet]
-        public IActionResult FileUploader()
+        public IActionResult Uploader()
         {
             return View();
         }

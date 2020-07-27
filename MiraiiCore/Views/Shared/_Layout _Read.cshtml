@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - MiraiiCore</title>
+    <title>@ViewData["Title"]</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
 
@@ -47,7 +47,7 @@
 
         .text-footer {
             color: white;
-            font-size: 35px;
+            font-size: 24px;
             font-family: 'Bangers', cursive;
         }
 
@@ -169,8 +169,8 @@
                                 Read
                             </a>
                             <div id="reviewDrop" class="dropdown-menu" aria-labelledby="navbarDropdown" onmouseover="reviewDrop.classList.add('show');">
-                                <a class="dropdown-item text-nav" asp-area="" asp-controller="Read" asp-action="index">blog</a>
-                                <a class="dropdown-item text-nav" asp-area="" asp-controller="Read" asp-action="index">review</a>
+                                <a class="dropdown-item text-nav" asp-area="" asp-controller="Read" asp-action="Blog">blog</a>
+                                <a class="dropdown-item text-nav" asp-area="" asp-controller="Read" asp-action="Review">review</a>
                             </div>
                         </li>
                         <!--Listen-->
@@ -179,7 +179,7 @@
                                 Listen
                             </a>
                             <div id="reviewDrop" class="dropdown-menu" aria-labelledby="navbarDropdown" onmouseover="reviewDrop.classList.add('show');">
-                                <a class="dropdown-item text-nav" asp-area="" asp-controller="Listen" asp-action="index">podcast</a>
+                                <a class="dropdown-item text-nav" asp-area="" asp-controller="Listen" asp-action="Podcast">podcast</a>
                             </div>
                         </li>
                         <!--About-->

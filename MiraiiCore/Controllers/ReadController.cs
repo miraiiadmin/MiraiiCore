@@ -8,11 +8,14 @@ namespace MiraiiCore.Controllers
 {
     public class ReadController : Controller
     {
-        public IActionResult Index()
+        public IActionResult Blog()
         {
             return View();
         }
 
-        
+        public IActionResult Review()
+        {
+            return View();
+        }
     }
 }

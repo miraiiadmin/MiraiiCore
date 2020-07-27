@@ -1,0 +1,79 @@
+﻿@{
+    ViewData["Title"] = "Podcast";
+    Layout = "~/Views/Shared/_Layout_Podcast.cshtml";
+}
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+<style>
+    .podcast-center {
+        max-width: 330px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .pod-sapce {
+        max-width: 1110px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px;
+    }
+</style>
+
+<div class="container pod-sapce">
+   
+ 
+            <div class="card my-4 ">
+                <h5 class="card-header display-6 text-center bg-maincolor "><p class="text-head-dark"> PODCAST ?! </p> </h5>
+                <div class="card-body ">
+                    <div class="container podcast-center">
+                        <audio controls>
+                            <source src="~/assets/podcast/1.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio><br />
+                    </div>
+                    <p class="display-6 text-center">Now you are listening to <a href="#">this</a></p><br />
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr class="table bg-maincolor">
+                                    <th scope="col">Title</th>
+                                    <th scope="col">Speaker</th>
+                                    <th scope="col">Length</th>
+                                    <th scope="col">Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row"><a href="#">AAA</a></th>
+                                    <td>Anonymous</td>
+                                    <td>12:49</td>
+                                    <td>13/04/2020</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><a href="#">BBB</a></th>
+                                    <td>Picolo</td>
+                                    <td>04:20</td>
+                                    <td>20/04/2020</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><a href="#">CCC</a></th>
+                                    <td>Nicochan</td>
+                                    <td>29:30</td>
+                                    <td>20/04/2020</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <a href="#" class="btn form-control btn-outline-success">Sound Good ?! Discover More !</a>
+                    </div>
+                </div>
+            </div>
+
+</div>
