@@ -1,7 +1,5 @@
-﻿@{
-    ViewData["Title"] = "About";
-    Layout = "~/Views/Shared/_Layout_About.cshtml";
-}
+﻿@{ ViewData["Title"] = "About";
+                Layout = "~/Views/Shared/_Layout_About.cshtml"; }
 
 <style>
     .img-head {
@@ -10,78 +8,56 @@
         margin-bottom: 20px;
         width: 100%;
     }
+
+    .icon {
+        margin-top: 8px;
+        margin-bottom: 9px;
+        font-size: 35px;
+    }
 </style>
 <!--Crossfade Carousel (picture 1200x480)-->
 <img src="~/image/Index/cover.png" class="img-head">
-<div class="container">
-    <div class="row">
-        <!-- Post Content Column -->
-        <div class="col-lg-12">
-            <!-- Title -->
-            <br />
-            <br />
-            <h1 class="mt-4 display-6 text-center">Miraii</h1>
-            <blockquote class="blockquote display-6 text-center">
-                <footer class="blockquote-footer">
-                    kkkkk
-                    <cite title="Source Title"></cite>
-                </footer>
-            </blockquote>
-            <!-- Preview Image -->
-            <div class="col-lg-12 text-center">
-                <img class="img-fluid" src="https://i.pinimg.com/originals/30/23/83/302383c530b39f5a65f11b4ef986e3ce.gif" alt="">
-            </div>
-            <hr>
-            <!-- Post Content -->
 
-            <p>สวัสดี ! ยินดีต้อนรับอย่างเป็นทางการสู่ Miraii (อีกครั้ง) แรกเริ่มเดิมทีเราเป็นเพียง Personal Blog แต่ปัจจุบันเรากำลังพัฒนาตัวเองเพื่อเป็น Content Provider Community พื้นที่สำหรับคนที่มีเรื่องมาเล่า มีเรื่องมาแชร์ ทั้งในรูปแบบบทความและ Podcast ครอบคลุมเนื้อหาไม่ว่าจะเป็น Culture, Social, Trend, Lifestyle, Experience, Review หรือโฆษณา </p>
-            <p>ปัจจุบันเรากำลังตามหาผู้ร่วมทีม โดยเฉพาะน้องๆ Intern และ Part-Time สำหรับผู้มีความสนใจในสื่อ Social Media ทั้งตำแหน่ง Graphich Designer, Online Marketing และ Content Creator เพื่อมาร่วมสร้างสรรค์ผลงานออนไลน์ด้วยกัน หากผู้ใดสนใจเป็นส่วนหนึ่งของทีมเรา <a asp-area="" asp-controller="Join" asp-action="Index">คลิ๊กที่นี่</a> ได้เลย ! </p>
-            <p>อย่างไรก็ดี ต้องขอขอบพระคุณทุกท่านที่ติดตามผลงานเราอย่างสม่ำเสมอ สามารถติดตาม Miraii ผ่านทางช่องทางอื่นๆได้ทั้ง <a href="https://www.facebook.com/The-Handyman-110039810651594/">Facebook</a> และ <a href="https://www.instagram.com/thehandyman.bkk/">Instagram</a> และสามารถให้ Feedback กับเราได้ทุกช่องทาง สุดท้ายนี้ ก็ขอให้ทุกท่านสนุกกับการอ่านและใช้ชีวิตอย่างมีความสุขนะครับ ยินดีต้อนรับเสมอ !</p>
-            <hr>
-            <br />
-        </div>
-    </div>
-    <!-- /.row -->
-</div>
-
-
-<div class="container">
-    <div class="row">
-        <!-- Post Content Column -->
-        <div class="col-lg-12">
-            <!-- Title -->
-            <br />
-            <br />
-            <h1 class="mt-4 display-6 text-center">Join Our Team</h1><br />
-            <blockquote class="blockquote display-6 text-center">
-                <p class="mb-0">Be a Miraii !</p>
-                <footer class="blockquote-footer">
-                    A man skilled in various odd jobs and other small tasks.
-                    <cite title="Source Title"></cite>
-                </footer>
-            </blockquote>
-            <p>
-                ตอนนี้เรากำลังขยายทีมและเปิดโอกาสสำหรับน้องๆนิสิตนักศึกษาไม่จำกัดชั้นปี ไม่จำกัดสาขา ไม่ว่าจะอยู่บ้าน อยู่จังหวัดไหนก็สามารถร่วมทีม Internship หรือทำ Part-Time กับเราได้ !
-                โดยเรามี Basic Requirement เล็กน้อย นั่นคือ ทุกคนสามารถทำงานที่บ้านได้ / ไม่มี Fix เวลาทำงาน / สามารถจัดสรรแบ่งเวลาเองได้ / เราประชุมงานผ่าน Online Meeting / มีความรู้พื้นฐานในตำแหน่งนั้นๆ / สื่อสารรู้เรื่องทั้งการพูดและการเขียน / เข้าใจและเสพสื่อ Social Media เป็นประจำ / หากมีความสนใจใน Japanese Culture is a plus !
-                <br /><br />ขอโปรโมตนิดเพิ่มเติมนิดนึงว่า เราเปิดโอกาสให้ทุกคนมีส่วนร่วมในการสร้างสรรค์ผลงานออนไลน์ ไม่ว่าจะมีสาระหรือไร้สาระ หากใครมีงานเขียนเช่นเรื่องสั้น,นวนิยาย หรือ Artwork ภาพวาด ก็สามารถติดต่อเข้ามาร่วม Featuring กับ Miraii ได้เช่นกันนะครับ : )
-            </p>
-            <div class="col-lg-12 text-center">
-                <img class="img-fluid" src="https://cdn.vox-cdn.com/thumbor/VCuWHw2qUHB6UbN97mA1_abeyNU=/1400x0/filters:no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/13250843/breakdancing_together.jpg" alt="">
-            </div>
-            <hr>
-            <br />
-        </div>
-    </div>
-</div>
 <div class="container">
     <div class="row">
         <div class="col-lg-6 text-center">
-            <img class="img-fluid" src="https://instagram.fbkk22-1.fna.fbcdn.net/v/t51.2885-15/e35/90711267_2953942171294632_6903867279220462584_n.jpg?_nc_ht=instagram.fbkk22-1.fna.fbcdn.net&_nc_cat=100&_nc_ohc=NcIMGdxV2CgAX_5QlZK&oh=02605ad4e92d0f5a06e5cd88592b06c9&oe=5EAE5CAE" alt="">
+            <img class="img-fluid" src="~/image/Index/Miraii LOGO.png" alt="">
+            <img class="img-fluid" src="https://cdn.vox-cdn.com/thumbor/VCuWHw2qUHB6UbN97mA1_abeyNU=/1400x0/filters:no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/13250843/breakdancing_together.jpg" alt="">
+
         </div>
         <div class="col-lg-6">
             <hr>
-            <h2 class="display-6 text-center">Content Creator</h2><br />
-            <h2 class="display-6 text-center">(Internship / Part-Time)</h2>
+            <h2 class=" text-center"><strong>ABOUT US</strong></h2><br />
+            <h2 class="display-6 text-center">Online Based Content Community</h2>
+            <hr>
+            <address>
+                <br />
+                <p>
+                    ในภาษาญี่ปุ่น คำว่า Mirai (N.) แปลว่า "อนาคต" ซึ่งก็ไปพ้องเสียงกับคำพูดติดปากของคนไทย คำว่า "มีไร ?" ให้ความรู้สึกเหมือนประโยคที่ว่า "มีอะไรมาเล่าให้ฟัง" เพื่อสอดคล้องกับ Content ญี่ปุ่นๆในช่วงแรกที่เราทำ จึงเป็นที่มาของชื่อ Project Miraii นี่เอง :) <br /><br />
+
+                    ปัจจุบันเราต้องการเป็นสื่อตัวกลางอีกหนึ่งช่องทางในการนำเสนอ Content และเรื่องราวต่างๆเพื่ออนาคตที่ดีกว่าเดิมและกำลังพัฒนาตัวเองเพื่อเป็น Content Provider Community ที่ไม่ได้จำกัดวงแค่วัฒนธรรมญี่ปุ่น แต่เราเปิดพื้นที่กว้างๆสำหรับคนที่มีเรื่องมาเล่า มีเรื่องมาแชร์ ในรูปแบบบทความหรือ Blog ครอบคลุมเนื้อหาในเรื่อง Trend, Lifestyle, Art, Learning, Review, Interview หรือสื่อโฆษณา สอดแทรกเนื้อหาทั้งที่มีสาระและไร้สาระไปด้วยกัน<br /><br />
+                    ตอนนี้เรากำลังขยายทีมและเปิดโอกาสสำหรับน้องๆนิสิตนักศึกษาไม่จำกัดชั้นปี ไม่จำกัดสาขา ไม่ว่าจะอยู่บ้าน อยู่จังหวัดไหนก็สามารถร่วมทีม Internship หรือทำ Part-Time กับเราได้ !
+                    โดยเรามี Basic Requirement เล็กน้อย นั่นคือ ทุกคนสามารถทำงานที่บ้านได้ / ไม่มี Fix เวลาทำงาน / สามารถจัดสรรแบ่งเวลาเองได้ / เราประชุมงานผ่าน Online Meeting / มีความรู้พื้นฐานในตำแหน่งนั้นๆ / สื่อสารรู้เรื่องทั้งการพูดและการเขียน / เข้าใจและเสพสื่อ Social Media เป็นประจำ
+                    <br /><br />ขอโปรโมตนิดเพิ่มเติมนิดนึงว่า เราเปิดโอกาสให้ทุกคนมีส่วนร่วมในการสร้างสรรค์ผลงานออนไลน์ ไม่ว่าจะมีสาระหรือไร้สาระ หากใครมีงานเขียนเช่นเรื่องสั้น,นวนิยาย หรือ Artwork ภาพวาด ก็สามารถติดต่อเข้ามาร่วม Featuring กับ Miraii ได้เช่นกันนะครับ : )
+                    <br />
+                </p>
+                <div class="text-center">
+                    <p><a href="mailto:#">miraii.team@gmail.com</a></p>
+                </div>
+                <br />
+            </address>
+            <br />
+        </div>
+        <br />
+        <br />
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+            <hr>
+            <h2 class="display-6 text-center"><strong>Content Creator / Writer</strong></h2>
+            <h5 class="text-center">(Internship / Part-Time)</h5>
             <hr>
             <p class="display-7b text-center">นักสร้าง Content คิดเก่ง เขียนเก่ง มีไอเดียตลอด !</p>
             <address>
@@ -96,14 +72,18 @@
                     • Have excellent writing and communication skills.<br />
                 </p>
                 <div class="text-center">
-                    <p><a href="mailto:#">piccolothehandyman@gmail.com</a></p>
-                    <img src="https://media.giphy.com/media/8L0T9qoN744tzLk2hM/giphy.gif" class="img-fluid text-center" width="100" height="100" />
-                    <img src="https://media.giphy.com/media/8L0T9qoN744tzLk2hM/giphy.gif" class="img-fluid text-center" width="100" height="100" />
-                    <img src="https://media.giphy.com/media/8L0T9qoN744tzLk2hM/giphy.gif" class="img-fluid text-center" width="100" height="100" /><br />
+                    <p><a href="mailto:#">miraii.team@gmail.com</a></p>
+                    <a href="https://www.instagram.com/"><i class="icofont-instagram icon "></i></a>
+                    <a href="https://www.facebook.com/"><i class="icofont-facebook icon"></i></a>
+                    <a href="https://www.linkedin.com/"><i class="icofont-linkedin icon text-center"></i><br /><br /></a>
+
                 </div>
                 <br />
             </address>
             <br />
+        </div>
+        <div class="col-lg-6 text-center">
+            <img class="img-fluid" src="https://i.pinimg.com/originals/30/23/83/302383c530b39f5a65f11b4ef986e3ce.gif" alt="">
         </div>
         <br />
         <br />
@@ -113,10 +93,13 @@
 <br />
 <div class="container">
     <div class="row">
+        <div class="col-lg-6 text-center">
+            <img class="img-fluid" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/f8d5aade-18d3-4246-8bc8-de907cb9f4ed/daqy7hz-48c838d0-7838-4e25-bade-44d7431ef21f.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvZjhkNWFhZGUtMThkMy00MjQ2LThiYzgtZGU5MDdjYjlmNGVkXC9kYXF5N2h6LTQ4YzgzOGQwLTc4MzgtNGUyNS1iYWRlLTQ0ZDc0MzFlZjIxZi5naWYifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.YPxUxZC07NfrQZc02jHIyywH2YAzY-CIQ7AFrOxCqgs" alt="">
+        </div>
         <div class="col-lg-6">
             <hr>
-            <h2 class="display-6 text-center">Online Marketer</h2><br />
-            <h2 class="display-6 text-center">(Internship / Part-Time)</h2>
+            <h2 class="display-6 text-center"><strong>Online Marketer</strong></h2>
+            <h5 class="text-center">(Internship / Part-Time)</h5>
             <hr>
             <p class="display-7b text-center">นักการตลาดออนไลน์ วางแผน SEO และการยิง Ads !</p>
             <address>
@@ -131,7 +114,7 @@
                     • Got well understanding of all social media platforms<br />
                 </p>
                 <div class="text-center">
-                    <p><a href="mailto:#">piccolothehandyman@gmail.com</a></p>
+                    <p><a href="mailto:#">miraii.team@gmail.com</a></p>
                     <img src="https://media.giphy.com/media/8L0T9qoN744tzLk2hM/giphy.gif" class="img-fluid text-center" width="100" height="100" />
                     <img src="https://media.giphy.com/media/8L0T9qoN744tzLk2hM/giphy.gif" class="img-fluid text-center" width="100" height="100" />
                     <img src="https://media.giphy.com/media/8L0T9qoN744tzLk2hM/giphy.gif" class="img-fluid text-center" width="100" height="100" /><br />
@@ -139,9 +122,7 @@
             </address>
             <br />
         </div>
-        <div class="col-lg-6 text-center">
-            <img class="img-fluid" src="https://instagram.fbkk22-3.fna.fbcdn.net/v/t51.2885-15/e35/90486226_1288567561332962_652716870986134727_n.jpg?_nc_ht=instagram.fbkk22-3.fna.fbcdn.net&_nc_cat=102&_nc_ohc=4UmdBocdVt0AX9nMAI5&oh=44ef6cfe0f6179bdfa26e533531883f6&oe=5EB02858" alt="">
-        </div>
+
         <br />
         <br />
         <br />
@@ -151,13 +132,11 @@
 <div class="container">
     <div class="row">
         <!-- Post Content Column -->
-        <div class="col-lg-6 text-center">
-            <img class="img-fluid" src="https://instagram.fbkk22-2.fna.fbcdn.net/v/t51.2885-15/e35/91059252_583626485557602_1890815052073555600_n.jpg?_nc_ht=instagram.fbkk22-2.fna.fbcdn.net&_nc_cat=106&_nc_ohc=_NZwKzNzYrQAX_cNcXS&oh=37030015c12f6f61912411bedaf31660&oe=5EADB0D0" alt="">
-        </div>
+
         <div class="col-lg-6">
             <hr>
-            <h2 class="display-6 text-center">Graphic Designer</h2><br />
-            <h2 class="display-6 text-center">(Internship / Part-Time)</h2>
+            <h2 class="display-6 text-center"><strong>Graphic Designer</strong></h2>
+            <h5 class="text-center">(Internship / Part-Time)</h5>
             <hr>
             <p class="display-7b text-center">สร้างสรรค์งาน Graphic เสกงานด้าน Artwork !</p>
             <address>
@@ -170,7 +149,7 @@
                     • Familiar with Canva, Adobe Illustrator and Photoshop.<br />
                 </p>
                 <div class="text-center">
-                    <p><a href="mailto:#">piccolothehandyman@gmail.com</a></p>
+                    <p><a href="mailto:#">miraii.team@gmail.com</a></p>
 
                     <img src="https://media.giphy.com/media/8L0T9qoN744tzLk2hM/giphy.gif" class="img-fluid text-center" width="100" height="100" />
                     <img src="https://media.giphy.com/media/8L0T9qoN744tzLk2hM/giphy.gif" class="img-fluid text-center" width="100" height="100" />
@@ -181,50 +160,46 @@
             </address>
             <br />
         </div>
+        <div class="col-lg-6 text-center">
+            <img class="img-fluid" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/196176d7-d088-4c5e-b44a-69aaac4413b1/dbt0yfd-9e7772ad-a94e-4a65-9497-c05e41337a14.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvMTk2MTc2ZDctZDA4OC00YzVlLWI0NGEtNjlhYWFjNDQxM2IxXC9kYnQweWZkLTllNzc3MmFkLWE5NGUtNGE2NS05NDk3LWMwNWU0MTMzN2ExNC5naWYifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.1kZnv8aYLdOUJf416i4041cbLmIwvtxbmVBOgOIuO30" alt="">
+        </div>
         <br />
         <br />
         <br />
     </div>
 </div>
-
-
-
 <div class="container">
     <div class="row">
         <!-- Post Content Column -->
         <div class="col-lg-6">
             <div class="card my-4">
-                <h5 class="card-header display-6 text-center">Give me a feedback here.</h5>
+                <h5 class="card-header display-6 text-center">Give us some comments here.</h5>
                 <div class="card-body">
                     @using (Html.BeginForm("Feedback", "About", FormMethod.Post))
                     {
-                        <form data-aos="fade-up">
-                            <div class="form-group">
-                                <textarea class="form-control" name="Feedback" id="Feedback" rows="7" required></textarea>
-                            </div>
-                            <button type="submit" class="btn bg-maincolor form-control">Submit</button>
-                        </form>
-                    }
+        <form data-aos="fade-up">
+            <div class="form-group">
+                <textarea class="form-control" name="Feedback" id="Feedback" rows="7" required></textarea>
+            </div>
+            <button type="submit" class="btn bg-maincolor form-control">Submit</button>
+        </form>}
                 </div>
             </div>
             <!-- /.container -->
         </div>
         <div class="col-lg-6 text-center">
             <hr>
-            <h2 class="display-6 text-center">Contact (For work)</h2>
+            <h2 class="display-6 text-center"><strong>Contact For Work</strong></h2>
             <hr>
             <address class="text-center">
                 <br />
                 <p class="text-center"><strong>Miraii</strong></p>
-                <p class="text-center">10200, Bangkok, Thailand</p>
-                <p class="text-center"><a href="mailto:#">piccolothehandyman@gmail.com</a></p>
-                <a href="https://www.instagram.com/thehandyman.bkk/"><i class="icofont-instagram text-center"></i></a>
-                <a href="https://www.facebook.com/The-Handyman-110039810651594/"><i class="icofont-facebook text-center"></i></a>
-                <a href="https://www.linkedin.com/company/42329199"><i class="icofont-linkedin text-center"></i><br /><br /></a>
+                <p class="text-center">Bangkok, Thailand</p>
+                <p class="text-center"><a href="mailto:#">miraii.teamn@gmail.com</a></p>
+                <a href="https://www.instagram.com/"><i class="icofont-instagram icon "></i></a>
+                <a href="https://www.facebook.com/"><i class="icofont-facebook icon"></i></a>
+                <a href="https://www.linkedin.com/"><i class="icofont-linkedin icon text-center"></i><br /><br /></a>
 
-                <img src="https://media.giphy.com/media/8L0T9qoN744tzLk2hM/giphy.gif" class="img-fluid text-center" width="100" height="100" />
-                <img src="https://media.giphy.com/media/8L0T9qoN744tzLk2hM/giphy.gif" class="img-fluid text-center" width="100" height="100" />
-                <img src="https://media.giphy.com/media/8L0T9qoN744tzLk2hM/giphy.gif" class="img-fluid text-center" width="100" height="100" /><br />
                 <br />
             </address>
             <br />

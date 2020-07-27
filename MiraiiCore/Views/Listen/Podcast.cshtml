@@ -2,78 +2,214 @@
     ViewData["Title"] = "Podcast";
     Layout = "~/Views/Shared/_Layout_Podcast.cshtml";
 }
+<head>
+    <style>
+        .podcast-center {
+            max-width: 330px;
+            margin-left: auto;
+            margin-right: auto;
+        }
 
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
+        .img-head {
+            display: block;
+            margin-top: 75px;
+            margin-bottom: 20px;
+            width: 100%;
+        }
 
-<style>
-    .podcast-center {
-        max-width: 330px;
-        margin-left: auto;
-        margin-right: auto;
-    }
+        .pod-sapce {
+            max-width: 1110px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 30px;
+        }
 
-    .pod-sapce {
-        max-width: 1110px;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 30px;
-    }
-</style>
+        .hr-bold {
+            border: 6px solid #E5AC51;
+            margin-top: 0px;
+        }
 
-<div class="container pod-sapce">
-   
- 
-            <div class="card my-4 ">
-                <h5 class="card-header display-6 text-center bg-maincolor "><p class="text-head-dark"> PODCAST ?! </p> </h5>
-                <div class="card-body ">
-                    <div class="container podcast-center">
-                        <audio controls>
-                            <source src="~/assets/podcast/1.mp3" type="audio/mpeg">
-                            Your browser does not support the audio element.
-                        </audio><br />
+        .pod-name {
+            font-family: 'Bangers', cursive;
+            font-size: 35px;
+            text-align:center;
+        }
+
+        .pod-article {
+            font-family: 'Sarabun', sans-serif;
+            font-size: 20px;
+            color: #E5AC51;
+        }
+
+        .pod-img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+        }
+
+        .credit {
+            font-size: 13px;
+            margin-left: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <!--Crossfade Carousel (picture 1200x480)-->
+    <img src="~/image/Index/cover.png" class="img-head">
+
+    <div class="container pod-sapce">
+        <div class="card my-4 ">
+            <h5 class="card-header display-6 text-center bg-maincolor "><p class="text-head-dark"> PODCAST ?! </p> </h5>
+            <div class="card-body ">
+                <div class="container podcast-center">
+                    <audio controls>
+                        <source src="~/assets/podcast/1.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio><br />
+                </div>
+                <p class="display-6 text-center">Now you are listening to <a href="#">this</a></p><br />
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr class="table bg-maincolor">
+                                <th scope="col">Title</th>
+                                <th scope="col">Speaker</th>
+                                <th scope="col">Length</th>
+                                <th scope="col">Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row"><a href="#">AAA</a></th>
+                                <td>Anonymous</td>
+                                <td>12:49</td>
+                                <td>13/04/2020</td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><a href="#">BBB</a></th>
+                                <td>Picolo</td>
+                                <td>04:20</td>
+                                <td>20/04/2020</td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><a href="#">CCC</a></th>
+                                <td>Nicochan</td>
+                                <td>29:30</td>
+                                <td>20/04/2020</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <a href="#" class="btn form-control btn-outline-success">Sound Good ?! Discover More !</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br />
+    <br />
+
+    <!--Podcast1 (3:4 img)-->
+    <div class="container pod-sapce">
+        <hr class="hr-bold" />
+        <h1 class="pod-name">Podcast Name</h1>
+        <hr class="hr-bold" />
+        <div class="row">
+            <div class="col-sm-8 text-right">
+                <p class="credit">Spreaker : Miraii 27/07/2020 </p>
+                <p class="pod-article">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+            </div>
+            <div class="col-md-4">
+                <img class="pod-img" src="~/image/podcast/Pod1.jpg" />
+            </div>
+        </div>
+        <br />
+        <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1055363695&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/thestandardpodcast" title="THE STANDARD Podcast" target="_blank" style="color: #cccccc; text-decoration: none;">THE STANDARD Podcast</a> · <a href="https://soundcloud.com/thestandardpodcast/sets/the-secret-sauce-boardroom" title="The Secret Sauce: Boardroom Wisdom" target="_blank" style="color: #cccccc; text-decoration: none;">The Secret Sauce: Boardroom Wisdom</a></div>
+    </div>
+
+    <br />
+    <br />
+
+    <!--Podcast2 (3:4 img)-->
+    <div class="container pod-sapce">
+
+        <div class="row">
+            <div class="col-md-4">
+                <img class="pod-img" src="~/image/podcast/Pod2.jpg" />
+            </div>
+            <div class="col-sm-8 text-left">
+                <hr class="hr-bold" />
+                <h1 class="pod-name">Podcast Name</h1>
+                <hr class="hr-bold" />
+                <p class="credit">Spreaker : Miraii 27/07/2020 </p>
+                <p class="pod-article">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            </div>
+        </div>
+        <br />
+        <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/581590314&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/thestandardpodcast" title="THE STANDARD Podcast" target="_blank" style="color: #cccccc; text-decoration: none;">THE STANDARD Podcast</a> · <a href="https://soundcloud.com/thestandardpodcast/sets/knd" title="คำนี้ดี" target="_blank" style="color: #cccccc; text-decoration: none;">คำนี้ดี</a></div>
+    </div>
+
+    <br />
+    <br />
+
+    <!--Podcast3 (3:4 img)-->
+    <div class="container pod-sapce">
+        <hr class="hr-bold" />
+        <h1 class="pod-name">Podcast Name</h1>
+        <hr class="hr-bold" />
+        <div class="row">
+            <div class="col-sm-8 text-right">
+                <p class="credit">Spreaker : Miraii 27/07/2020 </p>
+                <p class="pod-article">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+            </div>
+            <div class="col-md-4">
+                <img class="pod-img" src="~/image/podcast/Pod3.jpg" />
+            </div>
+        </div>
+        <br />
+        <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/469616088&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/thestandardpodcast" title="THE STANDARD Podcast" target="_blank" style="color: #cccccc; text-decoration: none;">THE STANDARD Podcast</a> · <a href="https://soundcloud.com/thestandardpodcast/sets/ihatemyjob" title="I HATE MY JOB" target="_blank" style="color: #cccccc; text-decoration: none;">I HATE MY JOB</a></div>
+    </div>
+
+    <br />
+    <br />
+
+    <!--banner-->
+    <div class="container">
+        <hr />
+        <br />
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-primary">World</strong>
+                        <h3 class="mb-0 display-6">For Ads</h3>
+                        <div class="mb-1 text-muted">Nov 12</div>
+                        <p class="card-text mb-auto">AAAAAAAAAAAAAAAAAAAAAA</p>
+                        <a href="#" class="stretched-link">Continue reading</a>
                     </div>
-                    <p class="display-6 text-center">Now you are listening to <a href="#">this</a></p><br />
-                    <div class="table-responsive">
-                        <table class="table table-hover">
-                            <thead>
-                                <tr class="table bg-maincolor">
-                                    <th scope="col">Title</th>
-                                    <th scope="col">Speaker</th>
-                                    <th scope="col">Length</th>
-                                    <th scope="col">Date</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th scope="row"><a href="#">AAA</a></th>
-                                    <td>Anonymous</td>
-                                    <td>12:49</td>
-                                    <td>13/04/2020</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row"><a href="#">BBB</a></th>
-                                    <td>Picolo</td>
-                                    <td>04:20</td>
-                                    <td>20/04/2020</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row"><a href="#">CCC</a></th>
-                                    <td>Nicochan</td>
-                                    <td>29:30</td>
-                                    <td>20/04/2020</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <a href="#" class="btn form-control btn-outline-success">Sound Good ?! Discover More !</a>
+                    <div class="col-auto d-none d-lg-block">
+
                     </div>
                 </div>
             </div>
+            <div class="col-lg-6">
+                <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-success">Design</strong>
+                        <h3 class="mb-0 display-6">For Ads</h3>
+                        <div class="mb-1 text-muted">Nov 11</div>
+                        <p class="mb-auto">AAAAAAAAAAAAAAAAAAAAAA</p>
+                        <a href="#" class="stretched-link">Continue reading</a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
 
-</div>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <br />
+            <br />
+        </div>
+    </div>
+</body>
