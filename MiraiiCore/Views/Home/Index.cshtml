@@ -1,6 +1,4 @@
-﻿@{
-    ViewData["Title"] = "Miraii";
-}
+﻿@{ ViewData["Title"] = "Miraii"; }
 
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/th_TH/sdk.js#xfbml=1&version=v6.0&appId=718174878568237&autoLogAppEvents=1"></script>
 <style>
@@ -26,6 +24,7 @@
         position: absolute;
         bottom: 8px;
     }
+
     .content-head {
         position: absolute;
         font-weight: bold;
@@ -66,10 +65,10 @@
     }
 
     .icon {
-            margin-top: 8px;
-            margin-bottom: 9px;
-            font-size: 35px;
-     }
+        margin-top: 8px;
+        margin-bottom: 9px;
+        font-size: 35px;
+    }
 
     .text-weekly {
         color: #E5AC51;
@@ -233,15 +232,11 @@
                     <div class="row text-left">
                         <div class="col-md-4 my-2">
                             <!--img-link-->
-                            <a class="navbar-brand" asp-area="" asp-controller="Read" asp-action="Review">
-                            <img src="~/image/Index/memoriesonthetablebrown.png" class="center">
-                            </a>
+                            <a href="https://localhost:44369/Blog/index"><img src="~/image/Index/memoriesonthetablebrown.png" class="center"></a>
                         </div>
                         <div class="col-sm-8 my-2">
                             <!--content-link-->
-                            <a class="navbar-brand" asp-area="" asp-controller="Read" asp-action="Review">
-                            <h2 class="content-name"> รีวิว DOCTOR ROMANTIC (2016)</h2>
-                            </a>
+                            <a href="https://localhost:44369/Blog/index"><h2 class="content-name"> รีวิว DOCTOR ROMANTIC (2016)</h2></a>
                             <p class="content-text-preview">
                                 <b>26/07/2020</b><br />
                                 การตัดสินใจเลือกประกอบอาชีพการงานของทุกคน
@@ -254,13 +249,11 @@
                     <div class="row text-left">
                         <div class="col-md-4 my-2">
                             <!--img-link-->
-                            <a class="navbar-brand" asp-area="" asp-controller="Read" asp-action="Review">
-                            <img src="~/image/Index/memoriesonthetablebrown.png" class="center"></a>
+                            <a href="https://localhost:44369/Blog/index"><img src="~/image/Index/memoriesonthetablebrown.png" class="center"></a>
                         </div>
                         <div class="col-sm-8 my-2">
                             <!--content-link-->
-                            <a class="navbar-brand" asp-area="" asp-controller="Read" asp-action="Review">
-                            <h2 class="content-name"> รีวิว DOCTOR ROMANTIC (2016)</h2></a>
+                            <a href="https://localhost:44369/Blog/index"><h2 class="content-name"> รีวิว DOCTOR ROMANTIC (2016)</h2></a>
                             <p class="content-text-preview">
                                 <b>26/07/2020</b><br />
                                 การตัดสินใจเลือกประกอบอาชีพการงานของทุกคน
@@ -273,11 +266,11 @@
                     <div class="row text-left">
                         <div class="col-md-4 my-2">
                             <!--img-link-->
-                            <a href="#"><img src="~/image/Index/memoriesonthetablebrown.png" class="center"></a>
+                            <a href="https://localhost:44369/Blog/index"><img src="~/image/Index/memoriesonthetablebrown.png" class="center"></a>
                         </div>
                         <div class="col-sm-8 my-2">
                             <!--content-link-->
-                            <a href="#"><h2 class="content-name"> รีวิว DOCTOR ROMANTIC (2016)</h2></a>
+                            <a href="https://localhost:44369/Blog/index"><h2 class="content-name"> รีวิว DOCTOR ROMANTIC (2016)</h2></a>
                             <p class="content-text-preview">
                                 <b>26/07/2020</b><br />
                                 การตัดสินใจเลือกประกอบอาชีพการงานของทุกคน
@@ -290,11 +283,11 @@
                     <div class="row text-left">
                         <div class="col-md-4 my-2">
                             <!--img-link-->
-                            <a href="#"><img src="~/image/Index/memoriesonthetablebrown.png" class="center"></a>
+                            <a href="https://localhost:44369/Blog/index"><img src="~/image/Index/memoriesonthetablebrown.png" class="center"></a>
                         </div>
                         <div class="col-sm-8 my-2">
                             <!--content-link-->
-                            <a href="#"><h2 class="content-name"> รีวิว DOCTOR ROMANTIC (2016)</h2></a>
+                            <a href="https://localhost:44369/Blog/index"><h2 class="content-name"> รีวิว DOCTOR ROMANTIC (2016)</h2></a>
                             <p class="content-text-preview">
                                 <b>26/07/2020</b><br />
                                 การตัดสินใจเลือกประกอบอาชีพการงานของทุกคน
@@ -304,7 +297,7 @@
                     </div><!--row-->
                 </div><!--container inside (Most Popular)-->
                 <br /><br />
-                <a href="#" class="btn form-control btn-outline-success">See more !</a> 
+                <a href="#" class="btn form-control btn-outline-success">See more !</a>
             </div><!--Most Popular-->
         </div><!--row (content1)-->
     </div><!--container-->
@@ -418,7 +411,7 @@
                 </div>
                 <div class="col-md-6 mb-5">
                     <address class="text-center">
-                       <br />
+                        <br />
                         <a href="https://www.instagram.com/"><i class="icofont-instagram icon "></i></a>
                         <a href="https://www.facebook.com/"><i class="icofont-facebook icon"></i></a>
                         <a href="https://www.linkedin.com/"><i class="icofont-linkedin icon text-center"></i><br /><br /></a>
@@ -431,50 +424,48 @@
 
                     @using (Html.BeginForm("Feedback", "Home", FormMethod.Post))
                     {
-                        <form data-aos="fade-up">
-                            <div class="form-group">
-                                <textarea class="form-control" name="Feedback" id="Feedback" rows="5" required></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-outline-warning form-control ">Submit</button>
-                        </form>
-                    }
+        <form data-aos="fade-up">
+            <div class="form-group">
+                <textarea class="form-control" name="Feedback" id="Feedback" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-outline-warning form-control ">Submit</button>
+        </form>}
                 </div>
             </div>
-        </div> 
-            
         </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                        <div class="col p-4 d-flex flex-column position-static">
-                            <strong class="d-inline-block mb-2 text-primary">World</strong>
-                            <h3 class="mb-0 display-6">For Ads</h3>
-                            <div class="mb-1 text-muted">Nov 12</div>
-                            <p class="card-text mb-auto">AAAAAAAAAAAAAAAAAAAAAA</p>
-                            <a href="#" class="stretched-link">Continue reading</a>
-                        </div>
-                        <div class="col-auto d-none d-lg-block">
 
-                        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-primary">World</strong>
+                        <h3 class="mb-0 display-6">For Ads</h3>
+                        <div class="mb-1 text-muted">Nov 12</div>
+                        <p class="card-text mb-auto">AAAAAAAAAAAAAAAAAAAAAA</p>
+                        <a href="#" class="stretched-link">Continue reading</a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                        <div class="col p-4 d-flex flex-column position-static">
-                            <strong class="d-inline-block mb-2 text-success">Design</strong>
-                            <h3 class="mb-0 display-6">For Ads</h3>
-                            <div class="mb-1 text-muted">Nov 11</div>
-                            <p class="mb-auto">AAAAAAAAAAAAAAAAAAAAAA</p>
-                            <a href="#" class="stretched-link">Continue reading</a>
-                        </div>
-                        <div class="col-auto d-none d-lg-block">
+            </div>
+            <div class="col-lg-6">
+                <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-success">Design</strong>
+                        <h3 class="mb-0 display-6">For Ads</h3>
+                        <div class="mb-1 text-muted">Nov 11</div>
+                        <p class="mb-auto">AAAAAAAAAAAAAAAAAAAAAA</p>
+                        <a href="#" class="stretched-link">Continue reading</a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
 
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 </body>
-
 
