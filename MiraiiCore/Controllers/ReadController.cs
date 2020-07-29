@@ -17,5 +17,15 @@ namespace MiraiiCore.Controllers
         {
             return View();
         }
+
+        public IActionResult Life()
+        {
+            return View();
+        }
+
+        public IActionResult Story()
+        {
+            return View();
+        }
     }
 }
