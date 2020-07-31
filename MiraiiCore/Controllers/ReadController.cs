@@ -12,8 +12,7 @@ namespace MiraiiCore.Controllers
         {
             return View();
         }
-
-        public IActionResult Review()
+        public IActionResult Story()
         {
             return View();
         }
@@ -23,9 +22,14 @@ namespace MiraiiCore.Controllers
             return View();
         }
 
-        public IActionResult Story()
+        public IActionResult Review()
         {
             return View();
         }
+        public IActionResult DrRomactic()
+        {
+            return View();
+        }
+
     }
 }
