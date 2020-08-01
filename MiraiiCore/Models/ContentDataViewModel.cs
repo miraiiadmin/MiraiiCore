@@ -1,0 +1,20 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace MiraiiCore.Models
+{
+    public class ContentDataViewModel
+    {
+        [Key]
+        public String ContentID { get; set; }
+        public String ContentLocation { get; set; }
+        public String ContentName { get; set; }
+        public String ContentCategory { get; set; }
+        public String ContentType { get; set; }
+        public String ContentDescription { get; set; }
+        public DateTime ContentDate { get; set; }
+    }
+}

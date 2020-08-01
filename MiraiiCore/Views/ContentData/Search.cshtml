@@ -1,0 +1,73 @@
+﻿@model IEnumerable<MiraiiCore.Models.ContentDataViewModel>
+
+@{
+    ViewData["Title"] = "Search";
+}
+
+<h1>Search</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+@using (Html.BeginForm("Search", "ContentData", FormMethod.Get))
+{
+    <input type="text" name="ContentSearch" />
+    <input type="submit" value="Seach" name="submit" />
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ContentLocation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ContentName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ContentCategory)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ContentType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ContentDescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ContentDate)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ContentLocation)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ContentName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ContentCategory)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ContentType)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ContentDescription)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ContentDate)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

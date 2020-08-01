@@ -214,10 +214,14 @@
                                     <div class="card">
                                         <div class="card-body">
                                             <div class="input-group">
-                                                <input type="text" class="form-control text-inSreachBox" placeholder="Type something here">
+
+                                                @using (Html.BeginForm("Search", "ContentDataController", FormMethod.Get))
+                                                {
+                                                <input type="text" name="ContentSearch"  class="form-control text-inSreachBox" placeholder="Type something here">
                                                 <div class="input-group-append text-center">
-                                                    <button class="btn btn-warning" type="submit"><i class="fa fa-search"></i></button>
+                                                    <button name="submit" class="btn btn-warning" type="submit"><i class="fa fa-search"></i>
                                                 </div>
+                                                }
                                             </div><!--input-group-->
                                         </div>
                                     </div><!--Card-->
