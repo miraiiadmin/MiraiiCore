@@ -6,11 +6,18 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace MiraiiCore.Controllers
 {
-    public class ListenController : Controller
+    public class Review : Controller
     {
-        public IActionResult Podcast()
+        public IActionResult Index()
+        {
+            return View("~/Views/Read/Review/Index.cshtml");
+        }
+
+        public IActionResult DrRomactic()
         {
             return View();
         }
+
+
     }
 }

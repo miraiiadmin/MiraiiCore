@@ -1,4 +1,5 @@
-﻿@{ ViewData["Title"] = "Miraii"; }
+﻿@{ ViewData["Title"] = "Miraii";}
+@model IEnumerable<MiraiiCore.Models.ContentDataViewModel>
 
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/th_TH/sdk.js#xfbml=1&version=v6.0&appId=718174878568237&autoLogAppEvents=1"></script>
 <style>
@@ -81,6 +82,14 @@
 <body>
     <!--Crossfade Carousel (picture 1200x480)-->
     <img src="~/image/Index/cover.png" class="img-head">
+
+    @using (Html.BeginForm("Search", "ContentData", FormMethod.Get))
+    {
+        <input type="text" name="text" class="form-control text-inSreachBox" placeholder="Type something here">
+        <div class="input-group-append text-center">
+            <button name="submit" class="btn btn-warning" type="submit"><i class="fa fa-search"></i>
+        </div>
+    }
 
     <main role="main">
         <section id="portfolio" class="portfolio">

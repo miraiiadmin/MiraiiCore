@@ -24,7 +24,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@500&display=swap" rel="stylesheet">
 
-
     <style>
         body {
             font-family: 'Sarabun', sans-serif;
@@ -173,10 +172,10 @@
                                 Read
                             </a>
                             <div id="reviewDrop" class="dropdown-menu" aria-labelledby="navbarDropdown" onmouseover="reviewDrop.classList.add('show');">
-                                <a class="dropdown-item text-nav" asp-area="" asp-controller="Read" asp-action="Blog">blog</a>
-                                <a class="dropdown-item text-nav" asp-area="" asp-controller="Read" asp-action="Story">Story</a>
-                                <a class="dropdown-item text-nav" asp-area="" asp-controller="Read" asp-action="review">review</a>
-                                <a class="dropdown-item text-nav" asp-area="" asp-controller="Read" asp-action="Life">Life</a>
+                                <a class="dropdown-item text-nav" asp-area="" asp-controller="Blog" asp-action="Index">Blog</a>
+                                <a class="dropdown-item text-nav" asp-area="" asp-controller="Story" asp-action="Index">Story</a>
+                                <a class="dropdown-item text-nav" asp-area="" asp-controller="Review" asp-action="Index">Review</a>
+                                <a class="dropdown-item text-nav" asp-area="" asp-controller="Life" asp-action="Index">Life</a>
                             </div>
                         </li>
                         <!--Listen-->
@@ -185,7 +184,7 @@
                                 Listen
                             </a>
                             <div id="reviewDrop" class="dropdown-menu" aria-labelledby="navbarDropdown" onmouseover="reviewDrop.classList.add('show');">
-                                <a class="dropdown-item text-nav" asp-area="" asp-controller="Listen" asp-action="podcast">podcast</a>
+                                <a class="dropdown-item text-nav" asp-area="" asp-controller="Podcast" asp-action="Index">podcast</a>
                             </div>
                         </li>
                         <!--About-->
@@ -215,13 +214,14 @@
                                         <div class="card-body">
                                             <div class="input-group">
 
-                                                @using (Html.BeginForm("Search", "ContentDataController", FormMethod.Get))
+                                                @using (Html.BeginForm("Search", "ContentData", FormMethod.Get))
                                                 {
-                                                <input type="text" name="ContentSearch"  class="form-control text-inSreachBox" placeholder="Type something here">
-                                                <div class="input-group-append text-center">
-                                                    <button name="submit" class="btn btn-warning" type="submit"><i class="fa fa-search"></i>
-                                                </div>
+                                                    <input type="text" name="text" class="form-control text-inSreachBox" placeholder="Type something here">
+                                                    <div class="input-group-append text-center">
+                                                        <button name="submit" class="btn btn-warning" type="submit"><i class="fa fa-search"></i>
+                                                    </div>
                                                 }
+
                                             </div><!--input-group-->
                                         </div>
                                     </div><!--Card-->

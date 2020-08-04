@@ -1,44 +1,58 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using MiraiiCore.Models;
-using System.Data;
-using System.Data.SqlClient;
-using System.Configuration;
 
 namespace MiraiiCore.Controllers
 {
     public class ContentDataController : Controller
     {
-        public IActionResult Search (string ContentSearch)
-        {
-            string mainconn = ConfigurationManager.ConnectionStrings["Myconnection"].ConnectionString;
-            SqlConnection sqlconn = new SqlConnection(mainconn);
-            string sqlquery = "selct * from [dbo].[ContentData] where ContentName like '%" + ContentSearch + "%' ";
-            SqlCommand sqlcomm = new SqlCommand(sqlquery, sqlconn);
-            sqlconn.Open();
-            SqlDataAdapter sda = new SqlDataAdapter (sqlcomm);
-            DataSet ds = new DataSet();
-            sda.Fill(ds);
-            List<ContentDataViewModel> ec = new List<ContentDataViewModel>();
+        SqlConnection con = new SqlConnection();
+        SqlCommand com = new SqlCommand();
+        SqlDataReader dr;
 
-            foreach (DataRow dr in ds.Tables[0].Rows)
+        void ConnectionString()
+        {
+            con.ConnectionString = "Data Source=DESKTOP-27AKM7H\\MSSQLSERVER01;Database=Miraii;Integrated Security=SSPI;";
+        }
+
+
+        [HttpGet]
+        public IActionResult Search(string text, ContentDataViewModel data)
+        {
+            ConnectionString();
+            con.Open();
+            com.Connection = con;
+
+            com.CommandText = "SELECT * FROM [dbo].[ContentData] WHERE ContentName like '%" + text + "%'";
+            dr = com.ExecuteReader();
+            List<ContentDataViewModel> objmodel = new List<ContentDataViewModel>();
+            if (dr.HasRows)
             {
-                ec.Add(new ContentDataViewModel
+                while (dr.Read())
                 {
-                    ContentLocation = Convert.ToString(dr["image"]),
-                    ContentName = Convert.ToString(dr["name"]),
-                    ContentCategory = Convert.ToString(dr["category"]),
-                    ContentDescription = Convert.ToString(dr["description"]),
-                    ContentDate = Convert.ToDateTime(dr["date"])
-                });
+                    var details = new ContentDataViewModel();
+                    details.ContentLocation = dr["ContentLocation"].ToString();
+                    details.ContentName = dr["ContentName"].ToString();
+                    details.ContentCategory = dr["ContentCategory"].ToString();
+                    details.ContentDescription = dr["ContentDescription"].ToString();
+                    details.ContentDate = dr["ContentDate"].ToString();
+                    objmodel.Add(details);
+                }
+                data.ContentInfo = objmodel;
+            }
+            else
+            {
+                return View("Error");
             }
 
-            sqlconn.Close();
+            con.Close();
             ModelState.Clear();
-            return View(ec);
+            return View("Search", data);
         }
     }
 }

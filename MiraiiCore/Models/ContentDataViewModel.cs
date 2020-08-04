@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
+
 namespace MiraiiCore.Models
 {
     public class ContentDataViewModel
@@ -15,6 +16,7 @@ namespace MiraiiCore.Models
         public String ContentCategory { get; set; }
         public String ContentType { get; set; }
         public String ContentDescription { get; set; }
-        public DateTime ContentDate { get; set; }
-    }
+        public String ContentDate { get; set; }
+        public List<ContentDataViewModel> ContentInfo { get; set; }
+}
 }
