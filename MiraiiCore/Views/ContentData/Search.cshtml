@@ -1,5 +1,4 @@
-﻿@model IEnumerable<MiraiiCore.Models.ContentDataViewModel>
-
+﻿@model MiraiiCore.Models.ContentDataViewModel
 @{
     ViewData["Title"] = "Search";
 }
@@ -20,16 +19,13 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.ContentLocation)
+                XXX
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.ContentName)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.ContentCategory)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ContentType)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.ContentDescription)
@@ -41,7 +37,7 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model)
+        @foreach (var item in Model.ContentInfo)
         {
             <tr>
                 <td>
@@ -54,19 +50,12 @@
                     @Html.DisplayFor(modelItem => item.ContentCategory)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.ContentType)
-                </td>
-                <td>
                     @Html.DisplayFor(modelItem => item.ContentDescription)
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.ContentDate)
                 </td>
-                <td>
-                    @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                    @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                    @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-                </td>
+             
             </tr>
         }
     </tbody>

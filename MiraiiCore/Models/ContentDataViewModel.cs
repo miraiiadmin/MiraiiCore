@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
-
+using MiraiiCore.Models;
 
 namespace MiraiiCore.Models
 {
@@ -18,5 +18,5 @@ namespace MiraiiCore.Models
         public String ContentDescription { get; set; }
         public String ContentDate { get; set; }
         public List<ContentDataViewModel> ContentInfo { get; set; }
-}
+    }
 }
