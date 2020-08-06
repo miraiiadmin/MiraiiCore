@@ -16,14 +16,45 @@ namespace MiraiiCore.Controllers
         SqlCommand com = new SqlCommand();
         SqlDataReader dr;
 
-        public IActionResult Index()
-        {
-            return View();
-        }
+        public IActionResult Index(ContentDataViewModel data)
+        
+            {
+                ConnectionString();
+                con.Open();
+                com.Connection = con;
+
+                com.CommandText = "SELECT * FROM [dbo].[ContentData] ";
+            dr = com.ExecuteReader();
+                List<ContentDataViewModel> objmodel = new List<ContentDataViewModel>();
+                if (dr.HasRows)
+                {
+                    while (dr.Read())
+                    {
+                        var details = new ContentDataViewModel();
+                        details.ContentLocation = dr["ContentLocation"].ToString();
+                        details.ContentName = dr["ContentName"].ToString();
+                        details.ContentCategory = dr["ContentCategory"].ToString();
+                        details.ContentDescription = dr["ContentDescription"].ToString();
+                        details.ContentDate = dr["ContentDate"].ToString();
+                        details.ContentWriter = dr["ContentWriter"].ToString();
+                        objmodel.Add(details);
+                    }
+                    data.ContentInfo = objmodel;
+                }
+                else
+                {
+                    return View("Error");
+                }
+
+                con.Close();
+                ModelState.Clear();
+                return View(data);
+            }
+        
 
         void ConnectionString()
         {
-            con.ConnectionString = "Data Source=DESKTOP-2MCCG5E\\SQLEXPRESS;Initial Catalog=Miraii;Trusted_Connection=True;MultipleActiveResultSets=true";
+            con.ConnectionString = "Data Source=DESKTOP-27AKM7H\\MSSQLSERVER01;Database=Miraii;Integrated Security=SSPI;";
         }
 
         [HttpPost]
