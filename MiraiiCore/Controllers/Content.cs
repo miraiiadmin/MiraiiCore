@@ -9,7 +9,7 @@ using MiraiiCore.Models;
 
 namespace MiraiiCore.Controllers
 {
-    public class ContentDataController : Controller
+    public class Content : Controller
     {
         SqlConnection con = new SqlConnection();
         SqlCommand com = new SqlCommand();

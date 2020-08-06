@@ -1,5 +1,7 @@
-﻿@{ ViewData["Title"] = "About";
-   Layout = "~/Views/Shared/_Layout_About.cshtml"; }
+﻿@{
+    ViewData["Title"] = "About";
+    Layout = "~/Views/Shared/_Layout_About.cshtml";
+}
 
 <style>
     .img-head {
@@ -177,13 +179,13 @@
                 <div class="card-body">
                     @using (Html.BeginForm("Feedback", "About", FormMethod.Post))
                     {
-        <form data-aos="fade-up">
-            <div class="form-group">
-                <textarea class="form-control" name="Feedback" id="Feedback" rows="7" required></textarea>
-            </div>
-            <button type="submit" class="btn bg-maincolor form-control">Submit</button>
-        </form>
-        }
+                        <form data-aos="fade-up">
+                            <div class="form-group">
+                                <textarea class="form-control" name="Feedback" id="Feedback" rows="7" required></textarea>
+                            </div>
+                            <button type="submit" class="btn bg-maincolor form-control">Submit</button>
+                        </form>
+                    }
                 </div>
             </div>
             <!-- /.container -->

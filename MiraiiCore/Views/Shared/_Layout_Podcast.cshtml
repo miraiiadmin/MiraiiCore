@@ -199,32 +199,38 @@
                             <a href="https://www.instagram.com/thehandyman.bkk/"><i class="nav-link icofont-instagram"></i></a>
                         </li>
                     </ul>
+                    @using (Html.BeginForm("Search", "Content", FormMethod.Get))
+                    {
+                        <!--button--><!--<i class="fas fa-search"></i>-->
+                        <form>
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-warning nav-button " data-toggle="modal" data-target="#exampleModal">
+                                <i class="nav-link fas fa-search"></i>
+                            </button>
 
-                    <!--button--><!--<i class="fas fa-search"></i>-->
-                    <form>
-                        <!-- Button trigger modal -->
-                        <button type="button" class="btn btn-warning nav-button " data-toggle="modal" data-target="#exampleModal">
-                            <i class="nav-link fas fa-search"></i>
-                        </button>
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <div class="input-group">
 
-                        <!-- Modal -->
-                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered">
-                                <div class="modal-content">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <div class="input-group">
-                                                <input type="text" class="form-control text-inSreachBox" placeholder="Type something here">
-                                                <div class="input-group-append text-center">
-                                                    <button class="btn btn-warning" type="submit"><i class="fa fa-search"></i></button>
-                                                </div>
-                                            </div><!--input-group-->
-                                        </div>
-                                    </div><!--Card-->
-                                </div>
-                            </div><!--Modal dialog-->
-                        </div><!--Modal-->
-                    </form>
+
+                                                    <input type="text" name="text" class="form-control text-inSreachBox" placeholder="Type something here">
+                                                    <div class="input-group-append text-center">
+                                                        <button name="submit" class="btn btn-warning" type="submit"><i class="fa fa-search"></i>
+                                                    </div>
+
+
+                                                </div><!--input-group-->
+                                            </div>
+                                        </div><!--Card-->
+                                    </div>
+                                </div><!--Modal dialog-->
+                            </div><!--Modal-->
+                        </form>
+                    }
                 </div><!--menu-->
             </div><!--container-->
         </nav>

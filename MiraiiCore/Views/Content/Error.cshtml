@@ -1,0 +1,91 @@
+﻿@{ ViewData["Title"] = "Error";}
+
+<head>
+    <style>
+        .img-head {
+            display: block;
+            margin-top: 75px;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        .Search-Error {
+            font-weight: bold;
+            font-size: 50px;
+            color: #E5AC51;
+            font-family: 'Bangers', cursive;
+        }
+
+        .Search-Error-btn {
+            color: white;
+            font-family: 'Bangers', cursive;
+            padding: auto;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Crossfade Carousel (picture 1200x480) -->
+    <img src="~/image/Index/cover.png" class="img-head">
+
+    <br />
+
+    <div class="container text-center Search-Error">
+        @using (Html.BeginForm("Search", "Content", FormMethod.Get))
+        {
+            <div class="input-group">
+                <input type="text" name="text" class="form-control text-inSreachBox" placeholder="Search Again">
+                <div class="input-group-append">
+                    <button name="submit" class="btn btn-warning" type="submit"><i class="fa fa-search"></i>
+                </div>
+            </div>
+        }
+        <br />
+        <p> Nothing here matches your search </p>
+        <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+            <input class="btn btn-warning Search-Error-btn" id="Button1" type="submit" value="Back To Home" />
+        </a>
+    </div>
+
+    <br />
+    <br />
+
+    <!--============== banner ===============-->
+    <div class="container">
+        <hr />
+        <br />
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-primary">World</strong>
+                        <h3 class="mb-0 display-6">For Ads</h3>
+                        <div class="mb-1 text-muted">Nov 12</div>
+                        <p class="card-text mb-auto">AAAAAAAAAAAAAAAAAAAAAA</p>
+                        <a href="#" class="stretched-link">Continue reading</a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-success">Design</strong>
+                        <h3 class="mb-0 display-6">For Ads</h3>
+                        <div class="mb-1 text-muted">Nov 11</div>
+                        <p class="mb-auto">AAAAAAAAAAAAAAAAAAAAAA</p>
+                        <a href="#" class="stretched-link">Continue reading</a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                    </div>
+                </div>
+            </div>
+
+            <br />
+            <br />
+
+        </div>
+    </div>
+</body>

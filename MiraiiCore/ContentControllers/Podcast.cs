@@ -10,7 +10,7 @@ namespace MiraiiCore.Controllers
     {
         public IActionResult Index()
         {
-            return View("~/Views/Read/Podcast/Index.cshtml");
+            return View("~/Views/Listen/Podcast/Index.cshtml");
         }
 
 

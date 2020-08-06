@@ -1,0 +1,173 @@
+﻿@model MiraiiCore.Models.ContentDataViewModel
+@{
+    ViewData["Title"] = "Search";
+}
+
+<style>
+    .img-head {
+        display: block;
+        margin-top: 75px;
+        margin-bottom: 40px;
+        width: 100%;
+    }
+
+    .cont-name {
+        font-family: 'Sarabun', sans-serif;
+        color: #E5AC51;
+        font-size: 20px;
+        font-weight: bold;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .cont-detail {
+        font-family: 'Sarabun', sans-serif;
+        font-size: 15px;
+        color: black;
+        text-align: left;
+    }
+
+        .cont-detail:hover {
+            font-family: 'Sarabun', sans-serif;
+            font-size: 15px;
+            color: #F5B041;
+            text-decoration: underline;
+        }
+
+    .cont-category {
+        font-family: 'Sarabun', sans-serif;
+        font-size: 17px;
+        color: #E5AC51;
+        text-align: left;
+        line-height: 15%;
+    }
+
+    .cont-img {
+        display: block;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .cont-date {
+        font-family: 'Sarabun', sans-serif;
+        font-size: 14px;
+        color: #BEB9B8;
+        text-align: right;
+        padding-right: 0px;
+        line-height: 15%;
+    }
+
+    .cont-credit {
+        font-family: 'Sarabun', sans-serif;
+        font-size: 14px;
+        color: #BEB9B8;
+        text-align: left;
+        padding-left: 0px;
+        line-height: 15%;
+    }
+
+    .result {
+        font-family: 'Sarabun', sans-serif;
+        font-size: 40px;
+        color: #F5B041;
+        text-align: center;
+        text-decoration: underline;
+    }
+</style>
+
+<body>
+    <!--Crossfade Carousel (picture 1200x480)-->
+    <img src="~/image/Index/cover.png" class="img-head">
+
+    <div class="container">
+        @using (Html.BeginForm("Search", "Content", FormMethod.Get))
+        {
+            <div class="input-group">
+                <input type="text" name="text" class="form-control text-inSreachBox" placeholder="Type something here">
+                <div class="input-group-append text-center">
+                    <button name="submit" class="btn btn-warning" type="submit"><i class="fa fa-search"></i>
+                </div>
+            </div>
+        }
+        <br />
+        <h1 class="result">"Here's Your Results"</h1>
+        <br />
+    </div>
+
+    <!--============ Article ==============-->
+    <!--4:4pic-->
+    <div class="container text-center ">
+        <a asp-area="" asp-controller="Read" asp-action="DrRomactic">
+            <div class="row">
+                @foreach (var item in Model.ContentInfo)
+                {
+                    <div class="col-lg-4 col-md-6">
+
+                        <img class="cont-img" src="@Url.Content(item.ContentLocation)" />
+                        <h1 class="cont-name">@Html.DisplayFor(modelItem => item.ContentName)</h1>
+                        <p class="cont-category">@Html.DisplayFor(modelItem => item.ContentCategory)</p>
+                        <p class="cont-detail">@Html.DisplayFor(modelItem => item.ContentDescription)</p>
+
+                        <!--foot mute text-->
+                        <div class="container">
+                            <div class="row">
+                                <div class="col cont-credit">
+                                    <p> Author : @Html.DisplayFor(modelItem => item.ContentDate) </p>
+                                </div>
+                                <div class="col cont-date">
+                                    <p> <i class="far fa-clock"> &nbsp; &nbsp; </i>@Html.DisplayFor(modelItem => item.ContentDate)  </p>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-outline-warning btn-lg cont-detail"> read more </button>
+                    </div>
+                }
+            </div>
+        </a>
+    </div>
+
+    <br />
+    <br />
+
+    <!--============== banner ===============-->
+    <div class="container">
+        <hr />
+        <br />
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-primary">World</strong>
+                        <h3 class="mb-0 display-6">For Ads</h3>
+                        <div class="mb-1 text-muted">Nov 12</div>
+                        <p class="card-text mb-auto">AAAAAAAAAAAAAAAAAAAAAA</p>
+                        <a href="#" class="stretched-link">Continue reading</a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-success">Design</strong>
+                        <h3 class="mb-0 display-6">For Ads</h3>
+                        <div class="mb-1 text-muted">Nov 11</div>
+                        <p class="mb-auto">AAAAAAAAAAAAAAAAAAAAAA</p>
+                        <a href="#" class="stretched-link">Continue reading</a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+
+                    </div>
+                </div>
+            </div>
+
+            <br />
+            <br />
+
+        </div>
+    </div>
+</body>
+
+
