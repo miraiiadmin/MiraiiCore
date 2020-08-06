@@ -41,6 +41,7 @@ namespace MiraiiCore.Controllers
                     details.ContentCategory = dr["ContentCategory"].ToString();
                     details.ContentDescription = dr["ContentDescription"].ToString();
                     details.ContentDate = dr["ContentDate"].ToString();
+                    details.ContentWriter = dr["ContentWriter"].ToString();
                     objmodel.Add(details);
                 }
                 data.ContentInfo = objmodel;

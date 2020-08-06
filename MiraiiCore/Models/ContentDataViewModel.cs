@@ -17,6 +17,7 @@ namespace MiraiiCore.Models
         public String ContentType { get; set; }
         public String ContentDescription { get; set; }
         public String ContentDate { get; set; }
+        public String ContentWriter { get; set; }
         public List<ContentDataViewModel> ContentInfo { get; set; }
     }
 }

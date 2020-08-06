@@ -66,8 +66,8 @@
         line-height: 15%;
     }
 
-    .result {
-        font-family: 'Sarabun', sans-serif;
+    .result-text {
+        font-family: 'Bangers', cursive;
         font-size: 40px;
         color: #F5B041;
         text-align: center;
@@ -90,7 +90,7 @@
             </div>
         }
         <br />
-        <h1 class="result">"Here's Your Results"</h1>
+        <h1 class="result-text">"Here's Your Results"</h1>
         <br />
     </div>
 
@@ -112,7 +112,7 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col cont-credit">
-                                    <p> Author : @Html.DisplayFor(modelItem => item.ContentDate) </p>
+                                    <p> Author : @Html.DisplayFor(modelItem => item.ContentWriter) </p>
                                 </div>
                                 <div class="col cont-date">
                                     <p> <i class="far fa-clock"> &nbsp; &nbsp; </i>@Html.DisplayFor(modelItem => item.ContentDate)  </p>

@@ -201,7 +201,7 @@
                     </ul>
                     @using (Html.BeginForm("Search", "Content", FormMethod.Get))
                     {
-                        <!--button--><!--<i class="fas fa-search"></i>-->
+                        <!--button-->
                         <form>
                             <!-- Button trigger modal -->
                             <button type="button" class="btn btn-warning nav-button " data-toggle="modal" data-target="#exampleModal">
@@ -209,19 +209,17 @@
                             </button>
 
                             <!-- Modal -->
-                            <div class="modal fade" id="exampleModal" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal fade" id="exampleModal" tabindex="" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                 <div class="modal-dialog modal-dialog-centered">
                                     <div class="modal-content">
                                         <div class="card">
                                             <div class="card-body">
                                                 <div class="input-group">
 
-
                                                     <input type="text" name="text" class="form-control text-inSreachBox" placeholder="Type something here">
                                                     <div class="input-group-append text-center">
                                                         <button name="submit" class="btn btn-warning" type="submit"><i class="fa fa-search"></i>
                                                     </div>
-
 
                                                 </div><!--input-group-->
                                             </div>
