@@ -13,9 +13,9 @@ namespace MiraiiCore.Controllers
             return View("~/Views/Read/Review/Index.cshtml");
         }
 
-        public IActionResult DrRomactic()
+        public IActionResult DrRomantic()
         {
-            return View();
+            return View("~/Views/Read/Review/DrRomantic.cshtml");
         }
 
 

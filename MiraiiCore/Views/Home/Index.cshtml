@@ -77,78 +77,6 @@
         margin-bottom: 0px;
         font-size: 2rem;
     }
-
-
-
-        .img-head {
-        display: block;
-        margin-top: 75px;
-        margin-bottom: 40px;
-        width: 100%;
-    }
-
-    .cont-name {
-        font-family: 'Sarabun', sans-serif;
-        color: #E5AC51;
-        font-size: 20px;
-        font-weight: bold;
-        margin-top: 20px;
-        text-align: center;
-    }
-
-    .cont-detail {
-        font-family: 'Sarabun', sans-serif;
-        font-size: 15px;
-        color: black;
-        text-align: left;
-    }
-
-        .cont-detail:hover {
-            font-family: 'Sarabun', sans-serif;
-            font-size: 15px;
-            color: #F5B041;
-            text-decoration: underline;
-        }
-
-    .cont-category {
-        font-family: 'Sarabun', sans-serif;
-        font-size: 17px;
-        color: #E5AC51;
-        text-align: center;
-        line-height: 25%;
-    }
-
-    .cont-img {
-        display: block;
-        width: 100%;
-        margin-top: 20px;
-    }
-
-    .cont-date {
-        font-family: 'Sarabun', sans-serif;
-        font-size: 14px;
-        color: #BEB9B8;
-        text-align: right;
-        padding-right: 0px;
-        line-height: 15%;
-    }
-
-    .cont-credit {
-        font-family: 'Sarabun', sans-serif;
-        font-size: 14px;
-        color: #BEB9B8;
-        text-align: left;
-        padding-left: 0px;
-        line-height: 15%;
-    }
-
-    .result-text {
-        font-family: 'Bangers', cursive;
-        font-size: 40px;
-        color: #F5B041;
-        text-align: center;
-        text-decoration: underline;
-    }
 </style>
 
 <body>
@@ -162,9 +90,10 @@
                     <div class="col-lg-12 ">
                         <ul id="portfolio-flters">
                             <li data-filter="*" class="filter-active">All</li>
-                            <li data-filter=".filter-app">Fiction</li>
-                            <li data-filter=".filter-card">Review</li>
+                            <li data-filter=".filter-app">Blog</li>
+                            <li data-filter=".filter-card">Story</li>
                             <li data-filter=".filter-web">Life</li>
+                            <li data-filter=".filter-web">Review</li>
                         </ul>
                     </div>
                 </div>
@@ -173,7 +102,7 @@
                     <div class="col-lg-4 col-md-6 portfolio-item filter-card">
                         <img src="https://steamuserimages-a.akamaihd.net/ugc/868489934988835719/ED9B08B975B07AEC0FC43632305F8AD4F45B4718/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true" width="100" height="225" class="card-img-top" text="Thumbnail" />
                         <div class="card-body">
-                            <a href="#">Love Generation </a>
+                            <a href="#">Love Generation</a>
                             <br />
                             <p class="card-text">Review</p>
                             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
@@ -268,7 +197,7 @@
                         </div>
                     </div>
                 </div>
-                <a href="#" class="btn form-control btn-outline-success">See more !</a> <!-- BS3 -->
+                <a asp-area="" asp-controller="Blog" asp-action="Index" class="btn form-control btn-outline-success">See more !</a> <!-- BS3 -->
             </div>
         </section>
     </main>
@@ -369,7 +298,7 @@
                     </div><!--row-->
                 </div><!--container inside (Most Popular)-->
                 <br /><br />
-                <a href="#" class="btn form-control btn-outline-success">See more !</a>
+                <a asp-area="" asp-controller="Story" asp-action="Index" class="btn form-control btn-outline-success">See more !</a>
             </div><!--Most Popular-->
         </div><!--row (content1)-->
     </div><!--container-->
@@ -418,7 +347,7 @@
                                     </tr>
                                 </tbody>
                             </table>
-                            <a href="#" class="btn form-control btn-outline-success">Sound Good ?! Discover More !</a>
+                            <a  asp-area="" asp-controller="Podcast" asp-action="Index" class="btn form-control btn-outline-success">Sound Good ?! Discover More !</a>
                         </div>
                     </div>
                 </div>
@@ -489,7 +418,9 @@
                         <a href="https://www.linkedin.com/"><i class="icofont-linkedin icon text-center"></i><br /><br /></a>
                     </address>
 
-                    <button class="btn btn-outline-success form-control">Learn more about us</button><br /><br />
+                    <a asp-area="" asp-controller="About" asp-action="Index">
+                        <button class="btn btn-outline-success form-control">Learn more about us</button><br /><br />
+                    </a>
 
                     <p class="display-6 text-center">You can leave us some comments here : )</p><br />
 
