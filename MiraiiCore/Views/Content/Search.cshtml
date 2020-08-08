@@ -102,7 +102,7 @@
             @foreach (var item in Model.ContentInfo)
             {
                 <div class="col-lg-4 col-md-6">
-                    <a asp-area="" asp-controller=" @Html.DisplayFor(modelItem => item.Controller)" asp-action=" @Html.DisplayFor(modelItem => item.Action)">
+                    <a asp-area="" asp-controller="@item.Controller" asp-action="@item.Action">
                         <img class="cont-img" src="@Url.Content(item.ContentLocation)" />
                         <h1 class="cont-name">@Html.DisplayFor(modelItem => item.ContentName)</h1>
                         <p class="cont-category">@Html.DisplayFor(modelItem => item.ContentCategory)</p>
