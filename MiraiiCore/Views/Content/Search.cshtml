@@ -54,7 +54,6 @@
         color: #BEB9B8;
         text-align: right;
         padding-right: 0px;
-        line-height: 15%;
     }
 
     .cont-credit {
@@ -63,7 +62,6 @@
         color: #BEB9B8;
         text-align: left;
         padding-left: 0px;
-        line-height: 15%;
     }
 
     .result-text {
@@ -97,12 +95,12 @@
     <!--============ Article ==============-->
     <!--4:4pic-->
     <div class="container text-center ">
-        <a asp-area="" asp-controller="Read" asp-action="DrRomactic">
-            <div class="row">
-                @foreach (var item in Model.ContentInfo)
-                {
-                    <div class="col-lg-4 col-md-6">
 
+        <div class="row">
+            @foreach (var item in Model.ContentInfo)
+            {
+                <div class="col-lg-4 col-md-6">
+                    <a asp-area="" asp-controller="@item.Controller" asp-action="@item.Action">
                         <img class="cont-img" src="@Url.Content(item.ContentLocation)" />
                         <h1 class="cont-name">@Html.DisplayFor(modelItem => item.ContentName)</h1>
                         <p class="cont-category">@Html.DisplayFor(modelItem => item.ContentCategory)</p>
@@ -115,15 +113,16 @@
                                     <p> Author : @Html.DisplayFor(modelItem => item.ContentWriter) </p>
                                 </div>
                                 <div class="col cont-date">
-                                    <p> <i class="far fa-clock"> &nbsp; &nbsp; </i>@Html.DisplayFor(modelItem => item.ContentDate)  </p>
+                                    <p> <i class="far fa-clock"> &nbsp; </i>@Html.DisplayFor(modelItem => item.ContentDate)  </p>
                                 </div>
                             </div>
                         </div>
                         <button type="button" class="btn btn-outline-warning btn-lg cont-detail"> read more </button>
-                    </div>
-                }
-            </div>
-        </a>
+                    </a>
+                </div>
+            }
+        </div>
+
     </div>
 
     <br />

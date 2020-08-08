@@ -13,6 +13,5 @@ namespace MiraiiCore.Controllers
             return View("~/Views/Listen/Podcast/Index.cshtml");
         }
 
-
     }
 }
