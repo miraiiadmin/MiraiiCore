@@ -23,7 +23,7 @@ namespace MiraiiCore.Controllers
                 con.Open();
                 com.Connection = con;
 
-                com.CommandText = "SELECT * FROM [dbo].[ContentData]";
+                com.CommandText = "SELECT * FROM [dbo].[ContentData] ";
             dr = com.ExecuteReader();
                 List<ContentDataViewModel> objmodel = new List<ContentDataViewModel>();
                 if (dr.HasRows)
