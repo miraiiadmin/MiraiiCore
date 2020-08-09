@@ -126,22 +126,10 @@
         }
 
         .active2 {
-            text-decoration: underline overline;
             color: #FCDC74;
         }
 
-        .dropdown:hover {
-            text-decoration: underline overline;
-            color: #FCDC74;
-        }
-
-        .nav-item:hover {
-            text-decoration: underline overline;
-            color: #FCDC74;
-        }
-
-        .dropdown-item:hover {
-            text-decoration: underline overline;
+        .dropdown:hover, .nav-item:hover, .dropdown-item:hover {
             color: #FCDC74;
         }
     </style>
@@ -181,11 +169,11 @@
                         </li>
                         <!--Listen-->
                         <li class="nav-item dropdown">
-                            <a class="nav-link text-nav" href="https://localhost:44369/Home/index" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link text-nav disabled" href="https://localhost:44369/Home/index" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Listen
                             </a>
                             <div id="reviewDrop" class="dropdown-menu" aria-labelledby="navbarDropdown" onmouseover="reviewDrop.classList.add('show');">
-                                <a class="dropdown-item text-nav" asp-area="" asp-controller="Podcast" asp-action="Index">podcast</a>
+                                <a class="dropdown-item disabled text-nav" asp-area="" asp-controller="Podcast" asp-action="Index">podcast</a>
                             </div>
                         </li>
                         <!--About-->

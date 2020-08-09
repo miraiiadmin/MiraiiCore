@@ -23,7 +23,7 @@ namespace MiraiiCore.Controllers
                 con.Open();
                 com.Connection = con;
 
-                com.CommandText = "SELECT TOP 9 * FROM [dbo].[ContentData]";
+                com.CommandText = "SELECT TOP 9 * FROM ContentData";
                 dr = com.ExecuteReader();
                 List<ContentDataViewModel> objmodel = new List<ContentDataViewModel>();
                 if (dr.HasRows)
@@ -53,12 +53,10 @@ namespace MiraiiCore.Controllers
                 return View(data);
             }
         
-
         void ConnectionString()
         {
-            con.ConnectionString = "Data Source=miraii.space;Initial Catalog=miraii_space;User ID=miraii_space;Password=Hostmiraii007;";
+            con.ConnectionString = "Data Source= miraii.space; Database= miraii_space; User ID=miraii_space; Password=Hostmiraii007;";
         }
-        
 
         [HttpPost]
         public IActionResult Feedback(FeedbackModel insertFeedback) //Insert Feedback Action

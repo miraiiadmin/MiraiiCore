@@ -20,7 +20,7 @@ namespace MiraiiCore.Controllers
         }
         void connectionString()
         {
-            con.ConnectionString = "Data Source=miraii.space;Initial Catalog=miraii_space;User ID=miraii_space;Password=Hostmiraii007;";
+            con.ConnectionString = "Data Source= miraii.space; Database= miraii_space; User ID=miraii_space; Password=Hostmiraii007;";
         }
 
         [HttpGet]

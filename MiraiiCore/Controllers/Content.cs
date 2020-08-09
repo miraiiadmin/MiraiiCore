@@ -17,7 +17,7 @@ namespace MiraiiCore.Controllers
 
         void ConnectionString()
         {
-            con.ConnectionString = "Data Source=miraii.space;Initial Catalog=miraii_space;User ID=miraii_space;Password=Hostmiraii007;";
+            con.ConnectionString = "Data Source= miraii.space; Database= miraii_space; User ID=miraii_space; Password=Hostmiraii007;";
         }
 
 
@@ -28,7 +28,7 @@ namespace MiraiiCore.Controllers
             con.Open();
             com.Connection = con;
 
-            com.CommandText = "SELECT * FROM [dbo].[ContentData] WHERE ContentName like '%" + text + "%'";
+            com.CommandText = "SELECT * FROM ContentData WHERE ContentName like '%" + text + "%'";
             dr = com.ExecuteReader();
             List<ContentDataViewModel> objmodel = new List<ContentDataViewModel>();
             if (dr.HasRows)
