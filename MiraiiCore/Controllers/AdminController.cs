@@ -20,7 +20,7 @@ namespace MiraiiCore.Controllers
         }
         void connectionString()
         {
-            con.ConnectionString = "data source=DESKTOP-27AKM7H\\MSSQLSERVER01; database=Miraii; integrated security = SSPI;";
+            con.ConnectionString = "Data Source=miraii.space;Initial Catalog=miraii_space;User ID=miraii_space;Password=Hostmiraii007;";
         }
 
         [HttpGet]

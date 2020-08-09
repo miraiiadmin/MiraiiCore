@@ -23,7 +23,7 @@ namespace MiraiiCore.Controllers
                 con.Open();
                 com.Connection = con;
 
-                com.CommandText = "SELECT TOP 9 * FROM [dbo].[ContentData] ";
+                com.CommandText = "SELECT TOP 9 * FROM [dbo].[ContentData]";
                 dr = com.ExecuteReader();
                 List<ContentDataViewModel> objmodel = new List<ContentDataViewModel>();
                 if (dr.HasRows)
@@ -56,8 +56,9 @@ namespace MiraiiCore.Controllers
 
         void ConnectionString()
         {
-            con.ConnectionString = "Data Source=DESKTOP-27AKM7H\\MSSQLSERVER01;Database=Miraii;Integrated Security=SSPI;";
+            con.ConnectionString = "Data Source=miraii.space;Initial Catalog=miraii_space;User ID=miraii_space;Password=Hostmiraii007;";
         }
+        
 
         [HttpPost]
         public IActionResult Feedback(FeedbackModel insertFeedback) //Insert Feedback Action
