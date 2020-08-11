@@ -50,7 +50,7 @@ namespace MiraiiCore.Controllers
 
             con.Close();
             ModelState.Clear();
-            return View(data);
+            return View("~/Views/Read/Life/Index.cshtml", data);
         }
         void ConnectionString()
         {
