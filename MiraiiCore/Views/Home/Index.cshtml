@@ -79,6 +79,19 @@
         margin-bottom: 0px;
         font-size: 2rem;
     }
+
+    .lastest-credit {
+        font-family: 'Sarabun', sans-serif;
+        font-size: 15px;
+        color: #BEB9B8;
+        margin-bottom: 0px;
+    }
+
+    .lastest-category {
+        font-family: 'Sarabun', sans-serif;
+        font-size: 15px;
+        margin-bottom: 0px;
+    }
 </style>
 
 <body>
@@ -107,7 +120,9 @@
                             <div class="card-body">
                                 <a asp-area="" asp-controller="@item.Controller" asp-action="@item.Action"> @Html.DisplayFor(modelItem => item.ContentName) </a>
                                 <br />
-                                <p class="card-text">@Html.DisplayFor(modelItem => item.ContentCategory)</p>
+                                <p class="lastest-category">@Html.DisplayFor(modelItem => item.ContentCategory)</p>
+                                <p class="lastest-credit">Author : @Html.DisplayFor(modelItem => item.ContentWriter)</p>
+                                <br />
                                 <p class="card-text">@Html.DisplayFor(modelItem => item.ContentDescription)</p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
@@ -251,26 +266,26 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <th scope="row"><a href="#">AAA</a></th>
-                                        <td>Anonymous</td>
-                                        <td>12:49</td>
-                                        <td>13/04/2020</td>
+                                        <th scope="row"><a href="#">???</a></th>
+                                        <td>??????</td>
+                                        <td>???</td>
+                                        <td>???</td>
                                     </tr>
                                     <tr>
-                                        <th scope="row"><a href="#">BBB</a></th>
-                                        <td>Picolo</td>
-                                        <td>04:20</td>
-                                        <td>20/04/2020</td>
+                                        <th scope="row"><a href="#">???</a></th>
+                                        <td>??????</td>
+                                        <td>???</td>
+                                        <td>???</td>
                                     </tr>
                                     <tr>
-                                        <th scope="row"><a href="#">CCC</a></th>
-                                        <td>Nicochan</td>
-                                        <td>29:30</td>
-                                        <td>20/04/2020</td>
+                                        <th scope="row"><a href="#">???</a></th>
+                                        <td>??????</td>
+                                        <td>???</td>
+                                        <td>???</td>
                                     </tr>
                                 </tbody>
                             </table>
-                            <a asp-area="" asp-controller="Podcast" asp-action="Index" class="btn form-control btn-outline-success">Sound Good ?! Discover More !</a>
+                            <a asp-area="" asp-controller="" asp-action="" class="btn form-control btn-outline-success">Sound Good ?! Discover More !</a>
                         </div>
                     </div>
                 </div>
@@ -287,24 +302,24 @@
                     </ol>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="https://fanart.tv/api/download.php?type=download&image=54819&section=1" class="img-fluid" width="400" height="400">
+                            <img src="~/image/Index/Artwork 01.png" class="img-fluid" width="400" height="400">
                             <div class="carousel-caption d-none d-md-block">
-                                <h5 class="display-6 text-black"><a href="#">AAA</a></h5>
-                                <p c>AAAAAAAAAAA</p>
+                                <h5 class="display-6 text-black"><a href="#"></a></h5>
+                                <p></p>
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="https://fanart.tv/api/download.php?type=download&image=54819&section=1" class="img-fluid" width="400" height="400">
+                            <img src="~/image/Index/Artwork 02.png" class="img-fluid" width="400" height="400">
                             <div class="carousel-caption d-none d-md-block">
-                                <h5 class="display-6 text-black"><a href="#">AAA</a></h5>
-                                <p>AAAAAAAAAAA</p>
+                                <h5 class="display-6 text-black"><a href="#"></a></h5>
+                                <p></p>
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="https://fanart.tv/api/download.php?type=download&image=54819&section=1" class="img-fluid" width="400" height="400">
+                            <img src="~/image/Index/Artwork 03.jpg" class="img-fluid" width="400" height="400">
                             <div class="carousel-caption d-none d-md-block">
-                                <h5 class="display-6 text-black"><a href="#">AAA</a></h5>
-                                <p>AAAAAAAAAAA</p>
+                                <h5 class="display-6 text-black"><a href="#"></a></h5>
+                                <p></p>
                             </div>
                         </div>
                     </div>
