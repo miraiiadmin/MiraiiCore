@@ -47,7 +47,6 @@ namespace MiraiiCore.Controllers
             {
                 return View("Error");
             }
-
             con.Close();
             ModelState.Clear();
             return View("~/Views/Read/Life/Index.cshtml", data);
