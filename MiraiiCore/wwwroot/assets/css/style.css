@@ -676,10 +676,10 @@ section {
 }
 
 .portfolio #portfolio-flters {
-  padding: 0;
-  margin: 0 0 35px 0;
-  list-style: none;
-  text-align: center;
+    padding: 0;
+    margin: 0 0 0px 0; /*0 0 35px 0*/
+    list-style: none;
+    text-align: center;
 }
 
 .portfolio #portfolio-flters li {

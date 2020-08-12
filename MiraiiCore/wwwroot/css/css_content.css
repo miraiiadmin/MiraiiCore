@@ -1,0 +1,66 @@
+﻿/*Style Sheet for all content pages*/
+
+.img-head {
+    display: block;
+    margin-top: 75px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+/*Editor Selection Class*/
+.sel-text {
+    font-family: 'Bangers', cursive;
+    font-size: 30px;
+    color: #E5AC51;
+}
+
+.sel-img {
+    direction: block;
+    width: 100%;
+}
+
+/*Content 3x3's Class*/
+.filter-text {
+    font-family: 'Bangers', cursive;
+    font-size: 30px;
+    color: #E5AC51;
+    margin-bottom: 2px;
+}
+
+.content-img {
+    display: block;
+    width: 100%
+}
+
+.content-name {
+    font-family: 'Sarabun', sans-serif;
+    font-size: 20px;
+    color: #E5AC51;
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+
+.content-category {
+    font-family: 'Sarabun', sans-serif;
+    font-size: 15px;
+    margin-bottom: 2px;
+}
+
+.content-credit {
+    font-family: 'Sarabun', sans-serif;
+    font-size: 15px;
+    color: #BEB9B8;
+    margin-bottom: 2px;
+}
+
+.content-detail {
+    font-family: 'Sarabun', sans-serif;
+    font-size: 15px;
+    color: black;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+    .content-detail:hover {
+        color: #E5AC51;
+    }

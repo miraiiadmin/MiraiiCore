@@ -1,70 +1,20 @@
 ﻿@{
-    ViewData["Title"] = "Life";
+    ViewData["Title"] = "Miraii - Life";
     Layout = "~/Views/Shared/_Layout _Read.cshtml";
     @model MiraiiCore.Models.ContentDataViewModel
 }
 
-<style>
-    .img-head {
-        display: block;
-        margin-top: 75px;
-        margin-bottom: 20px;
-        width: 100%;
-    }
-
-    .cont-name {
-        font-family: 'Sarabun', sans-serif;
-        color: #E5AC51;
-        font-size: 25px;
-        font-weight: bold;
-    }
-
-    .cont-detail {
-        font-family: 'Sarabun', sans-serif;
-        font-size: 15px;
-        color: black;
-    }
-
-        .cont-detail:hover {
-            font-family: 'Sarabun', sans-serif;
-            font-size: 15px;
-            color: #F5B041;
-            text-decoration: underline;
-        }
-
-    .cont-category {
-        font-family: 'Bangers', cursive;
-        font-size: 35px;
-        color: #E5AC51;
-    }
-
-    .cont-img {
-        display: block;
-        width: 100%;
-        margin-top: 20px;
-    }
-
-    .lastest-credit {
-        font-family: 'Sarabun', sans-serif;
-        font-size: 15px;
-        color: #BEB9B8;
-        margin-bottom: 0px;
-    }
-
-    .lastest-category {
-        font-family: 'Sarabun', sans-serif;
-        font-size: 15px;
-        margin-bottom: 0px;
-    }
-</style>
+<head>
+    <link href="~/css/css_content.css" rel="stylesheet">
+</head>
 
 <body>
-    <!--Crossfade Carousel (picture 1200x480)-->
-    <img src="~/image/Read/Life/LIFE.png" class="img-head">
-
+    <!--================ Top of the Week & Mounth (ratio_5:2 / min.size_1200x480) =======================-->
+    <img src="~/image/Read/life/LIFE.png" class="img-head">
     <br />
     <br />
 
+    <!--================ Top of the Week & Mounth (ratio_4:5)=======================-->
     <div class="container">
         <hr />
         <br />
@@ -97,35 +47,31 @@
                     <div class="col-auto d-none d-lg-block">
                         <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" role="img" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
 
-                    </div>
-                </div>
-            </div>
-
+                    </div><!--column-->
+                </div><!--row-->
+            </div><!--column-->
             <br />
             <br />
-
-        </div>
+        </div><!--row-->
     </div>
+
+    <!--================ Editor's Best Seleciton ! (ratio_3:4 / min.size_500x375) =======================-->
     <div class="container text-center">
         <hr />
-        <p class="cont-category">Editor's Best Seleciton !</p>
+        <p class="sel-text">Editor's Best Seleciton !</p>
         <a asp-area="" asp-controller="Review" asp-action="DrRomantic">
-            <img src="~/image/Read/Life/Life9.jpg" class="cont-img" />
+            <img src="~/image/Read/Life/Life9.jpg" class="sel-img" />
         </a>
-        <br />
     </div>
 
-    <br />
-    <br />
-
+    <!--================ All content (ratio_3:4 / min.size_500x375) =======================-->
     <main role="main">
         <section id="portfolio" class="portfolio">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 ">
-                        <ul id="portfolio-flters">
-                            <li data-filter="*" class="filter-active">Latest</li>
-                            <li data-filter=".filter-app">Top</li>
+                        <ul id="portfolio-flters" style="margin-bottom:5px;">
+                            <p data-filter="*" class="filter-active filter-text text-center"> All </p>
                         </ul>
                     </div>
                 </div>
@@ -135,38 +81,34 @@
                     {
                         <div class="col-lg-4 col-md-6 portfolio-item filter-web">
                             <a asp-area="" asp-controller="@item.Controller" asp-action="@item.Action">
-                                <img src="@Url.Content(item.ContentLocation)" width="100" height="225" class="card-img-top" text="Thumbnail" />
+                                <img src="@Url.Content(item.ContentLocation)" class="content-img" text="Thumbnail" />
                             </a>
                             <div class="card-body">
-                                <a asp-area="" asp-controller="@item.Controller" asp-action="@item.Action"> @Html.DisplayFor(modelItem => item.ContentName) </a>
-                                <br />
-                                <p class="lastest-category">@Html.DisplayFor(modelItem => item.ContentCategory)</p>
-                                <p class="lastest-credit">Author : @Html.DisplayFor(modelItem => item.ContentWriter)</p>
-                                <br />
-                                <p class="card-text">@Html.DisplayFor(modelItem => item.ContentDescription)</p>
+                                <a asp-area="" asp-controller="@item.Controller" asp-action="@item.Action">
+                                    <h1 class="content-name">@Html.DisplayFor(modelItem => item.ContentName)</h1>
+                                    <p class="content-category">@Html.DisplayFor(modelItem => item.ContentCategory)</p>
+                                    <h1 class="content-credit">Author : @Html.DisplayFor(modelItem => item.ContentWriter) <i class="fas fa-pencil-alt"></i></h1>
+                                    <p class="content-detail">@Html.DisplayFor(modelItem => item.ContentDescription)</p>
+                                </a>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
                                         <button type="submit" class="btn btn-sm btn-outline-success"><a class="btn-outline-success" asp-area="" asp-controller="@item.Controller" asp-action="@item.Action">View</a></button>
-                                        <button type="submit" class="btn btn-sm btn-outline-primary" data-href="https://thehandymanbkk.com/Review/LoveGeneration" data-layout="button"><a class="btn-outline-primary" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fthehandymanbkk.com%2FReview%2FLoveGeneration&amp;src=sdkpreparse">Share</a></button>
+                                        <button type="submit" class="btn btn-sm btn-outline-warning" data-layout="button"><a class="btn-outline-warning" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fthehandymanbkk.com%2FReview%2FLoveGeneration&amp;src=sdkpreparse">Share</a></button>
                                     </div>
-                                    <small class="text-muted">@Html.DisplayFor(modelItem => item.ContentDate)</small>
+                                    <small class="text-muted"><i class="far fa-calendar-alt"></i> &nbsp; : &nbsp; @Html.DisplayFor(modelItem => item.ContentDate)</small>
                                 </div>
                             </div>
-                        </div>
+                        </div><!--column-->
                     }
-                </div>
-                <a asp-area="" asp-controller="Blog" asp-action="Index" class="btn form-control btn-outline-success">See more !</a> <!-- BS3 -->
+                </div>  <!--content's row-->
             </div>
         </section>
     </main>
 
-    <br />
-    <br />
-    <br />
-    <br />
-
-    <!--============== banner ===============-->
+    <!--================ Banner =======================-->
     <div class="container">
+        <hr />
+        <br />
         <div class="row">
             <div class="col-lg-6">
                 <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
@@ -196,6 +138,9 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
+        </div><!--row-->
+    </div><!--container-->
+
 </body>
+
+
