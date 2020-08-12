@@ -62,6 +62,11 @@ namespace MiraiiCore.Controllers
             return View("~/Views/Read/Review/DrRomantic.cshtml");
         }
 
+        public IActionResult Rikuoh()
+        {
+            return View("~/Views/Read/Review/Rikuoh.cshtml");
+        }
+
         public IActionResult WW84_BlackWidow_Mulan()
         {
             return View("~/Views/Read/Review/WW84_BlackWidow_Mulan.cshtml");
