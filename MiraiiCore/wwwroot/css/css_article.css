@@ -1,0 +1,74 @@
+﻿/*css for article form*/
+
+.review-name {
+    text-align: center;
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 25px;
+    color: #E5AC51;
+}
+
+.credit {
+    font-size: 13px;
+    margin-left: auto;
+}
+
+.review-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    width: 70%;
+}
+
+.img-head {
+    display: block;
+    margin-top: 75px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.space {
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.share-this-page {
+    max-width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#force-sameLine {
+    white-space: nowrap;
+}
+
+    #force-sameLine > li {
+        display: inline-block;
+    }
+
+.author-tump {
+    display: block;
+    border: 3px solid #E5AC51;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    width: 50%;
+}
+
+.author-head {
+    color: #E5AC51;
+    font-family: 'Bangers', cursive;
+    font-size: 20px;
+}
+
+.author-detail {
+    margin-bottom: 25px;
+    margin-top: 25px;
+    font-family: 'Sarabun', sans-serif;
+    font-size: 15px;
+}
