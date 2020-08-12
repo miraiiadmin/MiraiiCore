@@ -21,12 +21,13 @@ body {
 
 .border-top footer {
     background-color: #E5AC51;
+    margin-bottom: 0px;
 }
 
 .text-footer {
     color: white;
-    font-size: 24px;
-    font-family: 'Bangers', cursive;
+    font-size: 20px;
+    font-family: 'Sarabun', sans-serif;
 }
 
 .bg-maincolor {
