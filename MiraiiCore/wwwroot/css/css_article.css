@@ -19,7 +19,7 @@
     margin-right: auto;
     margin-top: 25px;
     margin-bottom: 25px;
-    width: 70%;
+    max-width: 100%;
 }
 
 .img-head {
