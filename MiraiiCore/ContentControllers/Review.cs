@@ -72,5 +72,10 @@ namespace MiraiiCore.Controllers
             return View("~/Views/Read/Review/WW84_BlackWidow_Mulan.cshtml");
         }
 
+        public IActionResult VALORANT()
+        {
+            return View("~/Views/Read/Review/VALORANT.cshtml");
+        }
+        
     }
 }
