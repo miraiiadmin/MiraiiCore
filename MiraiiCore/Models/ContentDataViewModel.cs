@@ -14,7 +14,7 @@ namespace MiraiiCore.Models
         public String ContentLocation { get; set; }
         public String ContentName { get; set; }
         public String ContentCategory { get; set; }
-        public String ContentType { get; set; }
+        public String FileType { get; set; }
         public String ContentDescription { get; set; }
         public String ContentDate { get; set; }
         public String ContentWriter { get; set; }
