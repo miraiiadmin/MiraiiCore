@@ -66,5 +66,6 @@ namespace MiraiiCore.Controllers
         {
             return View("~/Views/Read/Review/WW84_BlackWidow_Mulan.cshtml");
         }
+
     }
 }

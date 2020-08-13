@@ -6,16 +6,14 @@
 <head>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/th_TH/sdk.js#xfbml=1&version=v6.0&appId=718174878568237&autoLogAppEvents=1"></script>
     <link href="~/css/css_home_about.css" rel="stylesheet">
-    <link href="~/css/css_content.css" rel="stylesheet">
+    <link href="~/css/css_read.css" rel="stylesheet">
 </head>
 
 <body>
     <!--Crossfade Carousel (picture 1200x480)-->
     <img src="~/image/Index/miraii (1).png" class="img-head">
 
-
     <!--================ All content (ratio_3:4 / min.size_500x375) =======================-->
-
     <main role="main">
         <section id="portfolio" class="portfolio">
             <div class="container">
@@ -36,12 +34,12 @@
                                 <img src="@Url.Content(item.ContentLocation)" class="content-img" text="Thumbnail" />
                             </a>
                             <div class="card-body">
-                                <a asp-area="" asp-controller="@item.Controller" asp-action="@item.Action">
-                                    <h1 class="content-name">@Html.DisplayFor(modelItem => item.ContentName)</h1>
-                                    <p class="content-category">@Html.DisplayFor(modelItem => item.ContentCategory)</p>
-                                    <h1 class="content-credit">Author : @Html.DisplayFor(modelItem => item.ContentWriter) <i class="fas fa-pencil-alt"></i></h1>
-                                    <p class="content-detail">@Html.DisplayFor(modelItem => item.ContentDescription)</p>
+                                <a class="content-name" asp-area="" asp-controller="@item.Controller" asp-action="@item.Action">
+                                    @Html.DisplayFor(modelItem => item.ContentName)
                                 </a>
+                                <p class="content-category">@Html.DisplayFor(modelItem => item.ContentCategory)</p>
+                                <h1 class="content-credit">Author : @Html.DisplayFor(modelItem => item.ContentWriter)</h1>
+                                <p class="content-detail">@Html.DisplayFor(modelItem => item.ContentDescription)</p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
                                         <button type="submit" class="btn btn-sm btn-outline-success"><a class="btn-outline-success" asp-area="" asp-controller="@item.Controller" asp-action="@item.Action">View</a></button>
@@ -256,9 +254,9 @@
                 <div class="col-md-6 mb-5">
                     <address class="text-center">
                         <br />
-                        <a href="https://www.instagram.com/"><i class="icofont-instagram icon "></i></a>
-                        <a href="https://www.facebook.com/"><i class="icofont-facebook icon"></i></a>
-                        <a href="https://www.linkedin.com/"><i class="icofont-linkedin icon text-center"></i><br /><br /></a>
+                        <a href="https://www.instagram.com/miraii.space/?hl=th"><i class="icofont-instagram icon "></i></a>
+                        <a href="https://www.facebook.com/miraii.space"><i class="icofont-facebook icon"></i></a>
+                        <a href="https://www.linkedin.com/company/miraii/"><i class="icofont-linkedin icon text-center"></i><br /><br /></a>
                     </address>
 
                     <a asp-area="" asp-controller="About" asp-action="Index">
@@ -282,6 +280,8 @@
 
     </div>
 
+
+    <!--================ Banner =======================-->
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
@@ -314,5 +314,6 @@
             </div>
         </div>
     </div>
+
 </body>
 

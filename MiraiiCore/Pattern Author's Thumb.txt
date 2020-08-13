@@ -1,0 +1,89 @@
+<=============================== Dew's ================================>
+
+ <div class="container bg-light">
+        <div class="row">
+            <div class="col-md" style="max-width:580px">
+                <img class="author-img" src="~/image/Read/Author_img/Dew's profile.jpg">
+            </div>
+            <div class="col-md author-detail author-box-text" style="max-width:420px">
+                <p class="author-head-text">autohur Info</p>
+                <p> <strong> Author </strong> : ลุงโจนาธาน </p>
+                <p>
+                    <strong> Style </strong> :
+                    <a asp-controller="" asp-action=""> Culture, </a>
+                    <a asp-controller="" asp-action=""> Entertainment, </a>
+                    <a asp-controller="" asp-action=""> Book </a>
+                </p>
+                <address>
+                        <strong> Contact </strong> :
+                        <a class="author-socail-icon" href="https://www.facebook.com/Jonathan-%E0%B8%A5%E0%B8%B8%E0%B8%87%E0%B9%82%E0%B8%88%E0%B8%99%E0%B8%B2%E0%B8%98%E0%B8%B2%E0%B8%99-110987617373496/"><i class="fab fa-facebook-square"></i> , </a>
+                        <a href="https://www.blockdit.com/pages/5f22884aed8f430cc23fb1aa"> Blockdit</a>
+                </address>
+                <p>
+                    " เป็นลุง Content Creator คนหนึ่งที่สนใจใน Pop culture
+                    และเชื่อว่าผลงานศิลปะทุกประเภทล้วนแล้วมี Culture อยู่ในนั้น "
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <br />
+
+<=============================== Pond's ================================>
+
+ <div class="container bg-light">
+        <div class="row">
+            <div class="col-md" style="max-width:580px" >
+                <img class="author-img" src="~/image/Read/Author_img/Pond's profile.jpg">
+            </div>
+            <div class="col-md author-detail author-box-text" style="max-width:350px">
+                <p class="author-head-text">autohur Info</p>
+                <p> <strong> Author </strong> : Alaska </p>
+                <p>
+                    <strong> Style </strong> :
+                    <a asp-controller="Blog" asp-action="Index"> Blog, </a>
+                    <a asp-controller="Review" asp-action="Index"> Review, </a>
+                    <a asp-controller="Life" asp-action="Index"> Life </a>
+                </p>
+                <p>
+                    <strong> Contact </strong> : - 
+                </p>
+                <p>
+                    "  Hello World ! "
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <br />
+
+<=============================== X-ray's ================================>
+
+<div class="container bg-light">
+        <div class="row">
+            <div class="col-md" style="max-width:580px">
+                <img class="author-img" src="~/image/Index/Miraii LOGO.png">
+            </div>
+            <div class="col-md author-detail author-box-text" style="max-width:400px">
+                <p class="author-head-text">autohur Info</p>
+                <p> <strong> Author </strong> : KIRAY </p>
+                <p>
+                    <strong> Style </strong> :
+                    <a asp-controller="" asp-action=""> Fashion, </a>
+                    <a asp-controller="" asp-action=""> Style, </a>
+                    <a asp-controller="" asp-action=""> Beauty, </a>
+                    <a asp-controller="" asp-action=""> Art, </a>
+                    <a asp-controller="" asp-action=""> Theatre </a>
+                </p>
+                <address>
+                    <strong> Contact </strong> :
+                    <a class="author-socail-icon" href="https://www.instagram.com/itexxybixxh/?hl=th"> <i class="fab fa-instagram"></i> </a>
+                </address>
+                <p>
+                    "  เราเชื่อว่า Art และ Design อยู่ในทุกช่วงเวลาและช่วงชีวิตของเรา หากปราศจาก 2 สิ่งนี้ สังคมไม่อาจขับเคลื่อนไปได้ "
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <br />
