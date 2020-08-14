@@ -116,18 +116,37 @@ body {
 }
 
 .footer-copyright {
-    font-size: 15px;
+    font-size: 16px;
 }
 
 .footer-head-text {
     font-weight: bold;
-    font-size: 18px;
+    font-size: 17px;
+    margin-bottom: 5px;
 }
 
 .footer-list-text {
     font-size: 15px;
+    color: white;
+}
+    .footer-list-text:hover {
+        color: black;
+    }
+
+.footer-icon {
+    font-size: 18px;
+    color : black;
+}
+    .footer-icon:hover {
+        color: white;
+    }
+
+.footer-miraii {
+    font-size: 20px;
+    color: black;
 }
 
+/*อันเก่า*/
 .border-top footer {
     background-color: #E5AC51;
 }
