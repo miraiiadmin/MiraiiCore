@@ -1,19 +1,24 @@
 ﻿/*css for article form*/
+.head-img {
+    display: block;
+    margin-top: 75px;
+    margin-bottom: 20px;
+    width: 100%;
+}
 
-.review-name {
+.top-title {
     text-align: center;
     font-weight: bold;
-    text-decoration: underline;
     font-size: 25px;
-    color: #E5AC51;
 }
 
-.credit {
+.top-credit {
     font-size: 13px;
     margin-left: auto;
+    color: #717D7E;
 }
 
-.review-img {
+.detail-img {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -22,11 +27,10 @@
     max-width: 100%;
 }
 
-.img-head {
-    display: block;
-    margin-top: 75px;
-    margin-bottom: 20px;
-    width: 100%;
+.detail-text-bold {
+    font-weight: bold;
+    font-family: 'Sarabun', sans-serif;
+    font-size: 20px;
 }
 
 .space {
@@ -35,7 +39,7 @@
     margin-right: auto;
 }
 
-.share-this-page {
+.bot-shareButton {
     max-width: 200px;
     margin-left: auto;
     margin-right: auto;
@@ -49,7 +53,8 @@
         display: inline-block;
     }
 
-.author-tump {
+/*Author Thumbnail*/
+.author-img {
     display: block;
     border: 3px solid #E5AC51;
     border-radius: 50%;
@@ -57,18 +62,59 @@
     margin-right: auto;
     margin-bottom: 25px;
     margin-top: 25px;
-    width: 50%;
+    width: 35%;
 }
 
-.author-head {
+.author-head-text {
     color: #E5AC51;
     font-family: 'Bangers', cursive;
     font-size: 20px;
 }
 
 .author-detail {
-    margin-bottom: 25px;
     margin-top: 25px;
     font-family: 'Sarabun', sans-serif;
     font-size: 15px;
+}
+
+.author-socail-icon {
+    font-size:20px;
+}
+
+/*you also like*/
+.also-head-text {
+    font-family: 'Sarabun', sans-serif;
+    font-size: 17px;
+    color: #E5AC51;
+    margin-bottom: 2px;
+}
+
+.also-category {
+    font-family: 'Sarabun', sans-serif;
+    font-size: 15px;
+    color: black;
+    margin-bottom: 2px;
+}
+
+.also-credit {
+    font-family: 'Sarabun', sans-serif;
+    font-size: 15px;
+    color: #BEB9B8;
+    margin-bottom: 2px;
+}
+
+.also-detail {
+    font-family: 'Sarabun', sans-serif;
+    display: block;
+    font-size: 15px;
+    color: black;
+}
+
+.also-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    margin-bottom: 5px;
+    margin-top: 5px;
 }
