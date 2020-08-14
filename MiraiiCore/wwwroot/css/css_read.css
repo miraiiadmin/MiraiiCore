@@ -64,6 +64,8 @@
 
 .content-detail {
     font-family: 'Sarabun', sans-serif;
+    height: 154px;
+    display: block;
     font-size: 15px;
     color: black;
     margin-bottom: 10px;

@@ -108,3 +108,33 @@ body {
 .dropdown:hover, .nav-item:hover, .dropdown-item:hover {
     color: #FCDC74;
 }
+
+/*Footer*/
+.footer-bg {
+    background-color: #E5AC51;
+    font-family: 'Sarabun', sans-serif;
+}
+
+.footer-copyright {
+    font-size: 15px;
+}
+
+.footer-head-text {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.footer-list-text {
+    font-size: 15px;
+}
+
+.border-top footer {
+    background-color: #E5AC51;
+}
+
+.text-footer {
+    color: white;
+    font-size: 20px;
+    font-family: 'Bangers', cursive;
+    margin-bottom: 0px;
+}
