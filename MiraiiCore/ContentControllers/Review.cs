@@ -57,9 +57,9 @@ namespace MiraiiCore.Controllers
             con.ConnectionString = "Data Source= miraii.space; Database= miraii_space; User ID=miraii_space; Password=Hostmiraii007;";
         }
 
-        public IActionResult Project_Power_Netfilx()
+        public IActionResult ProjectPowerNetflix()
         {
-            return View("~/Views/Read/Review/Project_Power_Netfilx.cshtml");
+            return View("~/Views/Read/Review/ProjectPowerNetflix.cshtml");
         }
 
         public IActionResult Valorant()
@@ -72,9 +72,9 @@ namespace MiraiiCore.Controllers
             return View("~/Views/Read/Review/Rikuoh.cshtml");
         }
 
-        public IActionResult WW84_BlackWidow_Mulan()
+        public IActionResult ComebackOfMovieIndustry()
         {
-            return View("~/Views/Read/Review/WW84_BlackWidow_Mulan.cshtml");
+            return View("~/Views/Read/Review/ComebackOfMovieIndustry.cshtml");
         }  
     }
 }

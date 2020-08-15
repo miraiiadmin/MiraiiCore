@@ -1,11 +1,21 @@
 ﻿@{
-    ViewData["Title"] = "WW84 BlackWidow Mulan";
+    ViewData["Title"] = "Miraii - Comeback Of Movie Industry";
     Layout = "~/Views/Shared/_Layout _Read.cshtml";
 }
 
-<head>
-    <link href="~/css/css_article.css" rel="stylesheet" />
-</head>
+    <head>
+        <link href="~/css/css_article.css" rel="stylesheet" />
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-175459266-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'UA-175459266-1');
+        </script>
+
+    </head>
 
 <body>
     <div id="fb-root"></div>
@@ -205,14 +215,14 @@
             <div class="col-md" style="max-width:580px">
                 <img class="author-img" src="~/image/Read/Author_img/Dew's profile.jpg">
             </div>
-            <div class="col-md author-detail author-box-text">
+            <div class="col-md author-detail author-box-text" style="max-width:420px">
                 <p class="author-head-text">Author Info</p>
                 <p> <strong> Author </strong> : ลุงโจนาธาน </p>
                 <p>
                     <strong> Style </strong> :
-                    <a asp-controller="Blog" asp-action="Index"> Culture, </a>
-                    <a asp-controller="Review" asp-action="Index"> Entertainment, </a>
-                    <a asp-controller="Review" asp-action="Index"> Book </a>
+                    <a asp-controller="" asp-action=""> Culture, </a>
+                    <a asp-controller="" asp-action=""> Entertainment, </a>
+                    <a asp-controller="" asp-action=""> Book </a>
                 </p>
                 <address>
                     <strong> Contact </strong> :
