@@ -23,7 +23,7 @@ namespace MiraiiCore.Controllers
             con.Open();
             com.Connection = con;
 
-            com.CommandText = "SELECT TOP 9 * FROM ContentData WHERE ContentCategory = 'Review' ORDER BY ContentID DESC";
+            com.CommandText = "SELECT TOP 9 * FROM ContentData WHERE ContentCategory = 'Review' ORDER BY ContentDate DESC";
             dr = com.ExecuteReader();
             List<ContentDataViewModel> objmodel = new List<ContentDataViewModel>();
             if (dr.HasRows)
@@ -62,9 +62,9 @@ namespace MiraiiCore.Controllers
             return View("~/Views/Read/Review/Project_Power_Netfilx.cshtml");
         }
 
-        public IActionResult VALORANT()
+        public IActionResult Valorant()
         {
-            return View("~/Views/Read/Review/VALORANT.cshtml");
+            return View("~/Views/Read/Review/Valorant.cshtml");
         }
 
       public IActionResult Rikuoh()
@@ -75,11 +75,6 @@ namespace MiraiiCore.Controllers
         public IActionResult WW84_BlackWidow_Mulan()
         {
             return View("~/Views/Read/Review/WW84_BlackWidow_Mulan.cshtml");
-        }
-
-        public IActionResult DrRomantic()
-        {
-            return View("~/Views/Read/Review/DrRomantic.cshtml");
-        }    
+        }  
     }
 }

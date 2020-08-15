@@ -1,4 +1,8 @@
 ﻿/*css for article form*/
+body {
+    font-family: 'Sarabun', sans-serif;
+}
+
 .head-img {
     display: block;
     margin-top: 75px;
@@ -14,8 +18,9 @@
 
 .top-credit {
     font-size: 13px;
-    margin-left: auto;
     color: #717D7E;
+    line-height : 2.0 ;
+    margin-bottom : 0px;
 }
 
 .detail-img {

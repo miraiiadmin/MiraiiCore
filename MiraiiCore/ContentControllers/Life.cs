@@ -23,7 +23,7 @@ namespace MiraiiCore.Controllers
             con.Open();
             com.Connection = con;
 
-            com.CommandText = "SELECT TOP 9 * FROM ContentData WHERE ContentCategory = 'Life' ORDER BY ContentID DESC";
+            com.CommandText = "SELECT TOP 9 * FROM ContentData WHERE ContentCategory = 'Life' ORDER BY ContentDate DESC";
             dr = com.ExecuteReader();
             List<ContentDataViewModel> objmodel = new List<ContentDataViewModel>();
             if (dr.HasRows)

@@ -10,9 +10,9 @@
                 <p> <strong> Author </strong> : ลุงโจนาธาน </p>
                 <p>
                     <strong> Style </strong> :
-                    <a asp-controller="" asp-action=""> Culture, </a>
-                    <a asp-controller="" asp-action=""> Entertainment, </a>
-                    <a asp-controller="" asp-action=""> Book </a>
+                    <a asp-controller="Blog" asp-action="Index"> Culture, </a>
+                    <a asp-controller="Review" asp-action="Index"> Entertainment, </a>
+                    <a asp-controller="Review" asp-action="Index"> Book </a>
                 </p>
                 <address>
                         <strong> Contact </strong> :
@@ -46,7 +46,7 @@
                     <a asp-controller="Life" asp-action="Index"> Life </a>
                 </p>
                 <p>
-                    <strong> Contact </strong> : - 
+                    <strong> Contact </strong> : panitarnjong@gmail.com 
                 </p>
                 <p>
                     "  Hello World ! "
@@ -69,11 +69,11 @@
                 <p> <strong> Author </strong> : KIRAY </p>
                 <p>
                     <strong> Style </strong> :
-                    <a asp-controller="" asp-action=""> Fashion, </a>
-                    <a asp-controller="" asp-action=""> Style, </a>
-                    <a asp-controller="" asp-action=""> Beauty, </a>
-                    <a asp-controller="" asp-action=""> Art, </a>
-                    <a asp-controller="" asp-action=""> Theatre </a>
+                    <a asp-controller="Blog" asp-action="Index"> Fashion, </a>
+                    <a asp-controller="Blog" asp-action="Index"> Style, </a>
+                    <a asp-controller="Blog" asp-action="Index"> Beauty, </a>
+                    <a asp-controller="Blog" asp-action="Index"> Art, </a>
+                    <a asp-controller="Blog" asp-action="Index"> Theatre </a>
                 </p>
                 <address>
                     <strong> Contact </strong> :

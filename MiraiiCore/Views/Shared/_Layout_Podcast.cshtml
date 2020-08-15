@@ -53,10 +53,10 @@
                                 Read
                             </a>
                             <div id="reviewDrop" class="dropdown-menu" aria-labelledby="navbarDropdown" onmouseover="reviewDrop.classList.add('show');">
-                                <a class="dropdown-item text-nav" asp-area="" asp-controller="Blog" asp-action="Index">Blog</a>
-                                <a class="dropdown-item text-nav" asp-area="" asp-controller="Story" asp-action="Index">Story</a>
+                                <a class="dropdown-item text-nav disabled" asp-area="" asp-controller="Blog" asp-action="Index">Blog</a>
+                                <a class="dropdown-item text-nav disabled" asp-area="" asp-controller="Story" asp-action="Index">Story</a>
                                 <a class="dropdown-item text-nav" asp-area="" asp-controller="Review" asp-action="Index">Review</a>
-                                <a class="dropdown-item text-nav" asp-area="" asp-controller="Life" asp-action="Index">Life</a>
+                                <a class="dropdown-item text-nav disabled" asp-area="" asp-controller="Life" asp-action="Index">Life</a>
                             </div>
                         </li>
                         <!--Listen-->
@@ -122,17 +122,17 @@
 
     <!--Footer-->
     <footer class=" border-top footer">
-        <div class="container pt-5 pb-1">
-            <div class="row py-3">
-                <div class="col-sm footer-head-text text-center">
+        <div class="container pt-3 pb-1">
+            <!--  <div class="row py-3">
+                <div class="col-xl-4 footer-head-text text-center">
                     <p> miraii.space </p>
                     <p> Life </p>
                     <p> Podcast </p>
                     <p> Learning </p>
                     <p> Art </p>
                 </div>
-                <div class="col-sm">
-                    <p class="footer-head-text"> <i class="fas fa-book"></i> Miraii's Content </p>
+                <div class="col-sm-2">
+                    <p class="footer-head-text"> <i class="fas fa-book"></i> Our Content </p>
                     <ul>
                         <a class="footer-list-text" asp-area="" asp-controller="Blog" asp-action="index"> <li> Blog </li> </a>
                         <a class="footer-list-text" asp-area="" asp-controller="Story" asp-action="index"> <li> Story </li> </a>
@@ -140,8 +140,8 @@
                         <a class="footer-list-text" asp-area="" asp-controller="Life" asp-action="index"> <li> Life </li> </a>
                     </ul>
                 </div>
-                <div class="col-sm">
-                    <p class="footer-head-text"> <i class="fas fa-pencil-alt"></i> Miraii's Author </p>
+                <div class="col-sm-2">
+                    <p class="footer-head-text"> <i class="fas fa-pencil-alt"></i> Our Author </p>
                     <ul>
                         <a class="footer-list-text " asp-area="" asp-controller="" asp-action=""> <li> Alaska </li> </a>
                         <a class="footer-list-text " asp-area="" asp-controller="" asp-action=""> <li> KIRAY </li> </a>
@@ -153,7 +153,7 @@
                         <a class="footer-list-text" asp-area="" asp-controller="About" asp-action="index"> <li> About </li> </a>
                     </ul>
                 </div>
-                <div class="col text-center" style="color:black">
+                <div class="col-xl-4 text-center" style="color:black">
                     <p class="footer-head-text"> Contact For Work </p>
                     <br />
                     <p> <strong> Miraii </strong> </p>
@@ -161,7 +161,7 @@
                     <p> Email : miraii.teamn@gmail.com </p>
                 </div>
             </div>
-            <hr style="color:white" />
+                    <hr />-->
             <div class="row footer-copyright">
                 <div class="col text-left">&copy; 2020 miraii.space all rights reserved</div>
                 <div class="col text-right">

@@ -22,13 +22,6 @@
     width: 100%;
 }
 
-.content-name {
-    font-family: 'Sarabun', sans-serif;
-    font-weight: bold;
-    font-size: 15px;
-    color: black;
-}
-
 .content-head-th {
     font-family: 'Sarabun', sans-serif;
     font-weight: bold;
@@ -44,10 +37,6 @@
     font-size: 25px;
     color: white;
     bottom: 8px;
-}
-
-.content-text-preview {
-    color: black;
 }
 
 .img-head {
