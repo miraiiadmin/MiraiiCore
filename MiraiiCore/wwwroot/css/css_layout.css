@@ -117,6 +117,12 @@ body {
 
 .footer-copyright {
     font-size: 16px;
+    text-align:left
+}
+@media (max-width: 391px){
+    .footer-copyright{
+        text-align:center;
+    }
 }
 
 .footer-head-text {
@@ -135,11 +141,18 @@ body {
 
 .footer-icon {
     font-size: 18px;
-    color : black;
+    color: black;
+    text-align: right;
 }
     .footer-icon:hover {
         color: white;
     }
+    @media (max-width: 391px){
+        .footer-icon{
+            text-align: center;
+        }
+    }
+
 
 .footer-miraii {
     font-size: 20px;

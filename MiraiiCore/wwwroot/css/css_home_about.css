@@ -1,5 +1,9 @@
 ﻿/*about page's css*/
 
+body {
+    font-family: 'Sarabun', sans-serif;
+}
+
 .img-head {
     display: block;
     margin-top: 75px;

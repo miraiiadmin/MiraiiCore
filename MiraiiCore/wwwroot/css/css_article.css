@@ -82,6 +82,23 @@ body {
     font-size: 15px;
 }
 
+.author-box-text {
+    text-align: left;
+    max-width: 420px
+}
+
+.author-box-text-Xray {
+    text-align: left;
+    max-width: 400px
+}
+
+@media (max-width: 767px) {
+    .author-box-text, .author-box-text-Xray {
+        text-align: center;
+        max-width: 767px
+    }
+}
+
 .author-socail-icon {
     font-size:20px;
 }

@@ -1,12 +1,12 @@
 <=============================== Dew's ================================>
 
- <div class="container bg-light">
+    <div class="container bg-light">
         <div class="row">
             <div class="col-md" style="max-width:580px">
                 <img class="author-img" src="~/image/Read/Author_img/Dew's profile.jpg">
             </div>
-            <div class="col-md author-detail author-box-text" style="max-width:420px">
-                <p class="author-head-text">autohur Info</p>
+            <div class="col-md author-detail author-box-text">
+                <p class="author-head-text">Author Info</p>
                 <p> <strong> Author </strong> : ลุงโจนาธาน </p>
                 <p>
                     <strong> Style </strong> :
@@ -15,9 +15,9 @@
                     <a asp-controller="Review" asp-action="Index"> Book </a>
                 </p>
                 <address>
-                        <strong> Contact </strong> :
-                        <a class="author-socail-icon" href="https://www.facebook.com/Jonathan-%E0%B8%A5%E0%B8%B8%E0%B8%87%E0%B9%82%E0%B8%88%E0%B8%99%E0%B8%B2%E0%B8%98%E0%B8%B2%E0%B8%99-110987617373496/"><i class="fab fa-facebook-square"></i> , </a>
-                        <a href="https://www.blockdit.com/pages/5f22884aed8f430cc23fb1aa"> Blockdit</a>
+                    <strong> Contact </strong> :
+                    <a class="author-socail-icon" href="https://www.facebook.com/Jonathan-%E0%B8%A5%E0%B8%B8%E0%B8%87%E0%B9%82%E0%B8%88%E0%B8%99%E0%B8%B2%E0%B8%98%E0%B8%B2%E0%B8%99-110987617373496/"><i class="fab fa-facebook-square"></i> , </a>
+                    <a href="https://www.blockdit.com/pages/5f22884aed8f430cc23fb1aa"> Blockdit</a>
                 </address>
                 <p>
                     " เป็นลุง Content Creator คนหนึ่งที่สนใจใน Pop culture
@@ -36,7 +36,7 @@
             <div class="col-md" style="max-width:580px" >
                 <img class="author-img" src="~/image/Read/Author_img/Pond's profile.jpg">
             </div>
-            <div class="col-md author-detail author-box-text" style="max-width:350px">
+            <div class="col-md author-detail author-box-text">
                 <p class="author-head-text">autohur Info</p>
                 <p> <strong> Author </strong> : Alaska </p>
                 <p>
@@ -64,7 +64,7 @@
             <div class="col-md" style="max-width:580px">
                 <img class="author-img" src="~/image/Index/Miraii LOGO.png">
             </div>
-            <div class="col-md author-detail author-box-text" style="max-width:400px">
+            <div class="col-md author-detail author-box-text-Xray">
                 <p class="author-head-text">autohur Info</p>
                 <p> <strong> Author </strong> : KIRAY </p>
                 <p>
