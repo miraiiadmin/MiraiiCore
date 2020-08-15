@@ -3,27 +3,37 @@
     Layout = "~/Views/Shared/_Layout _Read.cshtml";
 }
 
-<head>
-    <link href="~/css/css_article.css" rel="stylesheet" />
+    <head>
+        <link href="~/css/css_article.css" rel="stylesheet" />
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-175459266-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
 
-    <style>
-        .embed-container {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-            max-width: 100%;
-        }
+            gtag('config', 'UA-175459266-1');
+        </script>
 
-            .embed-container iframe, .embed-container object, .embed-container embed {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
+
+        <style>
+            .embed-container {
+                position: relative;
+                padding-bottom: 56.25%;
+                height: 0;
+                overflow: hidden;
+                max-width: 100%;
             }
-    </style>
-</head>
+
+                .embed-container iframe, .embed-container object, .embed-container embed {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+        </style>
+    </head>
 
 <body>
     <div id="fb-root"></div>
@@ -37,9 +47,9 @@
         <div class="row">
             <div class="col text-left">
                 <br />
-                <p class="top-credit"> <i class="fas fa-pencil-alt"></i>ลุงโจนาธาน </p>
-                <p class="top-credit"> <i class="fas fa-user-edit"></i>Alaska </p>
-                <p class="top-credit"> <i class="far fa-calendar-alt"></i>2020-08-16 </p>
+                <p class="top-credit">Author&nbsp; : ลุงโจนาธาน </p>
+                <p class="top-credit">Editor&nbsp; : Alaska </p>
+                <p class="top-credit">Date&nbsp;&nbsp;&nbsp;&nbsp;: 2020-08-16 </p>
             </div>
 
             <div class="col text-right">
