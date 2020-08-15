@@ -44,9 +44,8 @@
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
                                         <button type="submit" class="btn btn-sm btn-outline-success"><a class="btn-outline-success" asp-area="" asp-controller="@item.Controller" asp-action="@item.Action">View</a></button>
-                                        <button type="submit" class="btn btn-sm btn-outline-warning" data-layout="button"><a class="btn-outline-warning" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fthehandymanbkk.com%2FReview%2FLoveGeneration&amp;src=sdkpreparse">Share</a></button>
                                     </div>
-                                    <small class="text-muted"><i class="far fa-calendar-alt"></i> &nbsp; : &nbsp; @Html.DisplayFor(modelItem => item.ContentDate)</small>
+                                    <small class="text-muted"><i class="far fa-calendar-alt"></i> &nbsp; @Html.DisplayFor(modelItem => item.ContentDate)</small>
                                 </div>
                             </div>
                         </div><!--column-->
@@ -68,7 +67,7 @@
                         </a>
                     </div>
                     <div class="row mt-3">
-                        <a href="#">
+                        <a asp-area="" asp-controller="About" asp-action="Index">
                             <img src="~/image/Index/workwithus.png" class="img-big-content">
                         </a>
                     </div>
@@ -91,7 +90,7 @@
                         </div>
                         <div class="col-sm-8 my-2">
                             <br /><br />
-                            <a><h2 class="content-name"> ??!! COMMING SOON ??!! </h2></a>
+                            <a><h2 class="content-name">Coming Soon</h2></a>
                             <p class="content-text-preview">
                                 <b></b><br />
                             </p>
@@ -106,7 +105,7 @@
                         </div>
                         <div class="col-sm-8 my-2">
                             <br /><br />
-                            <a><h2 class="content-name"> ??!! COMMING SOON ??!! </h2></a>
+                            <a><h2 class="content-name">Coming Soon</h2></a>
                             <p class="content-text-preview">
                                 <b></b><br />
                             </p>
@@ -121,7 +120,7 @@
                         </div>
                         <div class="col-sm-8 my-2">
                             <br /><br />
-                            <a><h2 class="content-name"> ??!! COMMING SOON ??!! </h2></a>
+                            <a><h2 class="content-name">Coming Soon</h2></a>
                             <p class="content-text-preview">
                                 <b></b><br />
                             </p>
@@ -136,7 +135,7 @@
                         </div>
                         <div class="col-sm-8 my-2">
                             <br /><br />
-                            <a><h2 class="content-name"> ??!! COMMING SOON ??!! </h2></a>
+                            <a><h2 class="content-name">Coming Soon</h2></a>
                             <p class="content-text-preview">
                                 <b></b><br />
                             </p>
