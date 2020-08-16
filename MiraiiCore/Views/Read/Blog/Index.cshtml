@@ -4,24 +4,23 @@
     @model MiraiiCore.Models.ContentDataViewModel
 }
 
-    <head>
-        <link href="~/css/css_read.css" rel="stylesheet">
-        <link href="~/css/css_article.css" rel="stylesheet">
+<head>
+    <link href="~/css/css_read.css" rel="stylesheet">
+    <link href="~/css/css_article.css" rel="stylesheet">
 
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-175459266-1"></script>
-        <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-175459266-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-  gtag('config', 'UA-175459266-1');
-        </script>
+        gtag('config', 'UA-175459266-1');
+    </script>
 
-    </head>
+</head>
 
 <body>
-    <!--================ Top of the Week & Mounth (ratio_5:2 / min.size_1200x480) =======================-->
     <img src="~/image/Read/Blog/Blog.png" class="img-head">
     <br />
     <br />
@@ -72,15 +71,6 @@
         </div><!--row-->
     </div>
 
-    <!--================ Editor's Best Seleciton ! (ratio_3:4 / min.size_500x375) =======================-->
-    <div class="container text-center">
-        <hr />
-        <p class="sel-text">Editor's Best Seleciton !</p>
-        <a asp-area="" asp-controller="Review" asp-action="DrRomantic">
-            <img src="~/image/Read/Life/Life9.jpg" class="sel-img" />
-        </a>
-    </div>
-
     <!--================ All content (ratio_3:4 / min.size_500x375) =======================-->
     <main role="main">
         <section id="portfolio" class="portfolio">
@@ -88,11 +78,11 @@
                 <div class="row">
                     <div class="col-lg-12 ">
                         <ul id="portfolio-flters" style="margin-bottom:5px;">
-                            <p data-filter="*" class="filter-active filter-text text-center"> All </p>
+                            <p data-filter="*" class="filter-active"> All </p>
                         </ul>
                     </div>
                 </div>
-
+                <br />
                 <div class="row portfolio-container" data-aos="fade-up">
                     @foreach (var item in Model.ContentInfo)
                     {
@@ -110,9 +100,8 @@
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
                                         <button type="submit" class="btn btn-sm btn-outline-success"><a class="btn-outline-success" asp-area="" asp-controller="@item.Controller" asp-action="@item.Action">View</a></button>
-                                        <button type="submit" class="btn btn-sm btn-outline-warning" data-layout="button"><a class="btn-outline-warning" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fthehandymanbkk.com%2FReview%2FLoveGeneration&amp;src=sdkpreparse">Share</a></button>
                                     </div>
-                                    <small class="text-muted"><i class="far fa-calendar-alt"></i> &nbsp; : &nbsp; @Html.DisplayFor(modelItem => item.ContentDate)</small>
+                                    <small class="text-muted"><i class="far fa-calendar-alt"></i>  &nbsp; @Html.DisplayFor(modelItem => item.ContentDate)</small>
                                 </div>
                             </div>
                         </div><!--column-->
