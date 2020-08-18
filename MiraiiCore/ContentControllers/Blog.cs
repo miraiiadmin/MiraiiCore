@@ -57,6 +57,12 @@ namespace MiraiiCore.Controllers
             con.ConnectionString = "Data Source= miraii.space; Database= miraii_space; User ID=miraii_space; Password=Hostmiraii007;";
         }
 
+        
+        public IActionResult SevenSkillsForFreshGraduate()
+        {
+            return View("~/Views/Read/Blog/SevenSkillsForFreshGraduate.cshtml");
+        }
+
         public IActionResult ProjectPowerNetflix()
         {
             return View("~/Views/Read/Blog/ProjectPowerNetflix.cshtml");
