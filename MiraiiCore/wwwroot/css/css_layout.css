@@ -9,34 +9,44 @@ body {
 }
 
 .nav-theme {
-    background-color: white;
+    background-color: #F5F5F5;
     font-family: 'Bangers', cursive;
 }
 
 .text-nav {
     font-size: 35px;
-    color: #E5AC51;
+    color: #ECBA71;
+    margin-right: 10px;
+}
+
+    .dropdown:hover, .nav-item:hover, .text-nav:hover, .active2:hover, .dropdown-item:hover {
+        color: #F2D7A6;
+    }
+
+.active2 {
+    font-size: 35px;
+    color: #F2D7A6;
     margin-right: 10px;
 }
 
 .border-top footer {
-    background-color: #E5AC51;
+    background-color: #ECBA71;
     margin-bottom: 0px;
 }
 
 .text-footer {
-    color: white;
+    color: #F5F5F5;
     font-size: 20px;
     font-family: 'Bangers', cursive;
     margin-bottom: 0px;
 }
 
 .bg-maincolor {
-    background-color: #F1AA2A;
+    background-color: #ECBA71;
 }
 
 .text-maincolor {
-    color: #E5AC51;
+    color: #ECBA71;
 }
 
 .text-seccolor {
@@ -53,14 +63,14 @@ body {
 }
 
 .text-head-dark {
-    color: black;
+    color: #3D3D3D;
     font-family: 'Bangers', cursive;
     margin-bottom: 0px;
     font-size: 2rem;
 }
 
 .text-head-light {
-    color: #E5AC51;
+    color: #ECBA71;
     font-family: 'Bangers', cursive;
     margin-bottom: 0px;
     font-size: 2rem;
@@ -70,6 +80,7 @@ body {
     margin-top: 8px;
     margin-bottom: 9px;
     font-size: 35px;
+    color: #ECBA71;
 }
 
 .nav-button {
@@ -77,7 +88,7 @@ body {
     margin-bottom: 10px;
     padding: 0px;
     font-size: 25px;
-    color: white;
+    color: #F5F5F5;
 }
 
 .logo {
@@ -101,17 +112,9 @@ body {
     pointer-events: none;
 }
 
-.active2 {
-    color: #FCDC74;
-}
-
-.dropdown:hover, .nav-item:hover, .dropdown-item:hover {
-    color: #FCDC74;
-}
-
 /*Footer*/
 .footer-bg {
-    background-color: #E5AC51;
+    background-color: #ECBA71;
     font-family: 'Sarabun', sans-serif;
 }
 
@@ -133,26 +136,25 @@ body {
 
 .footer-list-text {
     font-size: 15px;
-    color: white;
+    color: #F5F5F5;
 }
     .footer-list-text:hover {
-        color: black;
+        color: #3D3D3D;
     }
 
 .footer-icon {
     font-size: 18px;
-    color: black;
+    color: #3D3D3D;
     text-align: right;
 }
     .footer-icon:hover {
-        color: white;
+        color: #F5F5F5;
     }
     @media (max-width: 391px){
         .footer-icon{
             text-align: center;
         }
     }
-
 
 .footer-miraii {
     font-size: 20px;

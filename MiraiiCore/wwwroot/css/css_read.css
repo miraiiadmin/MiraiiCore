@@ -32,7 +32,7 @@
 .filter-text {
     font-family: 'Bangers', cursive;
     font-size: 30px;
-    color: #E5AC51;
+    color: #ECBA71;
     margin-bottom: 2px;
 }
 
@@ -44,10 +44,13 @@
 .content-name {
     font-family: 'Sarabun', sans-serif;
     font-size: 20px;
-    color: #E5AC51;
+    color: #ECBA71;
     font-weight: bold;
     margin-bottom: 2px;
 }
+    .content-name:hover {
+        color: #F2D7A6;
+    }
 
 .content-category {
     font-family: 'Sarabun', sans-serif;
@@ -58,7 +61,7 @@
 .content-credit {
     font-family: 'Sarabun', sans-serif;
     font-size: 15px;
-    color: #BEB9B8;
+    color: #717D7E;
     margin-bottom: 2px;
 }
 
@@ -73,5 +76,5 @@
 }
 
     .content-detail:hover {
-        color: #E5AC51;
+        color: #F2D7A6;
     }
