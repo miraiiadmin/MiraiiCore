@@ -37,7 +37,7 @@
                 <img class="author-img" src="~/image/Read/Author_img/Pond's profile.jpg">
             </div>
             <div class="col-md author-detail author-box-text">
-                <p class="author-head-text">autohur Info</p>
+                <p class="author-head-text">Author Info</p>
                 <p> <strong> Author </strong> : Alaska </p>
                 <p>
                     <strong> Style </strong> :
@@ -65,7 +65,7 @@
                 <img class="author-img" src="~/image/Index/Miraii LOGO.png">
             </div>
             <div class="col-md author-detail author-box-text-Xray">
-                <p class="author-head-text">autohur Info</p>
+                <p class="author-head-text">Author Info</p>
                 <p> <strong> Author </strong> : KIRAY </p>
                 <p>
                     <strong> Style </strong> :
