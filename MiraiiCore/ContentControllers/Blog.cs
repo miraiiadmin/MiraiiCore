@@ -57,11 +57,6 @@ namespace MiraiiCore.Controllers
             con.ConnectionString = "Data Source= miraii.space; Database= miraii_space; User ID=miraii_space; Password=Hostmiraii007;";
         }
 
-        public IActionResult TEST()
-        {
-            return View("~/Views/Read/Blog/TEST.cshtml");
-        }
-
         public IActionResult Tenet()
         {
             return View("~/Views/Read/Blog/Tenet.cshtml");
