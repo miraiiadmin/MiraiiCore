@@ -57,7 +57,12 @@ namespace MiraiiCore.Controllers
             con.ConnectionString = "Data Source= miraii.space; Database= miraii_space; User ID=miraii_space; Password=Hostmiraii007;";
         }
 
-      public IActionResult Rikuoh()
+        public IActionResult Hamilton()
+        {
+            return View("~/Views/Read/Review/Hamilton.cshtml");
+        }
+
+        public IActionResult Rikuoh()
         {
             return View("~/Views/Read/Review/Rikuoh.cshtml");
         }

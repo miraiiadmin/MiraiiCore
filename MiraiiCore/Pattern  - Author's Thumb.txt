@@ -20,8 +20,8 @@
                     <a href="https://www.blockdit.com/pages/5f22884aed8f430cc23fb1aa"> Blockdit</a>
                 </address>
                 <p>
-                    " เป็นลุง Content Creator คนหนึ่งที่สนใจใน Pop culture
-                    และเชื่อว่าผลงานศิลปะทุกประเภทล้วนแล้วมี Culture อยู่ในนั้น "
+                     เป็นลุง Content Creator คนหนึ่งที่สนใจใน Pop culture
+                    และเชื่อว่าผลงานศิลปะทุกประเภทล้วนแล้วมี Culture อยู่ในนั้น 
                 </p>
             </div>
         </div>
@@ -62,7 +62,7 @@
 <div class="container bg-light">
         <div class="row">
             <div class="col-md" style="max-width:580px">
-                <img class="author-img" src="~/image/Index/Miraii LOGO.png">
+                <img class="author-img" src="~/image/Read/Author_img/X-ray's profile.jpg">
             </div>
             <div class="col-md author-detail author-box-text-Xray">
                 <p class="author-head-text">Author Info</p>
@@ -80,7 +80,7 @@
                     <a class="author-socail-icon" href="https://www.instagram.com/itexxybixxh/?hl=th"> <i class="fab fa-instagram"></i> </a>
                 </address>
                 <p>
-                    "  เราเชื่อว่า Art และ Design อยู่ในทุกช่วงเวลาและช่วงชีวิตของเรา หากปราศจาก 2 สิ่งนี้ สังคมไม่อาจขับเคลื่อนไปได้ "
+                     เราเชื่อว่า Art และ Design อยู่ในทุกช่วงเวลาและช่วงชีวิตของเรา หากปราศจาก 2 สิ่งนี้ สังคมไม่อาจขับเคลื่อนไปได้ 
                 </p>
             </div>
         </div>
