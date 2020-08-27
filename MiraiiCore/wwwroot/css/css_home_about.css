@@ -125,16 +125,6 @@ body {
 
 }
 
-    .weekly-description:hover {
-        color: #87d534;
-    }
-
-@media (max-width: 1200px) {
-    .weekly-description {
-        max-height: 300px ;
-    }
-}
-
 .weekly-credit {
     color: #A6A6A6;
     font-size: 15px;
