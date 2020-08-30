@@ -66,10 +66,5 @@ namespace MiraiiCore.Controllers
         {
             return View("~/Views/Read/Review/Rikuoh.cshtml");
         }
-
-        public IActionResult ComebackOfMovieIndustry()
-        {
-            return View("~/Views/Read/Review/ComebackOfMovieIndustry.cshtml");
-        }  
     }
 }

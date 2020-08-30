@@ -57,6 +57,11 @@ namespace MiraiiCore.Controllers
             con.ConnectionString = "Data Source= miraii.space; Database= miraii_space; User ID=miraii_space; Password=Hostmiraii007;";
         }
 
+        public IActionResult ComebackOfMovieIndustry()
+        {
+            return View("~/Views/Read/Blog/ComebackOfMovieIndustry.cshtml");
+        }
+
         public IActionResult BTS()
         {
             return View("~/Views/Read/Blog/BTS.cshtml");
