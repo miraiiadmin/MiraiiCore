@@ -16,6 +16,11 @@ namespace MiraiiCore.Controllers
         SqlCommand com = new SqlCommand();
         SqlDataReader dr;
 
+        void ConnectionString()
+        {
+            con.ConnectionString = "Data Source= miraii.space; Database= miraii_space; User ID=miraii_space; Password=Hostmiraii007;";
+        }
+
         public IActionResult Index(ContentDataViewModel data)
 
         {
@@ -52,14 +57,61 @@ namespace MiraiiCore.Controllers
             ModelState.Clear();
             return View("~/Views/Read/Blog/Index.cshtml", data);
         }
-        void ConnectionString()
+
+        public IActionResult T(ContentDataViewModel data)
         {
-            con.ConnectionString = "Data Source= miraii.space; Database= miraii_space; User ID=miraii_space; Password=Hostmiraii007;";
+            ConnectionString();
+            con.Open();
+            com.Connection = con;
+
+            com.CommandText = "SELECT TOP 2 * FROM ContentData WHERE ContentCategory = 'Blog' AND release = 'yes' ORDER BY NEWID ()";
+            dr = com.ExecuteReader();
+            List<ContentDataViewModel> objmodel = new List<ContentDataViewModel>();
+                while (dr.Read())
+                {
+                    var details = new ContentDataViewModel();
+                    details.ContentLocation = dr["ContentLocation"].ToString();
+                    details.ContentName = dr["ContentName"].ToString();
+                    details.ContentCategory = dr["ContentCategory"].ToString();
+                    details.ContentDate = dr["ContentDate"].ToString();
+                    details.ContentWriter = dr["ContentWriter"].ToString();
+                    details.Controller = dr["Controller"].ToString();
+                    details.Action = dr["Action"].ToString();
+                    objmodel.Add(details);
+                }
+                data.ContentInfo = objmodel;
+            con.Close();
+            ModelState.Clear();
+
+            return View("~/Views/Read/Blog/T.cshtml", data);
         }
 
-        public IActionResult ComebackOfMovieIndustry()
+        public IActionResult ComebackOfMovieIndustry(ContentDataViewModel data)
         {
-            return View("~/Views/Read/Blog/ComebackOfMovieIndustry.cshtml");
+            ConnectionString();
+            con.Open();
+            com.Connection = con;
+
+            com.CommandText = "SELECT TOP 2 * FROM ContentData WHERE ContentCategory = 'Blog' AND release = 'yes' ORDER BY NEWID ()";
+            dr = com.ExecuteReader();
+            List<ContentDataViewModel> objmodel = new List<ContentDataViewModel>();
+            while (dr.Read())
+            {
+                var details = new ContentDataViewModel();
+                details.ContentLocation = dr["ContentLocation"].ToString();
+                details.ContentName = dr["ContentName"].ToString();
+                details.ContentCategory = dr["ContentCategory"].ToString();
+                details.ContentDate = dr["ContentDate"].ToString();
+                details.ContentWriter = dr["ContentWriter"].ToString();
+                details.Controller = dr["Controller"].ToString();
+                details.Action = dr["Action"].ToString();
+                objmodel.Add(details);
+            }
+            data.ContentInfo = objmodel;
+            con.Close();
+            ModelState.Clear();
+
+            return View("~/Views/Read/Blog/ComebackOfMovieIndustry.cshtml", data);
         }
 
         public IActionResult BTS()

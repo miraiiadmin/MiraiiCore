@@ -189,34 +189,26 @@
                     <h5 class="card-header display-6 bg-maincolor main-font ">You may also like ?</h5>
                     <div class="card-body">
 
-                        <!--1st-->
-                        <hr />
-                        <a class="also-head-text" asp-area="" asp-controller="Review" asp-action="Hamilton">
-                            <img class="also-img" src="~/image/Read/Review/Hamilton/1_Hamilton.png">
-                        </a>
-                        <hr />
-                        <a class="also-head-text" asp-area="" asp-controller="Review" asp-action="Hamilton"> Review : Hamilton (Disney+) ละครเวทีสุดยิ่งใหญ่กับส่วนหนึ่งของหน้าประวัติศาสตร์ชาติอเมริกัน ?! </a>
-                        <br />
-                        <a class="also-category" asp-area="" asp-controller="Review" asp-action="index">Review</a>
-                        <div class="row">
-                            <div class="col text-left">  <p class="also-credit"> Author : KIRAY </p> </div>
-                            <div class="col text-right"> <p class="also-credit"> 2020-08-28 </p></div>
+                        @foreach (var item in Model.ContentInfo)
+                        {
+                            <hr />
+                            <a class="also-head-text" asp-area="" asp-controller="@item.Controller" asp-action="@item.Action">
+                                <img class="also-img" src="@Url.Content(item.ContentLocation)">
+                            </a>
+                            <hr />
+                            <a class="also-head-text" asp-area="" asp-controller="@item.Controller" asp-action="Index">
+                                @item.ContentName
+                            </a>
                             <br />
-                        </div>
-
-                        <!--2nd-->
-                        <hr />
-                        <a class="also-head-text" asp-area="" asp-controller="Blog" asp-action="Tenet">
-                            <img class="also-img" src="~/image/Read/Blog/Tenet/1200x480.jpg">
-                        </a>
-                        <hr />
-                        <a class="also-head-text" asp-area="" asp-controller="Blog" asp-action="Tenet"> อุ่นเครื่องก่อนดู TENET กับเรื่องการผกผันของเวลาที่รอการพิสูจน์ ? </a>
-                        <br />
-                        <a class="also-category" asp-area="" asp-controller="Blog" asp-action="Index">Blog</a>
-                        <div class="row">
-                            <div class="col text-left">  <p class="also-credit"> Author : ลุงโจนาธาน </p> </div>
-                            <div class="col text-right"> <p class="also-credit"> 2020-08-22 </p></div>
-                        </div>
+                            <a class="also-category" asp-area="" asp-controller="@item.Controller" asp-action="index">
+                                @item.ContentCategory
+                            </a>
+                            <div class="row">
+                                <div class="col text-left">  <p class="also-credit"> Author : @item.ContentWriter </p> </div>
+                                <div class="col text-right"> <p class="also-credit"> @item.ContentDate </p></div>
+                                <br />
+                            </div>
+                        }
 
                     </div>
                 </div>
