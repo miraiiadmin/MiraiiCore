@@ -3,387 +3,390 @@
     ViewData["Title"] = "Home";
 }
 
-<head>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/th_TH/sdk.js#xfbml=1&version=v6.0&appId=718174878568237&autoLogAppEvents=1"></script>
-    <link href="~/css/css_home_about.css?ver=1.0.1" rel="stylesheet">
-    <link href="~/css/css_read.css" rel="stylesheet">
+    <head>
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/th_TH/sdk.js#xfbml=1&version=v6.0&appId=718174878568237&autoLogAppEvents=1"></script>
+        <link href="~/css/css_home_about.css?ver=1.0.1" rel="stylesheet">
+        <link href="~/css/css_read.css" rel="stylesheet">
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-175459266-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-175459266-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
 
-        gtag('config', 'UA-175459266-1');
-    </script>
+            gtag('config', 'UA-175459266-1');
+        </script>
+        <link rel="me"
+              href="https://twitter.com/twitterdev">
+        <link rel="canonical"
+              href="/web/tweet-button">
+    </head>
 
-</head>
+    <body>
+        <!--Crossfade Carousel (picture 1200x480)-->
+        <img src="~/image/Index/miraii (1).png" class="img-head">
 
-<body>
-    <!--Crossfade Carousel (picture 1200x480)-->
-    <img src="~/image/Index/miraii (1).png" class="img-head">
-
-    <!--================ All content (ratio_3:4 / min.size_500x375) =======================-->
-    <main role="main">
-        <section id="portfolio" class="portfolio">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 ">
-                        <ul id="portfolio-flters">
-                            <li data-filter="*" class="filter-active"> Latest </li>
-                            <li data-filter=".filter-app"> Popular </li>
-                        </ul>
+        <!--================ All content (ratio_3:4 / min.size_500x375) =======================-->
+        <main role="main">
+            <section id="portfolio" class="portfolio">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 ">
+                            <ul id="portfolio-flters">
+                                <li data-filter="*" class="filter-active"> Latest </li>
+                                <li data-filter=".filter-app"> Popular </li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                <br />
+                    <br />
 
-                <div class="row portfolio-container" data-aos="fade-up">
-                    @foreach (var item in Model.ContentInfo)
-                    {
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                            <a asp-area="" asp-controller="@item.Controller" asp-action="@item.Action">
-                                <img src="@Url.Content(item.ContentLocation)" class="content-img" text="Thumbnail" />
-                            </a>
-                            <div class="card-body">
-                                <a class="content-name" asp-area="" asp-controller="@item.Controller" asp-action="@item.Action">
-                                    @Html.DisplayFor(modelItem => item.ContentName)
+                    <div class="row portfolio-container" data-aos="fade-up">
+                        @foreach (var item in Model.ContentInfo)
+                        {
+                            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                                <a asp-area="" asp-controller="@item.Controller" asp-action="@item.Action">
+                                    <img src="@Url.Content(item.ContentLocation)" class="content-img" text="Thumbnail" />
                                 </a>
-                                <p class="content-category">@Html.DisplayFor(modelItem => item.ContentCategory)</p>
-                                <h1 class="content-credit">Author : @Html.DisplayFor(modelItem => item.ContentWriter)</h1>
+                                <div class="card-body">
+                                    <a class="content-name" asp-area="" asp-controller="@item.Controller" asp-action="@item.Action">
+                                        @Html.DisplayFor(modelItem => item.ContentName)
+                                    </a>
+                                    <p class="content-category">@Html.DisplayFor(modelItem => item.ContentCategory)</p>
+                                    <h1 class="content-credit">Author : @Html.DisplayFor(modelItem => item.ContentWriter)</h1>
 
-                                <p class="content-detail">@Html.DisplayFor(modelItem => item.ContentDescription)</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="submit" class="btn btn-sm btn-outline-success"><a class="btn-outline-success" asp-area="" asp-controller="@item.Controller" asp-action="@item.Action">View</a></button>
+                                    <p class="content-detail">@Html.DisplayFor(modelItem => item.ContentDescription)</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <button type="submit" class="btn btn-sm btn-outline-success"><a class="btn-outline-success" asp-area="" asp-controller="@item.Controller" asp-action="@item.Action">View</a></button>
+                                        </div>
+                                        <small class="text-muted"><i class="far fa-calendar-alt"></i> &nbsp; @Html.DisplayFor(modelItem => item.ContentDate)</small>
                                     </div>
-                                    <small class="text-muted"><i class="far fa-calendar-alt"></i> &nbsp; @Html.DisplayFor(modelItem => item.ContentDate)</small>
                                 </div>
-                            </div>
-                        </div><!--column-->
-                    }
+                            </div><!--column-->
+                        }
+                    </div>
+                    <a asp-area="" asp-controller="Blog" asp-action="Index" class="btn form-control btn-outline-success">See more !</a> <!-- BS3 -->
                 </div>
-                <a asp-area="" asp-controller="Blog" asp-action="Index" class="btn form-control btn-outline-success">See more !</a> <!-- BS3 -->
-            </div>
-        </section>
-    </main>
+            </section>
+        </main>
 
-    <!--Content 1-->
-    <div class="container-xl fix-index ">
-        <div class="row fix-index">
-            <div class="col-xl fix-index">
-                <div class="container">
-                    <div class="row mt-3">
-                        <a href="#">
-                            <img src="~/image/Index/mitty.png" class="img-big-content">
-                        </a>
-                    </div>
-                    <div class="row mt-3">
-                        <a asp-area="" asp-controller="About" asp-action="Index">
-                            <img src="~/image/Index/workwithus.png" class="img-big-content">
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!--=============================== Weekly (4:4) =================================-->
-            <div class="col-sm">
-                <hr>
-                <p class="display-6 text-center text-weekly">มุมนักเขียนประจำสัปดาห์</p>
-                <hr>
-                <br />
-                <div class="container">
-
-                    <!--Popular 1-->
-                    <div class="row weekly-box">
-                        <div class="col-md-4 px-0">
-
-                            <a>
-                                <img class="weekly-img" src="~/image/Index/memoriesonthetablebrown.png">
+        <!--Content 1-->
+        <div class="container-xl fix-index ">
+            <div class="row fix-index">
+                <div class="col-xl fix-index">
+                    <div class="container">
+                        <div class="row mt-3">
+                            <a href="#">
+                                <img src="~/image/Index/mitty.png" class="img-big-content">
                             </a>
                         </div>
-                        <div class="col-sm-8">
-                            <br />
-                            <br />
-                            <a>
-                                <p class="weekly-name"> Comimg Soon </p>
-                            </a>
-                            <p class="weekly-description">
-                            </p>
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-6 text-left weekly-credit"> <p>   </p></div>
-                                    <div class="col-6 text-right weekly-credit"> <p> </p></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!--Popular 2-->
-                    <div class="row weekly-box">
-                        <div class="col-md-4 px-0">
-
-                            <a>
-                                <img class="weekly-img" src="~/image/Index/memoriesonthetablebrown.png">
-                            </a>
-                        </div>
-                        <div class="col-sm-8">
-                            <br />
-                            <br />
-                            <a>
-                                <p class="weekly-name"> Comimg Soon </p>
-                            </a>
-                            <p class="weekly-description">
-                            </p>
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-6 text-left weekly-credit"> <p>   </p></div>
-                                    <div class="col-6 text-right weekly-credit"> <p> </p></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!--Popular 3-->
-                    <div class="row weekly-box">
-                        <div class="col-md-4 px-0">
-
-                            <a>
-                                <img class="weekly-img" src="~/image/Index/memoriesonthetablebrown.png">
-                            </a>
-                        </div>
-                        <div class="col-sm-8">
-                            <br />
-                            <br />
-                            <a>
-                                <p class="weekly-name"> Comimg Soon </p>
-                            </a>
-                            <p class="weekly-description">
-                            </p>
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-6 text-left weekly-credit"> <p>   </p></div>
-                                    <div class="col-6 text-right weekly-credit"> <p> </p></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!--Popular 4-->
-                    <div class="row weekly-box">
-                        <div class="col-md-4 px-0">
-
-                            <a>
-                                <img class="weekly-img" src="~/image/Index/memoriesonthetablebrown.png">
-                            </a>
-                        </div>
-                        <div class="col-sm-8">
-                            <br />
-                            <br />
-                            <a>
-                                <p class="weekly-name"> Comimg Soon </p>
-                            </a>
-                            <p class="weekly-description">
-                            </p>
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-6 text-left weekly-credit"> <p>   </p></div>
-                                    <div class="col-6 text-right weekly-credit"> <p> </p></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!--
-        <div class="row weekly-box">
-                        <div class="col-md-4 px-0">
-
-                            <a asp-area="" asp-controller="" asp-action="">
-                                <img class="weekly-img" src="~/image/Index/memoriesonthetablebrown.png">
-                            </a>
-                        </div>
-                        <div class="col-sm-8">
-                            <a asp-area="" asp-controller="" asp-action="">
-                                <p class="weekly-name"> Memory on the table brown</p>
-                            </a>
-                            <p class="weekly-description">
-                                is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
-                            </p>
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-6 text-left weekly-credit"> <p> Author : miraii </p></div>
-                                    <div class="col-6 text-right weekly-credit"> <p> <i class="far fa-calendar-alt"></i> &nbsp; 2020-08-26 </p></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-    -->
-                </div>
-                <br />
-                <a asp-area="" asp-controller="" asp-action="" class="btn form-control btn-outline-success">See more !</a>
-            </div>
-        </div>
-    </div><!--=============================== End of Weekly =================================-->
-
-    <div class="container">
-        <div class="row">
-            <!-- Post Content Column -->
-            <div class="col-lg-6">
-                <div class="card my-4 ">
-                    <h5 class="card-header display-6 text-center bg-maincolor "><p class="text-head-dark"> PODCAST ?! </p> </h5>
-                    <div class="card-body ">
-                        <div class="container podcast-center">
-                            <audio controls>
-                                <source src="~/assets/podcast/1.mp3" type="audio/mpeg">
-                                Your browser does not support the audio element.
-                            </audio><br />
-                        </div>
-                        <p class="display-6 text-center">Now you are listening to <a href="#">this</a></p><br />
-                        <div class="table-responsive">
-                            <table class="table table-hover">
-                                <thead>
-                                    <tr class="table bg-maincolor">
-                                        <th scope="col">Title</th>
-                                        <th scope="col">Speaker</th>
-                                        <th scope="col">Length</th>
-                                        <th scope="col">Date</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row"><a href="#">???</a></th>
-                                        <td>??????</td>
-                                        <td>???</td>
-                                        <td>???</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row"><a href="#">???</a></th>
-                                        <td>??????</td>
-                                        <td>???</td>
-                                        <td>???</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row"><a href="#">???</a></th>
-                                        <td>??????</td>
-                                        <td>???</td>
-                                        <td>???</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <a asp-area="" asp-controller="" asp-action="" class="btn form-control btn-outline-success">Sound Good ?! Discover More !</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="col-lg-6 text-center">
-                <hr>
-                <h2 class="display-6 text-center text-head-dark ">Artwork</h2>
-                <hr>
-                <div id="carouselExampleCaptions" class="carousel slide " data-interval="3000" data-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <a href="https://www.facebook.com/miraii.space/photos/a.128260372265287/145634797194511" target="_blank" >
-                                <img src="~/image/Index/Artwork04.png" class="img-fluid" width="400" height="400">
-                            </a>
-                        </div>
-                        <div class="carousel-item">
-                            <a href="https://www.facebook.com/miraii.space/photos/a.128260372265287/143296507428340/" target="_blank" >
-                                <img src="~/image/Index/Artwork05.png" class="img-fluid" width="400" height="400">
-                            </a>
-                        </div>
-                        <div class="carousel-item">
-                            <a href="https://www.facebook.com/miraii.space/photos/a.128260372265287/141319574292700/" target="_blank" >
-                                <img src="~/image/Index/Artwork06.png" class="img-fluid" width="400" height="400">
-                            </a>
-                        </div>
-                        <div class="carousel-item">
-                            <a href="https://www.facebook.com/miraii.space/photos/a.128260372265287/136088524815805/" target="_blank" >
-                                <img src="~/image/Index/Artwork07.png" class="img-fluid" width="400" height="400">
+                        <div class="row mt-3">
+                            <a asp-area="" asp-controller="About" asp-action="Index">
+                                <img src="~/image/Index/workwithus.png" class="img-big-content">
                             </a>
                         </div>
                     </div>
                 </div>
-                <br />
-            </div>
-        </div>
-    </div>
 
-    <div class="container">
-        <div class="col-md-12">
-            <hr>
-            <p class="display-6 text-center text-head-dark">Contact for work</p>
-            <hr>
+                <!--=============================== Weekly (4:4) =================================-->
+                <div class="col-sm">
+                    <hr>
+                    <p class="display-6 text-center text-weekly">มุมนักเขียนประจำสัปดาห์</p>
+                    <hr>
+                    <br />
+                    <div class="container">
+
+                        <!--Popular 1-->
+                        <div class="row weekly-box">
+                            <div class="col-md-4 px-0">
+
+                                <a>
+                                    <img class="weekly-img" src="~/image/Index/memoriesonthetablebrown.png">
+                                </a>
+                            </div>
+                            <div class="col-sm-8">
+                                <br />
+                                <br />
+                                <a>
+                                    <p class="weekly-name"> Comimg Soon </p>
+                                </a>
+                                <p class="weekly-description">
+                                </p>
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-6 text-left weekly-credit"> <p>   </p></div>
+                                        <div class="col-6 text-right weekly-credit"> <p> </p></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Popular 2-->
+                        <div class="row weekly-box">
+                            <div class="col-md-4 px-0">
+
+                                <a>
+                                    <img class="weekly-img" src="~/image/Index/memoriesonthetablebrown.png">
+                                </a>
+                            </div>
+                            <div class="col-sm-8">
+                                <br />
+                                <br />
+                                <a>
+                                    <p class="weekly-name"> Comimg Soon </p>
+                                </a>
+                                <p class="weekly-description">
+                                </p>
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-6 text-left weekly-credit"> <p>   </p></div>
+                                        <div class="col-6 text-right weekly-credit"> <p> </p></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Popular 3-->
+                        <div class="row weekly-box">
+                            <div class="col-md-4 px-0">
+
+                                <a>
+                                    <img class="weekly-img" src="~/image/Index/memoriesonthetablebrown.png">
+                                </a>
+                            </div>
+                            <div class="col-sm-8">
+                                <br />
+                                <br />
+                                <a>
+                                    <p class="weekly-name"> Comimg Soon </p>
+                                </a>
+                                <p class="weekly-description">
+                                </p>
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-6 text-left weekly-credit"> <p>   </p></div>
+                                        <div class="col-6 text-right weekly-credit"> <p> </p></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Popular 4-->
+                        <div class="row weekly-box">
+                            <div class="col-md-4 px-0">
+
+                                <a>
+                                    <img class="weekly-img" src="~/image/Index/memoriesonthetablebrown.png">
+                                </a>
+                            </div>
+                            <div class="col-sm-8">
+                                <br />
+                                <br />
+                                <a>
+                                    <p class="weekly-name"> Comimg Soon </p>
+                                </a>
+                                <p class="weekly-description">
+                                </p>
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-6 text-left weekly-credit"> <p>   </p></div>
+                                        <div class="col-6 text-right weekly-credit"> <p> </p></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--
+                        <div class="row weekly-box">
+                                        <div class="col-md-4 px-0">
+
+                                            <a asp-area="" asp-controller="" asp-action="">
+                                                <img class="weekly-img" src="~/image/Index/memoriesonthetablebrown.png">
+                                            </a>
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <a asp-area="" asp-controller="" asp-action="">
+                                                <p class="weekly-name"> Memory on the table brown</p>
+                                            </a>
+                                            <p class="weekly-description">
+                                                is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+                                            </p>
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="col-6 text-left weekly-credit"> <p> Author : miraii </p></div>
+                                                    <div class="col-6 text-right weekly-credit"> <p> <i class="far fa-calendar-alt"></i> &nbsp; 2020-08-26 </p></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                    -->
+                    </div>
+                    <br />
+                    <a asp-area="" asp-controller="" asp-action="" class="btn form-control btn-outline-success">See more !</a>
+                </div>
+            </div>
+        </div><!--=============================== End of Weekly =================================-->
+
+        <div class="container">
             <div class="row">
-                <div class="col-md-6 mb-5">
-                    <address class="text-center">
-                        <div class="fb-page" data-href="https://www.facebook.com/Miraii-101825598242098/" data-tabs="timeline" data-width="340" data-height="427" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/Miraii-101825598242098/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Miraii-101825598242098/">The Handyman</a></blockquote></div>
-                        <br />
-                    </address>
-                </div>
-                <div class="col-md-6 mb-5">
-                    <address class="text-center">
-                        <br />
-                        <a href="https://www.instagram.com/miraii.space/?hl=th"><i class="icofont-instagram icon "></i></a>
-                        <a href="https://www.facebook.com/miraii.space"><i class="icofont-facebook icon"></i></a>
-                        <a href="https://www.linkedin.com/company/miraii/"><i class="icofont-linkedin icon text-center"></i><br /><br /></a>
-                    </address>
-
-                    <a asp-area="" asp-controller="About" asp-action="Index">
-                        <button class="btn btn-outline-success form-control">Learn more about us</button><br /><br />
-                    </a>
-
-                    <p class="display-6 text-center">You can leave us some comments here : )</p><br />
-
-                    @using (Html.BeginForm("Feedback", "Home", FormMethod.Post))
-                    {
-                        <form data-aos="fade-up">
-                            <div class="form-group">
-                                <textarea class="form-control" name="Feedback" id="Feedback" rows="5" required></textarea>
+                <!-- Post Content Column -->
+                <div class="col-lg-6">
+                    <div class="card my-4 ">
+                        <h5 class="card-header display-6 text-center bg-maincolor "><p class="text-head-dark"> PODCAST ?! </p> </h5>
+                        <div class="card-body ">
+                            <div class="container podcast-center">
+                                <audio controls>
+                                    <source src="~/assets/podcast/1.mp3" type="audio/mpeg">
+                                    Your browser does not support the audio element.
+                                </audio><br />
                             </div>
-                            <button type="submit" class="btn btn-outline-warning form-control ">Submit</button>
-                        </form>}
+                            <p class="display-6 text-center">Now you are listening to <a href="#">this</a></p><br />
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr class="table bg-maincolor">
+                                            <th scope="col">Title</th>
+                                            <th scope="col">Speaker</th>
+                                            <th scope="col">Length</th>
+                                            <th scope="col">Date</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row"><a href="#">???</a></th>
+                                            <td>??????</td>
+                                            <td>???</td>
+                                            <td>???</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"><a href="#">???</a></th>
+                                            <td>??????</td>
+                                            <td>???</td>
+                                            <td>???</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"><a href="#">???</a></th>
+                                            <td>??????</td>
+                                            <td>???</td>
+                                            <td>???</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <a asp-area="" asp-controller="" asp-action="" class="btn form-control btn-outline-success">Sound Good ?! Discover More !</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-6 text-center">
+                    <hr>
+                    <h2 class="display-6 text-center text-head-dark ">Artwork</h2>
+                    <hr>
+                    <div id="carouselExampleCaptions" class="carousel slide " data-interval="3000" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <a href="https://www.facebook.com/miraii.space/photos/a.128260372265287/145634797194511" target="_blank">
+                                    <img src="~/image/Index/Artwork04.png" class="img-fluid" width="400" height="400">
+                                </a>
+                            </div>
+                            <div class="carousel-item">
+                                <a href="https://www.facebook.com/miraii.space/photos/a.128260372265287/143296507428340/" target="_blank">
+                                    <img src="~/image/Index/Artwork05.png" class="img-fluid" width="400" height="400">
+                                </a>
+                            </div>
+                            <div class="carousel-item">
+                                <a href="https://www.facebook.com/miraii.space/photos/a.128260372265287/141319574292700/" target="_blank">
+                                    <img src="~/image/Index/Artwork06.png" class="img-fluid" width="400" height="400">
+                                </a>
+                            </div>
+                            <div class="carousel-item">
+                                <a href="https://www.facebook.com/miraii.space/photos/a.128260372265287/136088524815805/" target="_blank">
+                                    <img src="~/image/Index/Artwork07.png" class="img-fluid" width="400" height="400">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
                 </div>
             </div>
         </div>
 
-    </div>
-
-
-    <!--================ Banner =======================-->
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                    <div class="col p-4 d-flex flex-column position-static">
-                        <strong class="d-inline-block mb-2 text-primary">For Ads</strong>
-                        <h3 class="mb-0 display-6">Advertising</h3>
-                        <div class="mb-1 text-muted">?????</div>
-                        <p class="card-text mb-auto">?????</p>
-                        <a href="#" class="stretched-link">miraii.team@gmail.com</a>
+        <div class="container">
+            <div class="col-md-12">
+                <hr>
+                <p class="display-6 text-center text-head-dark">Contact for work</p>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6 mb-5">
+                        <address class="text-center">
+                            <div class="fb-page" data-href="https://www.facebook.com/Miraii-101825598242098/" data-tabs="timeline" data-width="340" data-height="427" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/Miraii-101825598242098/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Miraii-101825598242098/">The Handyman</a></blockquote></div>
+                            <br />
+                        </address>
                     </div>
-                    <div class="col-auto d-none d-lg-block">
+                    <div class="col-md-6 mb-5">
+                        <address class="text-center">
+                            <br />
+                            <a href="https://www.instagram.com/miraii.space/?hl=th"><i class="icofont-instagram icon "></i></a>
+                            <a href="https://www.facebook.com/miraii.space"><i class="icofont-facebook icon"></i></a>
+                            <a href="https://www.linkedin.com/company/miraii/"><i class="icofont-linkedin icon text-center"></i><br /><br /></a>
+                        </address>
 
+                        <a asp-area="" asp-controller="About" asp-action="Index">
+                            <button class="btn btn-outline-success form-control">Learn more about us</button><br /><br />
+                        </a>
+
+                        <p class="display-6 text-center">You can leave us some comments here : )</p><br />
+
+                        @using (Html.BeginForm("Feedback", "Home", FormMethod.Post))
+                        {
+                            <form data-aos="fade-up">
+                                <div class="form-group">
+                                    <textarea class="form-control" name="Feedback" id="Feedback" rows="5" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-outline-warning form-control ">Submit</button>
+                            </form>}
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6">
-                <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                    <div class="col p-4 d-flex flex-column position-static">
-                        <strong class="d-inline-block mb-2 text-success">For Ads</strong>
-                        <h3 class="mb-0 display-6">Advertising</h3>
-                        <div class="mb-1 text-muted">?????</div>
-                        <p class="mb-auto">?????</p>
-                        <a href="#" class="stretched-link">miraii.team@gmail.com</a>
-                    </div>
-                    <div class="col-auto d-none d-lg-block">
 
+        </div>
+
+
+        <!--================ Banner =======================-->
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                        <div class="col p-4 d-flex flex-column position-static">
+                            <strong class="d-inline-block mb-2 text-primary">For Ads</strong>
+                            <h3 class="mb-0 display-6">Advertising</h3>
+                            <div class="mb-1 text-muted">?????</div>
+                            <p class="card-text mb-auto">?????</p>
+                            <a href="#" class="stretched-link">miraii.team@gmail.com</a>
+                        </div>
+                        <div class="col-auto d-none d-lg-block">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                        <div class="col p-4 d-flex flex-column position-static">
+                            <strong class="d-inline-block mb-2 text-success">For Ads</strong>
+                            <h3 class="mb-0 display-6">Advertising</h3>
+                            <div class="mb-1 text-muted">?????</div>
+                            <p class="mb-auto">?????</p>
+                            <a href="#" class="stretched-link">miraii.team@gmail.com</a>
+                        </div>
+                        <div class="col-auto d-none d-lg-block">
+
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-</body>
+    </body>
 
