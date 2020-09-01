@@ -1,6 +1,7 @@
 ﻿@{
     ViewData["Title"] = " Wonder Woman 1984, Black Widow และ Mulan กับสัญญาณเตือนการกลับมาของอุตสาหกรรมภาพยนตร์ ";
     Layout = "~/Views/Shared/_Layout _Read.cshtml";
+    ViewData["image"] = "https://miraii.space/image/Read/Blog/ComebackOfMovieIndustry/Cover.jpg";
 }
 
 <head>
@@ -8,11 +9,11 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-175459266-1"></script>
     <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() { dataLayer.push(arguments); }
-            gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-            gtag('config', 'UA-175459266-1');
+        gtag('config', 'UA-175459266-1');
     </script>
 </head>
 
@@ -191,23 +192,23 @@
 
                         @foreach (var item in Model.ContentInfo)
                         {
-                            <hr />
-                            <a class="also-head-text" asp-area="" asp-controller="@item.Controller" asp-action="@item.Action">
-                                <img class="also-img" src="@Url.Content(item.ContentLocation)">
-                            </a>
-                            <hr />
-                            <a class="also-head-text" asp-area="" asp-controller="@item.Controller" asp-action="Index">
-                                @item.ContentName
-                            </a>
+                        <hr />
+                        <a class="also-head-text" asp-area="" asp-controller="@item.Controller" asp-action="@item.Action">
+                            <img class="also-img" src="@Url.Content(item.ContentLocation)">
+                        </a>
+                        <hr />
+                        <a class="also-head-text" asp-area="" asp-controller="@item.Controller" asp-action="Index">
+                            @item.ContentName
+                        </a>
+                        <br />
+                        <a class="also-category" asp-area="" asp-controller="@item.Controller" asp-action="index">
+                            @item.ContentCategory
+                        </a>
+                        <div class="row">
+                            <div class="col text-left">  <p class="also-credit"> Author : @item.ContentWriter </p> </div>
+                            <div class="col text-right"> <p class="also-credit"> @item.ContentDate </p></div>
                             <br />
-                            <a class="also-category" asp-area="" asp-controller="@item.Controller" asp-action="index">
-                                @item.ContentCategory
-                            </a>
-                            <div class="row">
-                                <div class="col text-left">  <p class="also-credit"> Author : @item.ContentWriter </p> </div>
-                                <div class="col text-right"> <p class="also-credit"> @item.ContentDate </p></div>
-                                <br />
-                            </div>
+                        </div>
                         }
 
                     </div>

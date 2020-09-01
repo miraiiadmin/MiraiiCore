@@ -1,20 +1,44 @@
 ﻿@{
-    ViewData["Title"] = "";
+    ViewData["Title"] = "บทความสำหรับการทดสอบ";
     Layout = "~/Views/Shared/_Layout _Read.cshtml";
+    ViewData["image"] = "~/image/Read/Blog/Tenet/1200x480.jpg";
 }
+    <head>
+        <style>
+            .embed-container {
+                position: relative;
+                padding-bottom: 56.25%;
+                height: 0;
+                overflow: hidden;
+                max-width: 100%;
+            }
 
-<head>
-    <link href="~/css/css_article.css" rel="stylesheet" />
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-175459266-1"></script>
-    <script>
+                .embed-container iframe, .embed-container object, .embed-container embed {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+        </style>
+
+        <meta property="og:image" content="https://miraii.space/image/Read/Review/Hamilton/1_Hamilton.png" />
+        <meta property="og:image:secure_url" content="https://miraii.space/image/Read/Review/Hamilton/1_Hamilton.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="500" />
+        <meta property="og:image:height" content="261" />
+
+        <link href="~/css/css_article.css" rel="stylesheet" />
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-175459266-1"></script>
+        <script>
             window.dataLayer = window.dataLayer || [];
             function gtag() { dataLayer.push(arguments); }
             gtag('js', new Date());
 
             gtag('config', 'UA-175459266-1');
-    </script>
-</head>
+        </script>
+    </head>
 
 <body>
     <div id="fb-root"></div>
