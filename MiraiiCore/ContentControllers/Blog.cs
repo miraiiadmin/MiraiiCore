@@ -85,8 +85,7 @@ namespace MiraiiCore.Controllers
 
             return View("~/Views/Read/Blog/T.cshtml", data);
         }
-
-        public IActionResult ComebackOfMovieIndustry(ContentDataViewModel data)
+        public IActionResult Rikuoh(ContentDataViewModel YouMay)
         {
             ConnectionString();
             con.Open();
@@ -107,11 +106,39 @@ namespace MiraiiCore.Controllers
                 details.Action = dr["Action"].ToString();
                 objmodel.Add(details);
             }
-            data.ContentInfo = objmodel;
+            YouMay.ContentInfo = objmodel;
             con.Close();
             ModelState.Clear();
 
-            return View("~/Views/Read/Blog/ComebackOfMovieIndustry.cshtml", data);
+            return View("~/Views/Read/Blog/Rikuoh.cshtml", YouMay);
+        }
+
+        public IActionResult ComebackOfMovieIndustry(ContentDataViewModel YouMay)
+        {
+            ConnectionString();
+            con.Open();
+            com.Connection = con;
+
+            com.CommandText = "SELECT TOP 2 * FROM ContentData WHERE ContentCategory = 'Blog' AND release = 'yes' ORDER BY NEWID ()";
+            dr = com.ExecuteReader();
+            List<ContentDataViewModel> objmodel = new List<ContentDataViewModel>();
+            while (dr.Read())
+            {
+                var details = new ContentDataViewModel();
+                details.ContentLocation = dr["ContentLocation"].ToString();
+                details.ContentName = dr["ContentName"].ToString();
+                details.ContentCategory = dr["ContentCategory"].ToString();
+                details.ContentDate = dr["ContentDate"].ToString();
+                details.ContentWriter = dr["ContentWriter"].ToString();
+                details.Controller = dr["Controller"].ToString();
+                details.Action = dr["Action"].ToString();
+                objmodel.Add(details);
+            }
+            YouMay.ContentInfo = objmodel;
+            con.Close();
+            ModelState.Clear();
+
+            return View("~/Views/Read/Blog/ComebackOfMovieIndustry.cshtml", YouMay);
         }
 
         public IActionResult BTS()

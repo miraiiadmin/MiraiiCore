@@ -32,6 +32,15 @@ body {
     max-width: 100%;
 }
 
+.detail-img-description {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    margin-bottom: 7px;
+    max-width: 100%;
+}
+
 .detail-text-bold {
     font-weight: bold;
     font-family: 'Sarabun', sans-serif;
@@ -159,10 +168,18 @@ body {
     }
 
 .link-text {
-    color: #3d3d3d;
-    text-decoration: uderline ;
+    color: #ecba71;
+    font-weight: bold;
 }
 
-    .link-text : hover {
-        color: #ecba71;
+    .link-text:hover {
+        color: #7e8a8b;
+        font-weight: bold;
+        text-decoration: underline;
     }
+
+.text-description {
+    font-size: 14px;
+    text-align: center;
+    color: #7e8a8b;
+}

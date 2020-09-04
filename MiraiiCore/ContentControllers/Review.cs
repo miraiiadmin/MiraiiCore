@@ -61,10 +61,5 @@ namespace MiraiiCore.Controllers
         {
             return View("~/Views/Read/Review/Hamilton.cshtml");
         }
-
-        public IActionResult Rikuoh()
-        {
-            return View("~/Views/Read/Review/Rikuoh.cshtml");
-        }
     }
 }
