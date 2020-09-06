@@ -74,7 +74,7 @@
                             </div><!--column-->
                         }
                     </div>
-                    <a asp-area="" asp-controller="Blog" asp-action="Index" class="btn form-control btn-outline-success">See more !</a> <!-- BS3 -->
+                    <a class="btn form-control btn-outline-success">See more !</a> <!-- BS3 -->
                 </div>
             </section>
         </main>
@@ -231,7 +231,7 @@
                     -->
                     </div>
                     <br />
-                    <a asp-area="" asp-controller="" asp-action="" class="btn form-control btn-outline-success">See more !</a>
+                    <a class="btn form-control btn-outline-success">See more !</a>
                 </div>
             </div>
         </div><!--=============================== End of Weekly =================================-->
@@ -281,7 +281,7 @@
                                         </tr>
                                     </tbody>
                                 </table>
-                                <a asp-area="" asp-controller="" asp-action="" class="btn form-control btn-outline-success">Sound Good ?! Discover More !</a>
+                                <a class="btn form-control btn-outline-success">Sound Good ?! Discover More !</a>
                             </div>
                         </div>
                     </div>
@@ -345,13 +345,13 @@
                             <button class="btn btn-outline-success form-control">Learn more about us</button><br /><br />
                         </a>
 
-                        <p class="display-6 text-center">You can leave us some comments here : )</p><br />
+                        <p class="display-6 text-center">You can leave us some comments below :)</p><br />
 
                         @using (Html.BeginForm("Feedback", "Home", FormMethod.Post))
                         {
                             <form data-aos="fade-up">
                                 <div class="form-group">
-                                    <textarea class="form-control" name="Feedback" id="Feedback" rows="5" required></textarea>
+                                    <textarea class="form-control" name="Feedback" id="Feedback" rows="5" placeholder="Give us some comments here" required></textarea>
                                 </div>
                                 <button type="submit" class="btn btn-outline-warning form-control ">Submit</button>
                             </form>}
