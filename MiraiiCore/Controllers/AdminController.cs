@@ -48,6 +48,7 @@ namespace MiraiiCore.Controllers
                 return View("Error");
             }
         }
+
         [HttpGet]
         public IActionResult Uploader()
         {
@@ -55,6 +56,11 @@ namespace MiraiiCore.Controllers
         }
 
         public IActionResult Error()
+        {
+            return View();
+        }
+
+        public IActionResult Edit()
         {
             return View();
         }
