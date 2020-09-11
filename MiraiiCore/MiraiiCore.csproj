@@ -19,6 +19,6 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\assets\img\" />
-    <Folder Include="wwwroot\image\Read\Blog\Kimetsu no\" />
+    <Folder Include="wwwroot\image\Read\Blog\Kimetsu no_mugen\" />
   </ItemGroup>
 </Project>

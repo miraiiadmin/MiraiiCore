@@ -63,6 +63,17 @@
 
         <p></p>
 
+           <p class="detail-text-bold"> อ้างอิงรูปภาพ </p>
+        <ul>
+            <li>
+                <a class="link-text" href="">
+                </a>
+            </li>
+            <li>
+                <a class="link-text" href="">
+                </a>
+            </li>
+        </ul>
     </div>
 
     <!--========================== Share Button =====================================-->
