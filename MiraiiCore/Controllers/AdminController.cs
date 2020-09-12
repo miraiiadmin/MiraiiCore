@@ -60,9 +60,7 @@ namespace MiraiiCore.Controllers
             return View();
         }
 
-        public IActionResult Edit()
-        {
-            return View();
-        }
+        
+        
     }
 }

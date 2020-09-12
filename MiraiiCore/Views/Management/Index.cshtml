@@ -1,0 +1,42 @@
+﻿@model List<MiraiiCore.Models.ContentDataModel>
+
+@{
+    ViewData["Title"] = "Movie index";
+}
+
+<h1>@ViewData["Title"]</h1>
+@Html.ActionLink("+ เพิ่ม", "Create", "Management", null, new { @class = "btn btn-primary", @style = "margin-bottom: 20px;" })
+<br>
+<table class="table">
+    <tr>
+        <th>ContentID</th>
+        <th>Title</th>
+        <th>Image</th>
+        <th>Date</th>
+        <th>Description</th>
+        <th>Writer</th>
+        <th>แก้ไข</th>
+        <th>ลบ</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td class="item-id">@item.ContentID</td>
+            <td>@item.ContentName</td>
+            <td>
+                <img src="@item.ContentLocation" class="img-responsive" />
+            </td>
+            <td>@item.ContentDate)</td>
+            <td>@item.ContentDescription</td>
+            <td>@item.ContentWriter</td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.ContentID}, new { id = item.ContentID, @class = "btn btn-primary", @style = "margin-bottom: 20px;" })
+            </td>
+            <td>
+                @Html.ActionLink("Delete", "Delete", new { id = item.ContentID }, new { id = item.ContentID, @class = "btn btn-alert", @style = "margin-bottom: 20px;" })
+
+            </td>
+        </tr>
+    }
+</table>
+
