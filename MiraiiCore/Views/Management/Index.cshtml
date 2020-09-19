@@ -24,8 +24,10 @@ else
 
     <div class="text-center">
         @Html.ActionLink("Create a content", "Create", "Management", null, new { @class = "btn btn-success", @style = "margin-bottom: 20px; text-center;" })
-        @Html.ActionLink("Logout", "Logout", "Management", null, new { @class = "btn btn-secondary", @style = "margin-bottom: 20px; text-center;" })
-
+        @using (Html.BeginForm("Logout", "Management", FormMethod.Post))
+        {
+            <button type="submit" class="btn btn-secondary" style=margin-bottom: 20px; text-center>Logout</button>
+        }
     </div>
     <br>
     <div class="table-responsive-lg">
