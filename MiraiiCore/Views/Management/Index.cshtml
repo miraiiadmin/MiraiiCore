@@ -1,42 +1,89 @@
 ﻿@model List<MiraiiCore.Models.ContentDataModel>
+@using Microsoft.AspNetCore.Http;
+@inject IHttpContextAccessor HttpContextAccessor
 
 @{
-    ViewData["Title"] = "Movie index";
+    ViewData["Title"] = "Content Management";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>@ViewData["Title"]</h1>
-@Html.ActionLink("+ เพิ่ม", "Create", "Management", null, new { @class = "btn btn-primary", @style = "margin-bottom: 20px;" })
-<br>
-<table class="table">
-    <tr>
-        <th>ContentID</th>
-        <th>Title</th>
-        <th>Image</th>
-        <th>Date</th>
-        <th>Description</th>
-        <th>Writer</th>
-        <th>แก้ไข</th>
-        <th>ลบ</th>
-    </tr>
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td class="item-id">@item.ContentID</td>
-            <td>@item.ContentName</td>
-            <td>
-                <img src="@item.ContentLocation" class="img-responsive" />
-            </td>
-            <td>@item.ContentDate)</td>
-            <td>@item.ContentDescription</td>
-            <td>@item.ContentWriter</td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.ContentID}, new { id = item.ContentID, @class = "btn btn-primary", @style = "margin-bottom: 20px;" })
-            </td>
-            <td>
-                @Html.ActionLink("Delete", "Delete", new { id = item.ContentID }, new { id = item.ContentID, @class = "btn btn-alert", @style = "margin-bottom: 20px;" })
+@if (@HttpContextAccessor.HttpContext.Session.GetString("Username") == null)
+{
+    <h2>Login needed to preceed this action.</h2>
+}
+else
+{
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <h1 class="text-center">@ViewData["Title"]</h1>
+    <h3 class="text-center">Version 0.1</h3>
+    <br />
 
-            </td>
-        </tr>
+    <div class="text-center">
+        @Html.ActionLink("Create a content", "Create", "Management", null, new { @class = "btn btn-success", @style = "margin-bottom: 20px; text-center;" })
+        @Html.ActionLink("Logout", "Logout", null, new { @class = "btn btn-secondary", @style = "margin-bottom: 20px; text-center;" })
+
+    </div>
+    <br>
+    <div class="table-responsive-lg">
+
+
+        <table class="table">
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Image</th>
+                <th>Date</th>
+                <th>Category</th>
+                <th>Writer</th>
+                <th>Release</th>
+                <th>Edit</th>
+                <th>Delete</th>
+
+            </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td class="item-id">@item.ContentID</td>
+                    <td>@item.ContentName</td>
+                    <td>
+                        <img src="@Url.Content(item.ContentLocation)" height="50px" width="80px" />
+                    </td>
+                    <td>@item.ContentDate)</td>
+                    <td>@item.ContentCategory</td>
+                    <td>@item.ContentWriter</td>
+                    <td>@item.Release</td>
+                    <td>
+                        @Html.ActionLink("Update", "Update", new { id = item.ContentID }, new { id = item.ContentID, @class = "btn btn-primary", @style = "margin-bottom: 20px;" })
+                    </td>
+                    <td>
+                        <input type="button" value="Delete" class="btn btn-danger" />
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+
+    @using (Html.BeginForm("Delete", "Management", FormMethod.Post, new { name = "frmContent", id = "frmContent" }))
+    {
+        <input type="hidden" name="id" />
     }
-</table>
+
+    @section Scripts
+{
+        <script>
+            $(".btn-danger").click(function () {
+                if (!confirm('Do you really want to delete this content ?')) {
+                    return false;
+                }
+                var id = $(this).closest("tr").find(".item-id").text();
+                document.frmContent.id.value = id;
+                document.getElementById("frmContent").submit();
+            });
+        </script>
+    }
+}
 

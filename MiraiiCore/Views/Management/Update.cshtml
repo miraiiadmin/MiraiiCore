@@ -1,0 +1,88 @@
+﻿@model MiraiiCore.Models.ContentDataModel
+@{
+    ViewBag.Title = "Update";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<br />
+<br />
+<br />
+<br />
+<br />
+<div class="text-center">
+    <h1>Edit Form</h1>
+</div>
+<br />
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            @using (Html.BeginForm("update", "management", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                <div class="row">
+                    <div class="col-lg-6 form-group">
+                        @Html.LabelFor(model => model.ContentID, "Content ID")
+                        @Html.TextBoxFor(model => model.ContentID, new { @class = "form-control", @required = "required", placeholder = "Content ID", type = "Text", disabled = "disabled" })
+                    </div>
+
+                    <div class="form-group">
+                        @Html.HiddenFor(model => model.ContentID, new { style = "display: none;", placeholder = "Content ID", type = "Text" })
+                    </div>
+                    <div class="col-lg-6 form-group">
+                        @Html.LabelFor(model => model.ContentName, "ContentName")
+                        @Html.TextBoxFor(model => model.ContentName, new { @class = "form-control", @required = "required", placeholder = "Name", type = "Text", ID = "ContentName" })
+
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.ContentDescription, "Description")
+                    @Html.TextAreaFor(model => model.ContentDescription, new { @class = "form-control", @required = "required", placeholder = "Description", type = "Text", ID = "ContentDescription" })
+                    <lable class="text-danger">
+                        @Html.ValidationMessage("errDescription")
+                    </lable>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.ContentCategory, "Category")
+                    @Html.DropDownListFor(m => m.ContentCategory, new List<SelectListItem>
+                         {
+                         new SelectListItem { Text="Blog", Value="Blog" },
+                         new SelectListItem { Text="Life", Value="Life" },
+                         new SelectListItem { Text="Review", Value="Review" },
+                         new SelectListItem { Text="Story", Value="Story" }
+                         }, "กรุณาเลือก", new { @class = "form-control", @required = "required", ID = "ContentCategory" })
+                    @Html.ValidationMessageFor(model => model.ContentCategory, "", new { @class = "text-danger" })
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 form-group">
+                        @Html.LabelFor(model => model.Action, "Action")
+                        @Html.TextBoxFor(model => model.Action, new { @class = "form-control", @required = "required", type = "Text", ID = "Action" })
+                    </div>
+
+                    <div class="col-lg-6 form-group">
+                        @Html.LabelFor(model => model.Controller, "Controller")
+                        @Html.DropDownListFor(m => m.Controller, new List<SelectListItem>
+                        {
+                        new SelectListItem { Text="Blog", Value="Blog" },
+                        new SelectListItem { Text="Life", Value="Life" },
+                        new SelectListItem { Text="Review", Value="Review" },
+                        new SelectListItem { Text="Story", Value="Story" }
+                        }, "กรุณาเลือก", new { @class = "form-control", @required = "required", ID = "Controller" })
+                        @Html.ValidationMessageFor(model => model.Controller, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Release, "Release")
+                    @Html.DropDownListFor(m => m.Release, new List<SelectListItem>
+                    {
+                    new SelectListItem { Text="Yes", Value="yes" },
+                    new SelectListItem { Text="No", Value="no" }
+                    }, "กรุณาเลือก", new { @class = "form-control", @required = "required", ID = "Release" })
+                    @Html.ValidationMessageFor(model => model.Release, "", new { @class = "text-danger" })
+                </div>
+                <div class=form-group>
+                    <input type="submit" value="Update" class="btn btn-primary" />
+                </div>
+            }
+        </div>
+    </div>
+</div>
+

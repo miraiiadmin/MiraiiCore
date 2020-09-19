@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
@@ -12,89 +14,86 @@ namespace MiraiiCore.Controllers
 {
     public class ManagementController : Controller
     {
-        MyProjectContext db = new MyProjectContext();
+        SqlConnection con = new SqlConnection();
+        SqlCommand com = new SqlCommand();
+        SqlDataReader dr;
 
-        // GET: /<controller>/
-        public IActionResult Index()
+        void ConnectionString()
         {
-            var model = db.ContentData.ToList();
-            return View(model);
+            con.ConnectionString = "Data Source= miraii.space; Database= miraii_space; User ID=miraii_space; Password=Hostmiraii007;";
         }
 
-        public string Welcome(string name, string id)
+        MyProjectContext db = new MyProjectContext();
+
+        public IActionResult Index(AdminViewModel acc)
         {
-            return $"Hello, Your name's {name}. Your ID is {id}.";
+
+            if (HttpContext.Session.GetString("Username") == null)
+            {
+                return View("Login");
+            }
+            else
+            {
+                var model = db.ContentData.ToList();
+                return View(model);
+            }
+        }
+
+        public IActionResult Login()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Verify(AdminViewModel acc)
+        {
+            ConnectionString();
+            con.Open();
+            com.Connection = con;
+            com.CommandText = "select * from AdminLogin where username='" + acc.username + "' and password ='" + acc.password + "'";
+            dr = com.ExecuteReader();
+            if (dr.Read())
+            {
+                con.Close();
+                HttpContext.Session.SetString("Username", acc.username);
+                ViewBag.data = HttpContext.Session.GetString("Username");
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                con.Close();
+                return View("Error");
+            }
         }
 
         public IActionResult Create()
         {
-            return View();
+            if (HttpContext.Session.GetString("Username") == null)
+            {
+                return View("Login");
+            }
+            else
+            {
+                return View();
+            }
         }
 
         [HttpPost]
         public async Task<IActionResult> Create(ContentDataModel model, IFormFile fileUpload)
         {
-
-            if (fileUpload == null)
+            if (HttpContext.Session.GetString("Username") == null)
             {
-                ModelState.AddModelError("errFileUpload", "The file upload field is required.");
-                return View();
+                return View("Login");
             }
-
-            if (ModelState.IsValid)
+            else
             {
-                string pathImgMovie = "/images/upload/";
-                string pathSave = $"wwwroot{pathImgMovie}";
-                if (!Directory.Exists(pathSave))
+                if (fileUpload == null)
                 {
-                    Directory.CreateDirectory(pathSave);
-                }
-                string extFile = Path.GetExtension(fileUpload.FileName);
-                string fileName = DateTime.Now.ToString("dd-MM-yyyy-hh-mm-ss") + extFile;
-                var path = Path.Combine(Directory.GetCurrentDirectory(), pathSave, fileName);
-
-                using (var stream = new FileStream(path, FileMode.Create))
-                {
-                    await fileUpload.CopyToAsync(stream);
+                    ModelState.AddModelError("errFileUpload", "The file upload field is required.");
+                    return View();
                 }
 
-                DateTime dateNow = DateTime.Now;
-                model.ContentLocation = pathImgMovie + fileName;
-                model.ContentDate = dateNow.ToString();
-                db.ContentData.Add(model);
-                await db.SaveChangesAsync();
-                return RedirectToAction("Index");
-            }
-            return View();
-        }
-
-        [HttpPost]
-        public ActionResult Delete(int id)
-        {
-            ContentDataModel content = db.ContentData.Find(id);
-            db.ContentData.Remove(content);
-            db.SaveChanges();
-            return RedirectToAction("Index");
-        }
-
-        public ActionResult Edit(int id)
-        {
-            ContentDataModel movie = db.ContentData.Find(id);
-            return View(movie);
-        }
-
-        [HttpPost]
-        public async Task<IActionResult> Edit(ContentDataModel model, IFormFile fileUpload)
-        {
-            // set old data
-            db.ContentData.Attach(model);
-            ContentDataModel oldContent = new MyProjectContext().ContentData.Find(model.ContentID);
-            model.ContentLocation = oldContent.ContentLocation;
-            oldContent = null;
-
-            if (ModelState.IsValid)
-            {
-                if (fileUpload != null)
+                if (ModelState.IsValid)
                 {
                     string pathImgMovie = "/images/upload/";
                     string pathSave = $"wwwroot{pathImgMovie}";
@@ -110,16 +109,72 @@ namespace MiraiiCore.Controllers
                     {
                         await fileUpload.CopyToAsync(stream);
                     }
-                    model.ContentLocation = pathImgMovie + fileName;
-                }
 
-                
-                db.Entry(model).State = EntityState.Modified;
-                await db.SaveChangesAsync();
-                return RedirectToAction("Index");
+                    model.ContentLocation = pathImgMovie + fileName;
+                    db.ContentData.Add(model);
+                    await db.SaveChangesAsync();
+                    return RedirectToAction("Index");
+                }
+                return View();
             }
+        }
+
+        [HttpPost]
+        public ActionResult Delete(int id)
+        {
+            ContentDataModel content = db.ContentData.Find(id);
+            db.ContentData.Remove(content);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult Update(int id)
+        {
+            if (HttpContext.Session.GetString("Username") == null)
+            {
+                return View("Login");
+            }
+            else
+            {
+                ContentDataModel content = db.ContentData.Find(id);
+                return View(content);
+            }
+        }
+
+        [HttpPost]
+        public ActionResult Update(ContentDataModel content)
+        {
+            ConnectionString();
+            con.Open();
+            com.Connection = con;
+
+            com.CommandText = "UPDATE ContentData SET ContentName=@ContentName, ContentDescription=@ContentDescription, Action=@Action, Controller=@Controller, Release=@Release, ContentCategory=@ContentCategory WHERE ContentId=@ContentID";
+
+            com.Parameters.AddWithValue("@ContentID", content.ContentID);
+            com.Parameters.AddWithValue("@ContentName", content.ContentName);
+            com.Parameters.AddWithValue("@ContentDescription", content.ContentDescription);
+            com.Parameters.AddWithValue("@Action", content.Action);
+            com.Parameters.AddWithValue("@Controller", content.Controller);
+            com.Parameters.AddWithValue("@Release", content.Release);
+            com.Parameters.AddWithValue("@ContentCategory", content.ContentCategory);
+            com.ExecuteNonQuery();
+            con.Close();
+            return RedirectToAction("Index");
+        }
+
+        [HttpGet]
+        public ActionResult Update()
+        {
             return View();
         }
+        [HttpPost]
+        public ActionResult Logout()
+        {
+            HttpContext.Session.Clear();
+            return View("Logout");
+        }
+
+
     }
 }
        

@@ -3,110 +3,117 @@
     ViewBag.Title = "Create";
     Layout = "~/Views/Shared/_Layout _Read.cshtml";
 }
+<br />
+<br />
+<br />
+<br />
+<br />
+<div class="text-center">
+    <h1>Create Form</h1>
+</div>
+<br />
 
-<h2>Create</h2>
-@using (Html.BeginForm("create", "management", FormMethod.Post, new { enctype = "multipart/form-data" }))
-{
-    <div class="form-group">
-        @Html.LabelFor(model => model.ContentName, "Title")
-        @Html.TextBoxFor(model => model.ContentName, new { @class = "form-control", placeholder = "ชื่อบทความ" })
-        @Html.ValidationMessageFor(model => model.ContentName, "", new { @class = "text-danger" })
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(model => model.ContentWriter, "Writer")
-        @Html.TextBoxFor(model => model.ContentWriter, new { @class = "form-control", placeholder = "Writer" })
-        @Html.ValidationMessageFor(model => model.ContentWriter, "", new { @class = "text-danger" })
-    </div>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            @using (Html.BeginForm("create", "management", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                <div class="row">
+                    <div class="col-lg-6 form-group">
+                        @Html.LabelFor(model => model.ContentName, "Title")
+                        @Html.TextBoxFor(model => model.ContentName, new { @class = "form-control", @required = "required", placeholder = "Title" })
+                        
+                    </div>
+                    <div class="col-lg-6 form-group">
+                        @Html.LabelFor(model => model.ContentDate, "Date (YYYY-MM-DD)")
+                        @Html.TextBoxFor(model => model.ContentDate, new { @class = "form-control", @required = "required", placeholder = "Date" })
+                       
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 form-group">
+                        @Html.LabelFor(model => model.ContentWriter, "Writer")
+                        @Html.TextBoxFor(model => model.ContentWriter, new { @class = "form-control", @required = "required", placeholder = "Writer" })
+                      
+                    </div>
 
-    <div class="form-group">
-        @Html.LabelFor(model => model.ContentCategory, "หมวดหมู่")
-        @Html.DropDownListFor(m => m.ContentCategory, new List<SelectListItem>
-        {
-        new SelectListItem { Text="Blog", Value="Blog" },
-        new SelectListItem { Text="Life", Value="Life" },
-        new SelectListItem { Text="Review", Value="Review" },
-        new SelectListItem { Text="Story", Value="Story" }
-        }, "กรุณาเลือก", new { @class = "form-control" })
-        @Html.ValidationMessageFor(model => model.ContentCategory, "", new { @class = "text-danger" })
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(model => model.FileType, "FileType")
-        @Html.TextBoxFor(model => model.FileType, new { @class = "form-control", placeholder = "FileType", type = "Text" })
-        <lable class="text-danger">
-            @Html.ValidationMessage("errFileType")
-        </lable>
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(model => model.ContentDescription, "Description")
-        @Html.TextBoxFor(model => model.ContentDescription, new { @class = "form-control", placeholder = "Description", type = "Text" })
-        <lable class="text-danger">
-            @Html.ValidationMessage("errDuration")
-        </lable>
-    </div>
+                    <div class="col-lg-6 form-group">
+                        @Html.LabelFor(model => model.Editor, "Editor")
+                        @Html.TextBoxFor(model => model.Editor, new { @class = "form-control", @required = "required", placeholder = "Editor", type = "Text" })
+                        <lable class="text-danger">
+                            @Html.ValidationMessage("errEditor")
+                        </lable>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 form-group">
+                        @Html.LabelFor(model => model.ContentCategory, "Category")
+                        @Html.DropDownListFor(m => m.ContentCategory, new List<SelectListItem>
+                        {
+                        new SelectListItem { Text="Blog", Value="Blog" },
+                        new SelectListItem { Text="Life", Value="Life" },
+                        new SelectListItem { Text="Review", Value="Review" },
+                        new SelectListItem { Text="Story", Value="Story" }
+                        }, "กรุณาเลือก", new { @class = "form-control", @required = "required" })
+                        @Html.ValidationMessageFor(model => model.ContentCategory, "", new { @class = "text-danger"})
+                    </div>
+                    <div class="col-lg-6 form-group">
+                        @Html.LabelFor(model => model.Release, "Release")
+                        @Html.DropDownListFor(m => m.Release, new List<SelectListItem>
+                        {
+                        new SelectListItem { Text="Yes", Value="yes" },
+                        new SelectListItem { Text="No", Value="no" }
+                        }, "กรุณาเลือก", new { @class = "form-control", @required = "required" })
+                        @Html.ValidationMessageFor(model => model.Release, "", new { @class = "text-danger"})
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.ContentDescription, "Description")
+                    @Html.TextAreaFor(model => model.ContentDescription, new { @class = "form-control", @required = "required", placeholder = "Description", type = "Text" })
+                    <lable class="text-danger">
+                        @Html.ValidationMessage("errDuration")
+                    </lable>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 form-group">
+                        @Html.LabelFor(model => model.Controller, "Controller")
+                        @Html.DropDownListFor(m => m.Controller, new List<SelectListItem>
+                        {
+                        new SelectListItem { Text="Blog", Value="Blog" },
+                        new SelectListItem { Text="Life", Value="Life" },
+                        new SelectListItem { Text="Review", Value="Review" },
+                        new SelectListItem { Text="Story", Value="Story" }
+                        }, "กรุณาเลือก", new { @class = "form-control", @required = "required" })
+                        @Html.ValidationMessageFor(model => model.Controller, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="col-lg-6 form-group">
+                        @Html.LabelFor(model => model.Action, "Action")
+                        @Html.TextBoxFor(model => model.Action, new { @class = "form-control", @required = "required", placeholder = "Action", type = "Text" })
+                        <lable class="text-danger">
+                            @Html.ValidationMessage("errAction")
+                        </lable>
+                    </div>
+                </div>
 
-    <div class="form-group">
-        @Html.LabelFor(model => model.Controller, "Controller")
-        @Html.TextBoxFor(model => model.Controller, new { @class = "form-control", placeholder = "Controller", type = "Text" })
-        <lable class="text-danger">
-            @Html.ValidationMessage("errController")
-        </lable>
-    </div>
+                <div class="row">
+                    <div class="col-lg-6 form-group">
+                        @Html.Label("fileCoverImg", "รูปภาพ")
+                        <input type="file" id="fileUpload" name="fileUpload" class="form-control" />
+                        <lable class="text-danger">
+                            @Html.ValidationMessage("errFileUpload")
+                        </lable>
+                    </div>
+                    <div class="col-lg-6 form-group">
+                        @Html.LabelFor(model => model.FileType, "FileType")
+                        @Html.TextBoxFor(model => model.FileType, new { @class = "form-control", @required = "required", placeholder = "FileType", type = "Text" })
+                        <lable class="text-danger">
+                            @Html.ValidationMessage("errFileType")
+                        </lable>
+                    </div>
+                </div>
 
-    <div class="form-group">
-        @Html.LabelFor(model => model.Action, "Action")
-        @Html.TextBoxFor(model => model.Action, new { @class = "form-control", placeholder = "Action", type = "Text" })
-        <lable class="text-danger">
-            @Html.ValidationMessage("errAction")
-        </lable>
-    </div>
-
-    <div class="form-group">
-        @Html.LabelFor(model => model.Editor, "Editor")
-        @Html.TextBoxFor(model => model.Editor, new { @class = "form-control", placeholder = "Editor", type = "Text" })
-        <lable class="text-danger">
-            @Html.ValidationMessage("errEditor")
-        </lable>
-    </div>
-
-    <div class="form-group">
-        @Html.LabelFor(model => model.Release, "Release")
-        @Html.TextBoxFor(model => model.Release, new { @class = "form-control", placeholder = "Release", type = "Text" })
-        <lable class="text-danger">
-            @Html.ValidationMessage("errRelease")
-        </lable>
-    </div>
-
-    <div class="form-group">
-        @Html.Label("fileCoverImg", "รูปภาพ")
-        <input type="file" id="fileUpload" name="fileUpload" class="form-control" />
-        <lable class="text-danger">
-            @Html.ValidationMessage("errFileUpload")
-        </lable>
-    </div>
-    <div class=form-group>
-        <input onclick="return validateOnSubmit()" type="submit" value="Create" class="btn btn-primary" />
-    </div>
-}
-
-@section Scripts
-{
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
-    <script type="text/javascript">
-        $(function () {
-            $('#dtReleaseDate').datetimepicker({
-                defaultDate: new Date(),
-            });
-        });
-        function validateOnSubmit() {
-            if (!$('#fileUpload').val()) {
-                $('span[data-valmsg-for="errFileUpload"]').text('The file upload is required.');
+                <input type="submit" value="Create" class="btn form-control btn btn-primary" />
             }
-            if (!$('#duration').val()) {
-                $('span[data-valmsg-for="errDuration"]').text('The duration is required.');
-            }
-        }
-    </script>
-    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.16.0/jquery.validate.min.js"></script>
-    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validation.unobtrusive/3.2.6/jquery.validate.unobtrusive.min.js"></script>
-}
+        </div>
+    </div>
+</div>
