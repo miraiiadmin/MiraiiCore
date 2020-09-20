@@ -25,6 +25,7 @@ namespace MiraiiCore.Controllers
 
         MyProjectContext db = new MyProjectContext();
 
+        [Route("/management")]
         public IActionResult Index(AdminViewModel acc)
         {
 
@@ -66,6 +67,7 @@ namespace MiraiiCore.Controllers
             }
         }
 
+        [Route("/management/create")]
         public IActionResult Create()
         {
             if (HttpContext.Session.GetString("Username") == null)
@@ -140,7 +142,6 @@ namespace MiraiiCore.Controllers
                 return View(content);
             }
         }
-
         [HttpPost]
         public ActionResult Update(ContentDataModel content)
         {
@@ -162,11 +163,7 @@ namespace MiraiiCore.Controllers
             return RedirectToAction("Index");
         }
 
-        [HttpGet]
-        public ActionResult Update()
-        {
-            return View();
-        }
+        
         [HttpPost]
         public ActionResult Logout()
         {
@@ -174,6 +171,50 @@ namespace MiraiiCore.Controllers
             return View("Logout");
         }
 
+        [HttpGet]
+        public IActionResult Search(string text, ContentDataViewModel data)
+        {
+            if (HttpContext.Session.GetString("Username") == null)
+            {
+                return View("Login");
+            }
+            else
+            {
+                ConnectionString();
+                con.Open();
+                com.Connection = con;
+
+                com.CommandText = "SELECT * FROM ContentData WHERE ContentName like '%" + text + "%'";
+                dr = com.ExecuteReader();
+                List<ContentDataViewModel> objmodel = new List<ContentDataViewModel>();
+                if (dr.HasRows)
+                {
+                    while (dr.Read())
+                    {
+                        var details = new ContentDataViewModel();
+                        details.ContentID = dr["ContentID"].ToString();
+                        details.ContentLocation = dr["ContentLocation"].ToString();
+                        details.ContentName = dr["ContentName"].ToString();
+                        details.ContentCategory = dr["ContentCategory"].ToString();
+                        details.ContentDescription = dr["ContentDescription"].ToString();
+                        details.ContentDate = dr["ContentDate"].ToString();
+                        details.ContentWriter = dr["ContentWriter"].ToString();
+                        details.Controller = dr["Controller"].ToString();
+                        details.Action = dr["Action"].ToString();
+                        details.Release = dr["Release"].ToString();
+                        objmodel.Add(details);
+                    }
+                    data.ContentInfo = objmodel;
+                }
+                else
+                {
+                    return View("Error");
+                }
+                con.Close();
+                ModelState.Clear();
+                return View("Search", data);
+            }
+        }
 
     }
 }

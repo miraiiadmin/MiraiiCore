@@ -1,4 +1,4 @@
-﻿@model List<MiraiiCore.Models.ContentDataModel>
+﻿@model MiraiiCore.Models.ContentDataViewModel
 @using Microsoft.AspNetCore.Http;
 @inject IHttpContextAccessor HttpContextAccessor
 
@@ -47,7 +47,7 @@ else
                         <th>Delete</th>
 
                     </tr>
-                    @foreach (var item in Model)
+                    @foreach (var item in Model.ContentInfo)
                     {
                         <tr>
                             <td class="item-id">@item.ContentID</td>
