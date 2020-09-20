@@ -1,7 +1,7 @@
 ﻿@model MiraiiCore.Models.ContentDataModel
 @{
     ViewBag.Title = "Update";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_Layout_Management.cshtml";
 }
 <br />
 <br />
@@ -78,9 +78,9 @@
                     }, "กรุณาเลือก", new { @class = "form-control", @required = "required", ID = "Release" })
                     @Html.ValidationMessageFor(model => model.Release, "", new { @class = "text-danger" })
                 </div>
-                <div class=form-group>
+                
                     <input type="submit" value="Update" class="btn btn-primary" />
-                </div>
+               
             }
         </div>
     </div>

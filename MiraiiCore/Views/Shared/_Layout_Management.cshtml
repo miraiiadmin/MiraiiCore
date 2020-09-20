@@ -1,0 +1,168 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+
+    <!-- Vendor CSS Files -->
+    <link href="~/assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+    <link href="~/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="~/assets/vendor/venobox/venobox.css" rel="stylesheet">
+    <link href="~/assets/vendor/aos/aos.css" rel="stylesheet">
+
+    <!--CSS & favicon import -->
+    <link href="~/css/css_layout.css" rel="stylesheet">
+    <link href="~/assets/css/style.css" rel="stylesheet">
+    <link href="~/image/favicon.png" rel="icon" type="image/x-icon">
+
+    <!--font awesome-->
+    <script src="https://kit.fontawesome.com/8dedd5ecd1.js" crossorigin="anonymous"></script>
+    <!--google font-->
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <!--Navbar-->
+        <nav class="navbar navbar-expand-lg nav-theme bg-white fixed-top">
+            <div class="container">
+                <!--center Navbar's Menu & Logo-->
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                    <img src="~/image/Index/Miraii  png NBG.png" class="logo">
+                </a>
+                <button class="navbar-toggler nav-tog navbar-dark" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!--menu-->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <!--Home-->
+                        <li class="nav-item">
+                            <a class="nav-link text-nav" asp-area="" asp-controller="Home" asp-action="index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            @using (Html.BeginForm("Logout", "Management", FormMethod.Post))
+                            {
+                                <a class="nav-link text-nav"><button type="submit" class="btn btn-outline-danger" style=margin-bottom: 20px; text-center>Logout</button></a>}
+                        </li>
+                        <li class="nav-item">
+                            @using (Html.BeginForm("Search", "Management", FormMethod.Get))
+                            {
+                                <!--button-->
+                                <form>
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn btn-warning nav-button " data-toggle="modal" data-target="#exampleModal">
+                                        <i class="nav-link fas fa-search"></i>
+                                    </button>
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered">
+                                            <div class="modal-content">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <div class="input-group">
+
+                                                            <input type="text" name="text" class="form-control text-inSreachBox" placeholder="Type something here">
+                                                            <div class="input-group-append text-center">
+                                                                <button name="submit" class="btn btn-warning" type="submit"><i class="fa fa-search"></i>
+                                                            </div>
+                                                        </div><!--input-group-->
+                                                    </div>
+                                                </div><!--Card-->
+                                            </div>
+                                        </div><!--Modal dialog-->
+                                    </div><!--Modal-->
+                                </form>
+                            }
+                        </li>
+                        
+</div><!--menu-->
+            </div><!--container-->
+        </nav>
+    </header>
+
+    <main role="main" class="pb-3">
+        @RenderBody()
+    </main>
+
+    <br />
+
+    <!--Footer-->
+    <footer class=" border-top footer">
+        <div class="container pt-3 pb-1">
+            <!--  <div class="row py-3">
+                <div class="col-xl-4 footer-head-text text-center">
+                    <p> miraii.space </p>
+                    <p> Life </p>
+                    <p> Podcast </p>
+                    <p> Learning </p>
+                    <p> Art </p>
+                </div>
+                <div class="col-sm-2">
+                    <p class="footer-head-text"> <i class="fas fa-book"></i> Our Content </p>
+                    <ul>
+                        <a class="footer-list-text" asp-area="" asp-controller="Blog" asp-action="index"> <li> Blog </li> </a>
+                        <a class="footer-list-text" asp-area="" asp-controller="Story" asp-action="index"> <li> Story </li> </a>
+                        <a class="footer-list-text" asp-area="" asp-controller="Review" asp-action="index"> <li> Review </li> </a>
+                        <a class="footer-list-text" asp-area="" asp-controller="Life" asp-action="index"> <li> Life </li> </a>
+                    </ul>
+                </div>
+                <div class="col-sm-2">
+                    <p class="footer-head-text"> <i class="fas fa-pencil-alt"></i> Our Author </p>
+                    <ul>
+                        <a class="footer-list-text " asp-area="" asp-controller="" asp-action=""> <li> Alaska </li> </a>
+                        <a class="footer-list-text " asp-area="" asp-controller="" asp-action=""> <li> KIRAY </li> </a>
+                        <a class="footer-list-text " asp-area="" asp-controller="" asp-action=""> <li> ลุงโจนาธาน </li> </a>
+                    </ul>
+                    <br />
+                    <p class="footer-head-text"> Know us more !! </p>
+                    <ul>
+                        <a class="footer-list-text" asp-area="" asp-controller="About" asp-action="index"> <li> About </li> </a>
+                    </ul>
+                </div>
+                <div class="col-xl-4 text-center" style="color:black">
+                    <p class="footer-head-text"> Contact For Work </p>
+                    <br />
+                    <p> <strong> Miraii </strong> </p>
+                    <p> Location : Bangkok, Thailand </p>
+                    <p> Email : miraii.teamn@gmail.com </p>
+                </div>
+            </div>
+                    <hr />-->
+            <div class="row ">
+                <div class="col footer-copyright">&copy; 2020 miraii.space all rights reserved</div>
+                <div class="col footer-icon">
+                    <address>
+                        <a href="https://www.instagram.com/miraii.space/?hl=th"><i class="footer-icon fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/miraii.space"><i class="footer-icon icofont-facebook"></i></a>
+                        <a href="https://www.linkedin.com/company/miraii/"><i class="footer-icon icofont-linkedin"></i></a>
+                    </address>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+    <script src="~/assets/vendor/jquery/jquery.min.js"></script>
+    <script src="~/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+    <script src="~/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="~/assets/vendor/venobox/venobox.min.js"></script>
+    <script src="~/assets/vendor/aos/aos.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+
+</html>

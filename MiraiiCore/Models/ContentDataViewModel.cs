@@ -20,6 +20,7 @@ namespace MiraiiCore.Models
         public String ContentWriter { get; set; }
         public String Controller  { get; set; }
         public String Action { get; set; }
+        public String Release { get; set; }
         public List<ContentDataViewModel> ContentInfo { get; set; }
     }
 }
