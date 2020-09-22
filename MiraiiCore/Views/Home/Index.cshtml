@@ -26,24 +26,24 @@
         <!--Crossfade Carousel (picture 1200x480)-->
         <img src="~/image/Index/miraii (1).png" class="img-head">
 
-        <!--================ All content (ratio_3:4 / min.size_500x375) =======================-->
-        <main role="main">
-            <section id="portfolio" class="portfolio">
+        <!--================ All content (500 x 261) =======================-->
+        <main role="main" data-aos="fade-up" data-aos-duration="500">
+            <div id="portfolio" class="portfolio">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-12 ">
+                        <header class="col-lg-12 ">
                             <ul id="portfolio-flters">
                                 <li data-filter="*" class="filter-active"> Latest </li>
                                 <!--<li data-filter=".filter-app"> Popular </li>-->
                             </ul>
-                        </div>
+                        </header>
                     </div>
                     <br />
 
-                    <div class="row portfolio-container" data-aos="fade-up">
+                    <div class="row portfolio-container" data-aos="fade-up" data-aos-duration="1000">
                         @foreach (var item in Model.ContentInfo)
                         {
-                            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                            <article class="col-lg-4 col-md-6 portfolio-item filter-web">
                                 <a asp-area="" asp-controller="@item.Controller" asp-action="@item.Action">
                                     <img src="@Url.Content(item.ContentLocation)" class="content-img" text="Thumbnail" />
                                 </a>
@@ -62,67 +62,72 @@
                                         <small class="text-muted"><i class="far fa-calendar-alt"></i> &nbsp; @Html.DisplayFor(modelItem => item.ContentDate)</small>
                                     </div>
                                 </div>
-                            </div><!--column-->
+                            </article>
                         }
                     </div>
-                    <a class="btn form-control btn-outline-success">See more !</a> <!-- BS3 -->
+                    <a class="btn form-control btn-outline-success" asp-controller="Blog" asp-action="index"> See more !</a> <!-- BS3 -->
                 </div>
-            </section>
+            </div>
         </main>
 
         <br />
+        <br />
 
-        <!--
-    <div class="container">
-        <div class="row">
-            <div class="col-xl-6">
-                <div id="carouselExampleIndicators" data-interval="false" class="carousel slide carousel-fade" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                        <li style="background-color: black; margin-bottom: 18px;" data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                        <li style="background-color: black; margin-bottom: 18px;" data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                        <li style="background-color: black; margin-bottom: 18px;" data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                    </ol>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div data-autoplay="true" class="fb-video" data-href="https://www.facebook.com/watch/?v=367706440915795&amp;extid=Y1iJGzb8mebJIAJy" data-show-text="true" data-width="">
+        <main class="container">
+            <div data-aos="fade-up" data-aos-duration="500">
+                <hr>
+                <h2 class="display-6 text-center text-head-dark" > Video </h2>
+                <hr>
+            </div>
+            <br />
+            <div class="row" data-aos="fade-up" data-aos-duration="1000">
+                <div class="col-xl-6">
+                    <div id="carouselExampleIndicators" data-interval="false" class="carousel slide carousel-fade" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li style="background-color: black; margin-bottom: 18px;" data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                            <li style="background-color: black; margin-bottom: 18px;" data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                            <li style="background-color: black; margin-bottom: 18px;" data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                         
                             </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="fb-video" data-href="https://www.facebook.com/watch/?v=266847820990388&amp;extid=dqOKjZNeofw9nMSg" data-show-text="true" data-width="">
+                            <div class="carousel-item">
+                             
                             </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div data-autoplay="true" class="fb-video" data-href="https://www.facebook.com/watch/?v=367706440915795&amp;extid=Y1iJGzb8mebJIAJy" data-show-text="true" data-width="">
+                            <div class="carousel-item">
+                                
                             </div>
                         </div>
                     </div>
+                    <br />
                 </div>
+
+                <div class="col-xl-6">
+                 
+                </div>
+                <br />
             </div>
+        </main>
 
-            <div class="col-xl-6">
-                <div class="fb-post" data-href="https://www.facebook.com/miraii.space/posts/146753780415946" data-show-text="true" data-width=""><blockquote cite="https://www.facebook.com/miraii.space/posts/146753780415946" class="fb-xfbml-parse-ignore"><p>หากพูดถึงงานศิลปะที่ได้รับแรงบันดาลใจจากนักการเมืองหรือสิ่งที่เป็นตัวแทนทางการเมืองนั้นๆ...</p>โพสต์โดย <a href="https://www.facebook.com/miraii.space/">Miraii</a> เมื่อ&nbsp;<a href="https://www.facebook.com/miraii.space/posts/146753780415946">วันอังคารที่ 1 กันยายน  2020</a></blockquote></div>
-            </div>
+        <br /> 
 
-        </div>
-    </div>
-
-    <br />
-    <br />
-    -->
         <!--Content 1-->
-        <div class="container-xl fix-index ">
+        <main class="container-xl fix-index">
             <div class="row fix-index">
                 <!--=============================== Weekly (4:4) =================================-->
                 <div class="col-sm">
-                    <hr>
-                    <p class="display-6 text-center text-weekly">มุมนักเขียนประจำสัปดาห์</p>
-                    <hr>
+                    <div data-aos="fade-up" data-aos="fade-up" data-aos-duration="500">
+                        <hr>
+                        <p class="display-6 text-center text-weekly">มุมนักเขียนประจำสัปดาห์</p>
+                        <hr>
+                    </div>
                     <br />
-                    <div class="container">
+                    <div class="container" >
 
                         <!--Popular 1-->
                         <div class="row weekly-box">
-                            <div class="col-md-4 px-0">
+                            <div class="col-md-4 px-0" data-aos="fade-up" data-aos-duration="500">
 
                                 <a>
                                     <img class="weekly-img" src="~/image/Index/memoriesonthetablebrown.png">
@@ -245,28 +250,29 @@
                         </div>
                     </div>
                     <br />
-                    <a class="btn form-control btn-outline-success">See more !</a>
+                    <a class="btn form-control btn-outline-success"> See more ! </a>
                 </div>
 
-                <div class="col-md-6 mb-5">
+                <div class="col-md-6 mb-5" data-aos="fade-up" data-aos-duration="1000">
                     <br />
                     <div class="text-center">
                         <div class="fb-page" data-href="https://www.facebook.com/kirinhuman" data-tabs="timeline" data-width="" data-height="" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/kirinhuman" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/kirinhuman">Memories on the table brown</a></blockquote></div>
                     </div>
                     <br />
-                    <a asp-area="" asp-controller="About" asp-action="Index">
+                    <a asp-area="" asp-controller="About" asp-action="Index" data-aos="fade-up" data-aos-duration="1000">
                         <img src="~/image/Index/workwithus.png" class="img-big-content">
                     </a>
                 </div>
-
             </div>
-        </div><!--=============================== End of Weekly =================================-->
+        </main><!--=============================== End of Weekly =================================-->
+
+        <br />
 
         <div class="container">
             <div class="row">
                 <!-- Post Content Column -->
-                <div class="col-lg-6">
-                    <div class="card my-4 ">
+                <div class="col-lg-6" data-aos="fade-up" data-aos-duration="500">
+                    <div class="card my-4">
                         <h5 class="card-header display-6 text-center bg-maincolor "><p class="text-head-dark"> PODCAST ?! </p> </h5>
                         <div class="card-body ">
                             <div class="container podcast-center">
@@ -314,7 +320,7 @@
                 </div>
 
 
-                <div class="col-lg-6 text-center">
+                <div class="col-lg-6 text-center" data-aos="fade-up" data-aos-duration="750">
                     <hr>
                     <h2 class="display-6 text-center text-head-dark ">Artwork</h2>
                     <hr>
@@ -351,12 +357,13 @@
         <br />
         <div class="container">
 
-            <hr>
-            <p class="display-6 text-center text-head-dark">Contact for work</p>
-            <hr>
+            <div data-aos="fade-up" data-aos-duration="500">
+                <hr>
+                <p class="display-6 text-center text-head-dark">Contact for work</p>
+                <hr>
+            </div>
 
-
-            <div class="row">
+            <div class="row" data-aos="fade-up" data-aos-duration="1000">
                 <div class="col-md-6 mb-5">
                     <div class="text-center">
                         <div class="fb-page" data-href="https://www.facebook.com/Miraii-101825598242098/" data-tabs="timeline" data-width="" data-height="427" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/Miraii-101825598242098/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Miraii-101825598242098/"> Miraii </a></blockquote></div>
@@ -392,7 +399,7 @@
 
 
         <!--================ Banner =======================-->
-        <div class="container">
+        <div class="container" data-aos="fade-up" data-aos-duration="500">
             <div class="row">
                 <div class="col-lg-6">
                     <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
