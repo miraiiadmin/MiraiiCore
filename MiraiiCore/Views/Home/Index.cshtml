@@ -5,7 +5,7 @@
 
     <head>
         <script async defer crossorigin="anonymous" src="https://connect.facebook.net/th_TH/sdk.js#xfbml=1&version=v6.0&appId=718174878568237&autoLogAppEvents=1"></script>
-        <link href="~/css/css_home_about.css?ver=1.0.1" rel="stylesheet">
+        <link href="~/css/css_home_about.css?ver=1.0.1" rel="stylesheet"> <!--?ver=1.0.1-->
         <link href="~/css/css_read.css" rel="stylesheet">
 
         <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -13,15 +13,15 @@
         <script>
             window.dataLayer = window.dataLayer || [];
             function gtag() { dataLayer.push(arguments); }
-            gtag('js', new Date()); 
-             
+            gtag('js', new Date());
+
             gtag('config', 'UA-175459266-1');
         </script>
     </head>
 
     <body>
         <div id="fb-root"></div>
-        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/th_TH/sdk.js#xfbml=1&version=v8.0" nonce="ejLhZuw9"></script>
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/th_TH/sdk.js#xfbml=1&version=v9.0" nonce="ejLhZuw9"></script>
 
         <!--Crossfade Carousel (picture 1200x480)-->
         <img src="~/image/Index/miraii (1).png" class="img-head">
@@ -73,61 +73,92 @@
         <br />
         <br />
 
-        <main class="container">
-            <div data-aos="fade-up" data-aos-duration="500">
-                <hr>
-                <h2 class="display-6 text-center text-head-dark" > Video </h2>
-                <hr>
-            </div>
-            <br />
-            <div class="row" data-aos="fade-up" data-aos-duration="1000">
-                <div class="col-xl-6">
-                    <div id="carouselExampleIndicators" data-interval="false" class="carousel slide carousel-fade" data-ride="carousel">
-                        <ol class="carousel-indicators">
-                            <li style="background-color: black; margin-bottom: 18px;" data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                            <li style="background-color: black; margin-bottom: 18px;" data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                            <li style="background-color: black; margin-bottom: 18px;" data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                        </ol>
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                         
-                            </div>
-                            <div class="carousel-item">
-                             
-                            </div>
-                            <div class="carousel-item">
-                                
+        <div class="container" data-aos="fade-up" data-aos-duration="500">
+            <hr>
+            <h2 class="display-6 text-center text-head-dark"> Video </h2>
+            <hr>
+        </div>
+
+        <div class="container-fluid">
+
+            <div data-aos="fade-up" data-aos-duration="1000" id="carouselExampleIndicators" data-interval="false" class="carousel slide carousel-fade" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li style="background-color: black;" data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li style="background-color: black;" data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li style="background-color: black;" data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+                                    <div data-autoplay="true" class="fb-video" data-href="https://www.facebook.com/watch/?v=367706440915795&amp;extid=kTxVQJjZvwTI7qnO" data-show-text="false" data-width=""></div>
+                                </div>
+                                <div class="col-md-6 mb-4"> <img src="~/image/Index/Next Video Coming Soon.png" class="d-block w-100" alt="..."></div>
                             </div>
                         </div>
+                        <br />
+                        <br />
                     </div>
-                    <br />
+
+                    <div class="carousel-item">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-6 mb-4"> <img src="~/image/Index/Next Video Coming Soon.png" class="d-block w-100" alt="..."></div>
+                                <div class="col-md-6 mb-4"> <img src="~/image/Index/Next Video Coming Soon.png" class="d-block w-100" alt="..."></div>
+                            </div>
+                        </div>
+                        <br />
+                        <br />
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-6 mb-4"> <img src="~/image/Index/Next Video Coming Soon.png" class="d-block w-100" alt="..."></div>
+                                <div class="col-md-6 mb-4"> <img src="~/image/Index/Next Video Coming Soon.png" class="d-block w-100" alt="..."></div>
+                            </div>
+                        </div>
+                        <br />
+                        <br />
+                    </div>
                 </div>
 
-                <div class="col-xl-6">
-                 
-                </div>
-                <br />
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <i class="fas fa-caret-left video-indicators" aria-hidden="true"></i>
+                    <span class="sr-only"> Previous </span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <i class="fas fa-caret-right video-indicators" aria-hidden="true"></i>
+                    <span class="sr-only"> Next </span>
+                </a>
             </div>
-        </main>
+            <center data-aos="fade-up" data-aos-duration="1000">
+                <a href="https://www.facebook.com/miraii.space/videos/?ref=page_internal" target="_blank">
+                    <button type="button" class="btn btn-outline-secondary"> Watch more videos on Facebook </button>
+                </a>
+            </center>
+        </div>
 
-        <br /> 
+        <br />
+        <br />
 
         <!--Content 1-->
         <main class="container-xl fix-index">
             <div class="row fix-index">
                 <!--=============================== Weekly (4:4) =================================-->
-                <div class="col-sm">
+                <div class="col-sm" data-aos="fade-up" data-aos-duration="500">
                     <div data-aos="fade-up" data-aos="fade-up" data-aos-duration="500">
                         <hr>
                         <p class="display-6 text-center text-weekly">มุมนักเขียนประจำสัปดาห์</p>
                         <hr>
                     </div>
                     <br />
-                    <div class="container" >
+                    <div class="container">
 
                         <!--Popular 1-->
                         <div class="row weekly-box">
-                            <div class="col-md-4 px-0" data-aos="fade-up" data-aos-duration="500">
+                            <div class="col-md-4 px-0">
 
                                 <a>
                                     <img class="weekly-img" src="~/image/Index/memoriesonthetablebrown.png">
@@ -137,7 +168,7 @@
                                 <br />
                                 <br />
                                 <a>
-                                    <p class="weekly-name"> Comimg Soon </p>
+                                    <p class="weekly-name"> Coming Soon </p>
                                 </a>
                                 <p class="weekly-description">
                                 </p>
@@ -161,13 +192,13 @@
                                 <br />
                                 <br />
                                 <a>
-                                    <p class="weekly-name"> Comimg Soon </p>
+                                    <p class="weekly-name"> Coming Soon </p>
                                 </a>
                                 <p class="weekly-description">
                                 </p>
                                 <div class="container">
                                     <div class="row">
-                                        <div class="col-6 text-left weekly-credit"> <p>   </p></div>
+                                        <div class="col-6 text-left weekly-credit"> <p> </p></div>
                                         <div class="col-6 text-right weekly-credit"> <p> </p></div>
                                     </div>
                                 </div>
@@ -186,7 +217,7 @@
                                 <br />
                                 <br />
                                 <a>
-                                    <p class="weekly-name"> Comimg Soon </p>
+                                    <p class="weekly-name"> Coming Soon </p>
                                 </a>
                                 <p class="weekly-description">
                                 </p>
@@ -211,7 +242,7 @@
                                 <br />
                                 <br />
                                 <a>
-                                    <p class="weekly-name"> Comimg Soon </p>
+                                    <p class="weekly-name"> Coming Soon </p>
                                 </a>
                                 <p class="weekly-description">
                                 </p>
@@ -236,7 +267,7 @@
                                 <br />
                                 <br />
                                 <a>
-                                    <p class="weekly-name"> Comimg Soon </p>
+                                    <p class="weekly-name"> Coming Soon </p>
                                 </a>
                                 <p class="weekly-description">
                                 </p>
@@ -400,7 +431,7 @@
                 <div class="col-lg-6">
                     <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                         <div class="col p-4 d-flex flex-column position-static">
-                            <strong class="d-inline-block mb-2 text-primary">For Ads</strong>
+                            <strong class="d-inline-block mb-2 text-warning">For Ads</strong>
                             <h3 class="mb-0 display-6">Advertising</h3>
                             <div class="mb-1 text-muted">-----</div>
                             <p class="card-text mb-auto">-----</p>
@@ -414,7 +445,7 @@
                 <div class="col-lg-6">
                     <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                         <div class="col p-4 d-flex flex-column position-static">
-                            <strong class="d-inline-block mb-2 text-success">For Ads</strong>
+                            <strong class="d-inline-block mb-2 text-warning">For Ads</strong>
                             <h3 class="mb-0 display-6">Advertising</h3>
                             <div class="mb-1 text-muted">-----</div>
                             <p class="mb-auto">-----</p>

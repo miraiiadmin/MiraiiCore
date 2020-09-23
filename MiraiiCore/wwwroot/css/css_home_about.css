@@ -96,6 +96,24 @@ body {
     margin-bottom: 0px;
 }
 
+/*Video*/
+.video-indicators {
+    color: #ECBA71;
+    font-size: 90px;
+}
+
+    .video-indicators:hover {
+        color: #F2D7A6;
+        font-size: 90px;
+    }
+
+@media (max-width : 1024px) {
+    .video-indicators {
+        display: none;
+    }
+}
+
+/* Weekly-CSS */
 .weekly-img {
     display: block;
     margin: 0px auto 10px auto;
@@ -131,3 +149,4 @@ body {
     margin-bottom: 0px;
     padding: 0px 0px 0px 0px;
 }
+
