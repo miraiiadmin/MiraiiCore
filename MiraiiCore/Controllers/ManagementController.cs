@@ -67,7 +67,6 @@ namespace MiraiiCore.Controllers
             }
         }
 
-        [Route("/management/create")]
         public IActionResult Create()
         {
             if (HttpContext.Session.GetString("Username") == null)
