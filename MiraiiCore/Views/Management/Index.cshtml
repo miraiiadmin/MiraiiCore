@@ -49,39 +49,39 @@ else
                     </tr>
                     @foreach (var item in Model)
                     {
-                        <tr>
-                            <td class="item-id">@item.ContentID</td>
-                            <td>@item.ContentName</td>
-                            <td>
-                                <img src="@Url.Content(item.ContentLocation)" height="50px" width="90px" />
-                            </td>
-                            <td>@item.ContentDate)</td>
-                            <td>@item.ContentCategory</td>
-                            <td>@item.ContentWriter</td>
-                            <td>@item.Release</td>
-                            <td>
-                                @Html.ActionLink("Update", "Update", new
-                           {
-                               id = item.ContentID
-                           }, new { id = item.ContentID, @class = "btn btn-outline-primary", @style = "margin-bottom: 20px;" })
-                            </td>
-                            <td>
-                                <input type="button" value="Delete" class="btn btn-outline-danger" />
-                            </td>
-                        </tr>
+                    <tr>
+                        <td class="item-id">@item.ContentID</td>
+                        <td>@item.ContentName</td>
+                        <td>
+                            <img src="@Url.Content(item.ContentLocation)" height="50px" width="90px" />
+                        </td>
+                        <td>@item.ContentDate)</td>
+                        <td>@item.ContentCategory</td>
+                        <td>@item.ContentWriter</td>
+                        <td>@item.Release</td>
+                        <td>
+                            @Html.ActionLink("Update", "Update", new
+                       {
+                           id = item.ContentID
+                       }, new { id = item.ContentID, @class = "btn btn-outline-primary", @style = "margin-bottom: 20px;" })
+                        </td>
+                        <td>
+                            <input type="button" value="Delete" class="btn btn-outline-danger" />
+                        </td>
+                    </tr>
                     }
                 </table>
             </div>
 
             @using (Html.BeginForm("Delete", "Management", FormMethod.Post, new { name = "frmContent", id = "frmContent" }))
             {
-                <input type="hidden" name="id" />
+            <input type="hidden" name="id" />
             }
 
             @section Scripts
 {
                 <script>
-                    $(".btn-danger").click(function () {
+                    $(".btn-outline-danger").click(function () {
                         if (!confirm('Do you really want to delete this content ?')) {
                             return false;
                         }
@@ -91,6 +91,8 @@ else
                     });
                 </script>
             }
+
+           
 
         </div>
     </div>
