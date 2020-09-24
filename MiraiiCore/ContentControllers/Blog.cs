@@ -114,6 +114,33 @@ namespace MiraiiCore.Controllers
             return View("~/Views/Read/Blog/MyRhythm.cshtml", YouMay);
         }
 
+        public IActionResult Kimetsunoyaiba(ContentDataViewModel YouMay)
+        {
+            ConnectionString();
+            con.Open();
+            com.Connection = con;
+
+            com.CommandText = "SELECT TOP 2 * FROM ContentData WHERE ContentCategory = 'Blog' AND release = 'yes' ORDER BY NEWID ()";
+            dr = com.ExecuteReader();
+            List<ContentDataViewModel> objmodel = new List<ContentDataViewModel>();
+            while (dr.Read())
+            {
+                var details = new ContentDataViewModel();
+                details.ContentLocation = dr["ContentLocation"].ToString();
+                details.ContentName = dr["ContentName"].ToString();
+                details.ContentCategory = dr["ContentCategory"].ToString();
+                details.ContentDate = dr["ContentDate"].ToString();
+                details.ContentWriter = dr["ContentWriter"].ToString();
+                details.Controller = dr["Controller"].ToString();
+                details.Action = dr["Action"].ToString();
+                objmodel.Add(details);
+            }
+            YouMay.ContentInfo = objmodel;
+            con.Close();
+            ModelState.Clear();
+
+            return View("~/Views/Read/Blog/Kimetsunoyaiba.cshtml", YouMay);
+        }
 
         public IActionResult Kimetsunoyaibataisho(ContentDataViewModel YouMay)
         {
