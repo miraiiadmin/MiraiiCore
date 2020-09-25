@@ -21,6 +21,8 @@ namespace MiraiiCore.Controllers
             con.ConnectionString = "Data Source= miraii.space; Database= miraii_space; User ID=miraii_space; Password=Hostmiraii007;";
         }
 
+
+        
         public IActionResult Index(ContentDataViewModel data)
 
         {
@@ -58,6 +60,8 @@ namespace MiraiiCore.Controllers
             return View("~/Views/Read/Blog/Index.cshtml", data);
         }
 
+
+        
         public IActionResult T(ContentDataViewModel data)
         {
             ConnectionString();
@@ -86,6 +90,7 @@ namespace MiraiiCore.Controllers
             return View("~/Views/Read/Blog/T.cshtml", data);
         }
 
+        [Route("/blog/my-rhythm")]
         public IActionResult MyRhythm(ContentDataViewModel YouMay)
         {
             ConnectionString();
