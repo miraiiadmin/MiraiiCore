@@ -124,6 +124,16 @@ body {
     margin: 0px 0px 0px 0px ;
 }
 
+.weekly-box-head {
+    margin: 0px 0px 0px 0px;
+}
+
+@media screen and (max-width : 767px ) {
+    .weekly-box {
+        display : none ;
+    }
+}
+
 .weekly-name {
     font-family: 'Sarabun', sans-serif;
     font-size: 20px;

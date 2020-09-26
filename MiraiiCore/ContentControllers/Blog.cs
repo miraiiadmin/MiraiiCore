@@ -119,6 +119,7 @@ namespace MiraiiCore.Controllers
             return View("~/Views/Read/Blog/MyRhythm.cshtml", YouMay);
         }
 
+        [Route("/blog/kimetsu-no-yaiba-mugen-train")]
         public IActionResult Kimetsunoyaiba(ContentDataViewModel YouMay)
         {
             ConnectionString();
