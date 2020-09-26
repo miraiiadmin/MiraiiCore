@@ -15,6 +15,7 @@ namespace MiraiiCore.Controllers
         SqlCommand com = new SqlCommand();
         SqlDataReader dr;
 
+
         public IActionResult Index()
         {
             return View();

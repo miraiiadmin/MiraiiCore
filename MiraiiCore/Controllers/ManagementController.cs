@@ -141,6 +141,7 @@ namespace MiraiiCore.Controllers
                 return View(content);
             }
         }
+
         [HttpPost]
         public ActionResult Update(ContentDataModel content)
         {
@@ -162,7 +163,6 @@ namespace MiraiiCore.Controllers
             return RedirectToAction("Index");
         }
 
-        
         [HttpPost]
         public ActionResult Logout()
         {
