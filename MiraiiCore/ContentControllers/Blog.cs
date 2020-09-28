@@ -90,8 +90,9 @@ namespace MiraiiCore.Controllers
             return View("~/Views/Read/Blog/T.cshtml", data);
         }
 
+        
         [Route("/blog/my-rhythm")]
-        public IActionResult MyRhythm(ContentDataViewModel YouMay)
+        public IActionResult B2020_09_19_My_Rhythm(ContentDataViewModel YouMay)
         {
             ConnectionString();
             con.Open();
@@ -116,11 +117,12 @@ namespace MiraiiCore.Controllers
             con.Close();
             ModelState.Clear();
 
-            return View("~/Views/Read/Blog/MyRhythm.cshtml", YouMay);
+            return View("~/Views/Read/Blog/B2020_09_19_My_Rhythm.cshtml", YouMay);
         }
 
+        
         [Route("/blog/kimetsu-no-yaiba-mugen-train")]
-        public IActionResult Kimetsunoyaiba(ContentDataViewModel YouMay)
+        public IActionResult B2020_09_26_Yaiba_mugen_train(ContentDataViewModel YouMay)
         {
             ConnectionString();
             con.Open();
@@ -145,10 +147,11 @@ namespace MiraiiCore.Controllers
             con.Close();
             ModelState.Clear();
 
-            return View("~/Views/Read/Blog/Kimetsunoyaiba.cshtml", YouMay);
+            return View("~/Views/Read/Blog/B2020_09_26_Yaiba_mugen_train.cshtml", YouMay);
         }
 
-        public IActionResult Kimetsunoyaibataisho(ContentDataViewModel YouMay)
+        [Route("/blog/kimetsunoyaibataisho")]
+        public IActionResult B2020_09_12_Yaiba_taisho(ContentDataViewModel YouMay)
         {
             ConnectionString();
             con.Open();
@@ -173,10 +176,11 @@ namespace MiraiiCore.Controllers
             con.Close();
             ModelState.Clear();
 
-            return View("~/Views/Read/Blog/Kimetsunoyaibataisho.cshtml", YouMay);
+            return View("~/Views/Read/Blog/B2020_09_12_Yaiba_taisho.cshtml", YouMay);
         }
 
-        public IActionResult Rikuoh(ContentDataViewModel YouMay)
+        [Route("/blog/rikuoh")]
+        public IActionResult B2020_09_05_Rikuoh(ContentDataViewModel YouMay)
         {
             ConnectionString();
             con.Open();
@@ -201,10 +205,11 @@ namespace MiraiiCore.Controllers
             con.Close();
             ModelState.Clear();
 
-            return View("~/Views/Read/Blog/Rikuoh.cshtml", YouMay);
+            return View("~/Views/Read/Blog/B2020_09_05_Rikuoh.cshtml", YouMay);
         }
 
-        public IActionResult ComebackOfMovieIndustry(ContentDataViewModel YouMay)
+        [Route("/blog/comebackofmovieindustry")]
+        public IActionResult B2020_08_31_Comeback_Of_Movie_Industry(ContentDataViewModel YouMay)
         {
             ConnectionString();
             con.Open();
@@ -229,31 +234,37 @@ namespace MiraiiCore.Controllers
             con.Close();
             ModelState.Clear();
 
-            return View("~/Views/Read/Blog/ComebackOfMovieIndustry.cshtml", YouMay);
+            return View("~/Views/Read/Blog/B2020_08_31_Comeback_Of_Movie_Industry.cshtml", YouMay);
         }
 
-        public IActionResult BTS()
+        [Route("/blog/bts")]
+        public IActionResult B2020_08_26_BTS()
         {
-            return View("~/Views/Read/Blog/BTS.cshtml");
-        }
-        public IActionResult Tenet()
-        {
-            return View("~/Views/Read/Blog/Tenet.cshtml");
+            return View("~/Views/Read/Blog/B2020_08_26_BTS.cshtml");
         }
 
-        public IActionResult SevenSkillsForFreshGraduate()
+        [Route("/blog/tenet")]
+        public IActionResult B2020_08_22_Tenet()
         {
-            return View("~/Views/Read/Blog/SevenSkillsForFreshGraduate.cshtml");
+            return View("~/Views/Read/Blog/B2020_08_22_Tenet.cshtml");
         }
 
-        public IActionResult ProjectPowerNetflix()
+        [Route("/blog/sevenskillsforfreshgraduate")]
+        public IActionResult B2020_08_21_Seven_Skills()
         {
-            return View("~/Views/Read/Blog/ProjectPowerNetflix.cshtml");
+            return View("~/Views/Read/Blog/B2020_08_21_Seven_Skills.cshtml");
         }
 
-        public IActionResult Valorant()
+        [Route("/blog/projectpowernetflix")]
+        public IActionResult B2020_08_16_Project_Power()
         {
-            return View("~/Views/Read/Blog/Valorant.cshtml");
+            return View("~/Views/Read/Blog/B2020_08_16_Project_Power.cshtml");
+        }
+
+        [Route("/blog/valorant")]
+        public IActionResult B2020_08_17_Valorant()
+        {
+            return View("~/Views/Read/Blog/B2020_08_17_Valorant.cshtml");
         }
     }
 }
