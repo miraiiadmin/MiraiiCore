@@ -119,19 +119,19 @@ body {
 }
 
 .footer-copyright {
-    font-size: 19px;
+    font-size: 15px;
     text-align:left
 }
 
 
 .footer-head-text {
     font-weight: bold;
-    font-size: 19px;
+    font-size: 17px;
     margin-bottom: 5px;
 }
 
 .footer-list-text {
-    font-size: 17px;
+    font-size: 15px;
     color: #F5F5F5;
 }
     .footer-list-text:hover {
@@ -180,14 +180,14 @@ body {
     }
 
     .footer-text-concept {
-        display:none;
-        margin:0px;
+        display: none;
+        margin: 0px;
     }
 
     .footer-list-text {
         font-size: 15px;
         list-style: none;
-        text-align:center;
+        text-align: center;
     }
 
     .footer-head-text {
